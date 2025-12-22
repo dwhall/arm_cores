@@ -7022,7 +7022,7 @@
             </registers>
           </peripheral>
           <peripheral>
-            <name>FP & MVE</name>
+            <name>FP_MVE</name>
             <description>Floating-point and MVE Extension</description>
             <groupName></groupName>
             <baseAddress>0xE000EF34</baseAddress>

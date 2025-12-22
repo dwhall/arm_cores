@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <device schemaVersion="1.3.5" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_3_5.xsd">
   <cpu>
-    <name>CM55</name>
+    <name>CM55F</name>
     <displayName>Cortex-M55 (with FPU)</displayName>
     <groups>
       <group>
@@ -6706,7 +6706,7 @@
             </registers>
           </peripheral>
           <peripheral>
-            <name>FP & MVE</name>
+            <name>FP_MVE</name>
             <description>Floating-point and MVE Extension</description>
             <groupName></groupName>
             <baseAddress>0xE000EF34</baseAddress>
