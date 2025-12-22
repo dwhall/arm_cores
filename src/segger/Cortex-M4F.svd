@@ -3558,7 +3558,7 @@
                 <access>read-only</access>
                 <fields>
                   <field>
-                    <name>Debug model, M profile</name>
+                    <name>M profile debug model</name>
                     <description>Support for memory-mapped debug model for M profile processors</description>
                     <bitRange>[23:20]</bitRange>
                     <enumeratedValues>
