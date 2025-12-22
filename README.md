@@ -14,5 +14,14 @@ Segger link: https://www.segger.com/downloads/jlink/Ozone_Linux_x86_64.tgz
 
 ## Status
 
-I've generated a package for the Cortex-M4
-and have not yet made any manual corrections.
+I've generated a package for the Cortex-M4 and
+early tests are working (and revealing issues).
+
+## Fixes
+
+* In `Cortex-M4F.svd` in the XML path,
+  `device/cpu/groups/group/peripherals/peripheral(SCB)/register(ID_DFR0)`,
+  there was a field with the name `<name>Debug model, M profile</name>`.
+  The comma in this name caused problems with the `minisvd2nim` tool,
+  so the field was renamed following the format in the preceding register,
+  from "Debug model, M profile" to "M profile debug model".
