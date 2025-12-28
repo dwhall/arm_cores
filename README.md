@@ -12,34 +12,33 @@ The result, though, may require some manual touch-up.
 
 Segger link: https://www.segger.com/downloads/jlink/Ozone_Linux_x86_64.tgz
 
-## Prerequisites
+## If the core you need is not available...
 
-You will need the [minisvd2nim](https://github.com/dwhall/minisvd2nim) tool.
+Or if you need to re-generate an existing package from the .svd file,
+then you will need the [minisvd2nim](https://github.com/dwhall/minisvd2nim) tool.
 Install it via your preferred Nim package management tool:
 
-`nimble install git@github.com:dwhall/minisvd2nim.git`
+```
+nimble install git@github.com:dwhall/minisvd2nim.git
+```
 
-## Usage:
+To generate a package for a core, use a command line such as:
 
-If the core you need isn't already available,
-convert it via a command line such as:
-
-```text
+```
 minisvd2nim -s src/segger/Cortex-M4F.svd
 ```
 
-## Then what?
+## HOW-TO Use this repo:
 
-You will need to add the path of the generated package to your project.
-In the directory where your application source uses the generated package,
-edit `config.nims` to add this line:
+In your application source directory, edit `config.nims` to add
+the path to the package for the core you need:
 
-`switch("path", "path/to/generated/pkg")`
+`switch("path", "path/to/arm_cores")`
 
-## Status
+Which might look like this if your project consolidates its dependencies
+in a subdirectory:
 
-I've generated a package for the Cortex-M4 and
-early tests are working (and revealing issues).
+`switch("path", "$projectDir/../deps/arm_cores")`
 
 ## Fixes
 
