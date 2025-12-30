@@ -166,47 +166,47 @@ declareSpecialRegister(PSP, true, true, "Process Stack Pointer")
 ##
 ## Reference: ARM DUI 0553B, p. 56, Table 3-2 CMSIS functions to generate some Cortex-M4 instructions
 ##
-proc enableIrq() {.inline.} =
+proc enableIrq*() {.inline.} =
   asm "  cpsie i \n"
-proc disableIrq() {.inline.} =
+proc disableIrq*() {.inline.} =
   asm "  cpsid i \n"
-proc enableFaultIrq() {.inline.} =
+proc enableFaultIrq*() {.inline.} =
   asm "  cpsie f \n"
-proc disableFaultIrq() {.inline.} =
+proc disableFaultIrq*() {.inline.} =
   asm "  cpsid f \n"
-proc ISB() {.inline.} =
+proc ISB*() {.inline.} =
   asm "  isb \n"
-proc DSB() {.inline.} =
+proc DSB*() {.inline.} =
   asm "  dsb \n"
-proc DMB() {.inline.} =
+proc DMB*() {.inline.} =
   asm "  dmb \n"
-proc REV(value: RegisterVal): RegisterVal {.inline.} =
+proc REV*(value: RegisterVal): RegisterVal {.inline.} =
   asm """
     rev %0, %1
     : "=r"(`result`)
     : "r"(`value`)
   """
-proc REV16(value: RegisterVal): RegisterVal {.inline.} =
+proc REV16*(value: RegisterVal): RegisterVal {.inline.} =
   asm """
     rev16 %0, %1
     : "=r"(`result`)
     : "r"(`value`)
   """
-proc REVSH(value: RegisterVal): RegisterVal {.inline.} =
+proc REVSH*(value: RegisterVal): RegisterVal {.inline.} =
   asm """
     revsh %0, %1
     : "=r"(`result`)
     : "r"(`value`)
   """
-proc RBIT(value: RegisterVal): RegisterVal {.inline.} =
+proc RBIT*(value: RegisterVal): RegisterVal {.inline.} =
   asm """
     rbit %0, %1
     : "=r"(`result`)
     : "r"(`value`)
   """
-proc SEV() {.inline.} =
+proc SEV*() {.inline.} =
   asm "  sev \n"
-proc WFE() {.inline.} =
+proc WFE*() {.inline.} =
   asm "  wfe \n"
-proc WFI() {.inline.} =
+proc WFI*() {.inline.} =
   asm "  wfi \n"
