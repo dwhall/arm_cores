@@ -1,6 +1,6 @@
 #!fmt: off
 
-version       = 0.7.3-dev-81915b9  # same as minisvd2nim's version
+version       = 0.7.4-dev-6b8ff4d  # same as minisvd2nim's version
 author        = "minisvd2nim (generated)"
 description   = "Device and peripheral modules for the CM7F."
 license       = "MIT"
