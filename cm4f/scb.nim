@@ -25,6 +25,7 @@ declareField(peripheralName = SCB, registerName = ICSR, fieldName = VECTACTIVE, 
 declareRegister(peripheralName = SCB, registerName = VTOR, addressOffset = 0x8'u32, readAccess = true, writeAccess = true, registerDesc = "Holds the vector table address")
 declareField(peripheralName = SCB, registerName = VTOR, fieldName = TBLOFF, bitOffset = 7, bitWidth = 25, readAccess = true, writeAccess = true, fieldDesc = "Bits[31:7] of the vector table address")
 declareRegister(peripheralName = SCB, registerName = AIRCR, addressOffset = 0xC'u32, readAccess = true, writeAccess = true, registerDesc = "Sets or returns interrupt control data")
+declareField(peripheralName = SCB, registerName = AIRCR, fieldName = VECTKEY, bitOffset = 16, bitWidth = 16, readAccess = true, writeAccess = true, fieldDesc = "Key to allow write to register")
 declareField(peripheralName = SCB, registerName = AIRCR, fieldName = ENDIANNESS, bitOffset = 15, bitWidth = 1, readAccess = true, writeAccess = true, fieldDesc = "Indicates the memory system endianness")
 declareField(peripheralName = SCB, registerName = AIRCR, fieldName = PRIGROUP, bitOffset = 8, bitWidth = 3, readAccess = true, writeAccess = true, fieldDesc = "Priority grouping, indicates the binary point position")
 declareField(peripheralName = SCB, registerName = AIRCR, fieldName = SYSRESETREQ, bitOffset = 2, bitWidth = 1, readAccess = true, writeAccess = true, fieldDesc = "System Reset Request")

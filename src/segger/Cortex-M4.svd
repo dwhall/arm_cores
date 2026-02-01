@@ -1877,6 +1877,17 @@
                 <access>read-write</access>
                 <fields>
                   <field>
+                    <name>VECTKEY</name>
+                    <description>Key to allow write to register</description>
+                    <bitRange>[31:16]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>KEY</description>
+                        <value>0x05FA</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
                     <name>ENDIANNESS</name>
                     <description>Indicates the memory system endianness</description>
                     <bitRange>[15:15]</bitRange>
