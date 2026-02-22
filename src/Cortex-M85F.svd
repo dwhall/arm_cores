@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <device schemaVersion="1.3.5" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_3_5.xsd">
   <cpu>
-    <name>CM85</name>
+    <name>CM85F</name>
     <displayName>Cortex-M85 (with FPU)</displayName>
     <groups>
       <group>
@@ -916,6 +916,649 @@
         </registers>
       </group>
       <group>
+        <name>FPU</name>
+        <description>FPU Registers</description>
+        <size>32</size>
+        <access>RW</access>
+        <type>float</type>
+        <registers>
+          <register>
+            <name>FPSCR</name>
+            <type>unsigned int</type>
+            <description>Floating point status and control register</description>
+            <Index>32</Index>
+            <fields>
+              <field>
+                <name>IOC</name>
+                <description>Invalid Operation cumulative exception bit</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>DZC</name>
+                <description>Division by Zero cumulative exception bit</description>
+                <bitOffset>1</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>OFC</name>
+                <description>Overflow cumulative exception bit</description>
+                <bitOffset>2</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>UFC</name>
+                <description>Underflow cumulative exception bit</description>
+                <bitOffset>3</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>IXC</name>
+                <description>Inexact cumulative exception bit</description>
+                <bitOffset>4</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>IDC</name>
+                <description>Input Denormal cumulative exception bit</description>
+                <bitOffset>7</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>LTPSIZE</name>
+                <description>The vector element size used when applying low-overhead-loop tail predication to vector instructions</description>
+                <bitOffset>18</bitOffset>
+                <bitWidth>3</bitWidth>
+                <enumeratedValues>
+                  <enumeratedValue>
+                    <value>0</value>
+                    <description>8 bits.</description>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <value>1</value>
+                    <description>16 bits</description>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <value>2</value>
+                    <description>32 bits</description>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <value>3</value>
+                    <description>64 bits</description>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <value>4</value>
+                    <description>Tail predication not applied</description>
+                  </enumeratedValue>
+                </enumeratedValues>
+              </field>
+              <field>
+                <name>FZ16</name>
+                <description>Flush-to-zero mode control for single and double precision Floating-point. This bit determines whether denormal Floating-point values are treated as though they are zero.</description>
+                <bitOffset>19</bitOffset>
+                <bitWidth>1</bitWidth>
+                <enumeratedValues>
+                  <enumeratedValue>
+                    <value>0</value>
+                    <description>Flush-to-zero mode disabled. Behavior of the Floating-point unit is fully compliant with the IEEE754 standard.</description>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <value>1</value>
+                    <description>Flush-to-zero mode enabled</description>
+                  </enumeratedValue>
+                </enumeratedValues>
+              </field>
+              <field>
+                <name>R-Mode</name>
+                <description>Rounding Mode control</description>
+                <bitOffset>22</bitOffset>
+                <bitWidth>2</bitWidth>
+                <enumeratedValues>
+                  <enumeratedValue>
+                    <value>0</value>
+                    <description>Round to Nearest (RN) mode</description>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <value>1</value>
+                    <description>Round towards Plus Infinity (RP) mode</description>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <value>2</value>
+                    <description>Round towards Minus Infinity (RM) mode</description>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <value>3</value>
+                    <description>Round towards Zero (RZ) mode</description>
+                  </enumeratedValue>
+                </enumeratedValues>
+              </field>
+              <field>
+                <name>FZ</name>
+                <description>Flush-to-zero mode control bit</description>
+                <bitOffset>24</bitOffset>
+                <bitWidth>1</bitWidth>
+                <enumeratedValues>
+                  <enumeratedValue>
+                    <value>0</value>
+                    <description>Flush-to-zero mode disabled. Behavior of the floating-point system is fully compliant with the IEEE 754 standard.</description>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <value>1</value>
+                    <description>Flush-to-zero mode enabled</description>
+                  </enumeratedValue>
+                </enumeratedValues>
+              </field>
+              <field>
+                <name>DN</name>
+                <description>Default NaN mode control bit</description>
+                <bitOffset>25</bitOffset>
+                <bitWidth>1</bitWidth>
+                <enumeratedValues>
+                  <enumeratedValue>
+                    <value>0</value>
+                    <description>NaN operands propagate through to the output of a floating-point operation</description>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <value>1</value>
+                    <description>Any operation involving one or more NaNs returns the Default NaN</description>
+                  </enumeratedValue>
+                </enumeratedValues>
+              </field>
+              <field>
+                <name>AHP</name>
+                <description>Alternative half-precision control bit</description>
+                <bitOffset>26</bitOffset>
+                <bitWidth>1</bitWidth>
+                <enumeratedValues>
+                  <enumeratedValue>
+                    <value>0</value>
+                    <description>IEEE half-precision format selected</description>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <value>1</value>
+                    <description>Alternative half-precision format selected</description>
+                  </enumeratedValue>
+                </enumeratedValues>
+              </field>
+              <field>
+                <name>V</name>
+                <description>Overflow condition code flag</description>
+                <bitOffset>28</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>C</name>
+                <description>Carry condition code flag</description>
+                <bitOffset>29</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>Z</name>
+                <description>Zero condition code flag</description>
+                <bitOffset>30</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>N</name>
+                <description>Negative condition code flag</description>
+                <bitOffset>30</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>S0</name>
+            <description>Floating point register 0</description>
+            <Index>33</Index>
+          </register>
+          <register>
+            <name>S1</name>
+            <description>Floating point register 1</description>
+            <Index>34</Index>
+          </register>
+          <register>
+            <name>S2</name>
+            <description>Floating point register 2</description>
+            <Index>35</Index>
+          </register>
+          <register>
+            <name>S3</name>
+            <description>Floating point register 3</description>
+            <Index>36</Index>
+          </register>
+          <register>
+            <name>S4</name>
+            <description>Floating point register 4</description>
+            <Index>37</Index>
+          </register>
+          <register>
+            <name>S5</name>
+            <description>Floating point register 5</description>
+            <Index>38</Index>
+          </register>
+          <register>
+            <name>S6</name>
+            <description>Floating point register 6</description>
+            <Index>39</Index>
+          </register>
+          <register>
+            <name>S7</name>
+            <description>Floating point register 7</description>
+            <Index>40</Index>
+          </register>
+          <register>
+            <name>S8</name>
+            <description>Floating point register 8</description>
+            <Index>41</Index>
+          </register>
+          <register>
+            <name>S9</name>
+            <description>Floating point register 9</description>
+            <Index>42</Index>
+          </register>
+          <register>
+            <name>S10</name>
+            <description>Floating point register 10</description>
+            <Index>43</Index>
+          </register>
+          <register>
+            <name>S11</name>
+            <description>Floating point register 11</description>
+            <Index>44</Index>
+          </register>
+          <register>
+            <name>S12</name>
+            <description>Floating point register 12</description>
+            <Index>45</Index>
+          </register>
+          <register>
+            <name>S13</name>
+            <description>Floating point register 13</description>
+            <Index>46</Index>
+          </register>
+          <register>
+            <name>S14</name>
+            <description>Floating point register 14</description>
+            <Index>47</Index>
+          </register>
+          <register>
+            <name>S15</name>
+            <description>Floating point register 15</description>
+            <Index>48</Index>
+          </register>
+          <register>
+            <name>S16</name>
+            <description>Floating point register 16</description>
+            <Index>49</Index>
+          </register>
+          <register>
+            <name>S17</name>
+            <description>Floating point register 17</description>
+            <Index>50</Index>
+          </register>
+          <register>
+            <name>S18</name>
+            <description>Floating point register 18</description>
+            <Index>51</Index>
+          </register>
+          <register>
+            <name>S19</name>
+            <description>Floating point register 19</description>
+            <Index>52</Index>
+          </register>
+          <register>
+            <name>S20</name>
+            <description>Floating point register 20</description>
+            <Index>53</Index>
+          </register>
+          <register>
+            <name>S21</name>
+            <description>Floating point register 21</description>
+            <Index>54</Index>
+          </register>
+          <register>
+            <name>S22</name>
+            <description>Floating point register 22</description>
+            <Index>55</Index>
+          </register>
+          <register>
+            <name>S23</name>
+            <description>Floating point register 23</description>
+            <Index>56</Index>
+          </register>
+          <register>
+            <name>S24</name>
+            <description>Floating point register 24</description>
+            <Index>57</Index>
+          </register>
+          <register>
+            <name>S25</name>
+            <description>Floating point register 25</description>
+            <Index>58</Index>
+          </register>
+          <register>
+            <name>S26</name>
+            <description>Floating point register 26</description>
+            <Index>59</Index>
+          </register>
+          <register>
+            <name>S27</name>
+            <description>Floating point register 27</description>
+            <Index>60</Index>
+          </register>
+          <register>
+            <name>S28</name>
+            <description>Floating point register 28</description>
+            <Index>61</Index>
+          </register>
+          <register>
+            <name>S29</name>
+            <description>Floating point register 29</description>
+            <Index>62</Index>
+          </register>
+          <register>
+            <name>S30</name>
+            <description>Floating point register 30</description>
+            <Index>63</Index>
+          </register>
+          <register>
+            <name>S31</name>
+            <description>Floating point register 31</description>
+            <Index>64</Index>
+          </register>
+        </registers>
+      </group>
+      <group>
+        <name>FPU (Double)</name>
+        <description>FPU Registers (double-precision)</description>
+        <size>64</size>
+        <access>RW</access>
+        <type>double</type>
+        <registers>
+          <register>
+            <name>FPSCR</name>
+            <type>unsigned int</type>
+            <description>Floating point status and control register</description>
+            <Index>32</Index>
+            <size>32</size>
+            <fields>
+              <field>
+                <name>IOC</name>
+                <description>Invalid Operation cumulative exception bit</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>DZC</name>
+                <description>Division by Zero cumulative exception bit</description>
+                <bitOffset>1</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>OFC</name>
+                <description>Overflow cumulative exception bit</description>
+                <bitOffset>2</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>UFC</name>
+                <description>Underflow cumulative exception bit</description>
+                <bitOffset>3</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>IXC</name>
+                <description>Inexact cumulative exception bit</description>
+                <bitOffset>4</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>IDC</name>
+                <description>Input Denormal cumulative exception bit</description>
+                <bitOffset>7</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>LTPSIZE</name>
+                <description>The vector element size used when applying low-overhead-loop tail predication to vector instructions</description>
+                <bitOffset>18</bitOffset>
+                <bitWidth>3</bitWidth>
+                <enumeratedValues>
+                  <enumeratedValue>
+                    <value>0</value>
+                    <description>8 bits.</description>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <value>1</value>
+                    <description>16 bits</description>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <value>2</value>
+                    <description>32 bits</description>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <value>3</value>
+                    <description>64 bits</description>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <value>4</value>
+                    <description>Tail predication not applied</description>
+                  </enumeratedValue>
+                </enumeratedValues>
+              </field>
+              <field>
+                <name>FZ16</name>
+                <description>Flush-to-zero mode control for single and double precision Floating-point. This bit determines whether denormal Floating-point values are treated as though they are zero.</description>
+                <bitOffset>19</bitOffset>
+                <bitWidth>1</bitWidth>
+                <enumeratedValues>
+                  <enumeratedValue>
+                    <value>0</value>
+                    <description>Flush-to-zero mode disabled. Behavior of the Floating-point unit is fully compliant with the IEEE754 standard.</description>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <value>1</value>
+                    <description>Flush-to-zero mode enabled</description>
+                  </enumeratedValue>
+                </enumeratedValues>
+              </field>
+              <field>
+                <name>R-Mode</name>
+                <description>Rounding Mode control</description>
+                <bitOffset>22</bitOffset>
+                <bitWidth>2</bitWidth>
+                <enumeratedValues>
+                  <enumeratedValue>
+                    <value>0</value>
+                    <description>Round to Nearest (RN) mode</description>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <value>1</value>
+                    <description>Round towards Plus Infinity (RP) mode</description>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <value>2</value>
+                    <description>Round towards Minus Infinity (RM) mode</description>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <value>3</value>
+                    <description>Round towards Zero (RZ) mode</description>
+                  </enumeratedValue>
+                </enumeratedValues>
+              </field>
+              <field>
+                <name>FZ</name>
+                <description>Flush-to-zero mode control bit</description>
+                <bitOffset>24</bitOffset>
+                <bitWidth>1</bitWidth>
+                <enumeratedValues>
+                  <enumeratedValue>
+                    <value>0</value>
+                    <description>Flush-to-zero mode disabled. Behavior of the floating-point system is fully compliant with the IEEE 754 standard.</description>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <value>1</value>
+                    <description>Flush-to-zero mode enabled</description>
+                  </enumeratedValue>
+                </enumeratedValues>
+              </field>
+              <field>
+                <name>DN</name>
+                <description>Default NaN mode control bit</description>
+                <bitOffset>25</bitOffset>
+                <bitWidth>1</bitWidth>
+                <enumeratedValues>
+                  <enumeratedValue>
+                    <value>0</value>
+                    <description>NaN operands propagate through to the output of a floating-point operation</description>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <value>1</value>
+                    <description>Any operation involving one or more NaNs returns the Default NaN</description>
+                  </enumeratedValue>
+                </enumeratedValues>
+              </field>
+              <field>
+                <name>AHP</name>
+                <description>Alternative half-precision control bit</description>
+                <bitOffset>26</bitOffset>
+                <bitWidth>1</bitWidth>
+                <enumeratedValues>
+                  <enumeratedValue>
+                    <value>0</value>
+                    <description>IEEE half-precision format selected</description>
+                  </enumeratedValue>
+                  <enumeratedValue>
+                    <value>1</value>
+                    <description>Alternative half-precision format selected</description>
+                  </enumeratedValue>
+                </enumeratedValues>
+              </field>
+              <field>
+                <name>V</name>
+                <description>Overflow condition code flag</description>
+                <bitOffset>28</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>C</name>
+                <description>Carry condition code flag</description>
+                <bitOffset>29</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>Z</name>
+                <description>Zero condition code flag</description>
+                <bitOffset>30</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+              <field>
+                <name>N</name>
+                <description>Negative condition code flag</description>
+                <bitOffset>30</bitOffset>
+                <bitWidth>1</bitWidth>
+              </field>
+            </fields>
+          </register>
+          <register>
+            <name>D0</name>
+            <description>Floating point register 0</description>
+            <Index1>33</Index1>
+            <Index2>34</Index2>
+          </register>
+          <register>
+            <name>D1</name>
+            <description>Floating point register 1</description>
+            <Index1>35</Index1>
+            <Index2>36</Index2>
+          </register>
+          <register>
+            <name>D2</name>
+            <description>Floating point register 2</description>
+            <Index1>37</Index1>
+            <Index2>38</Index2>
+          </register>
+          <register>
+            <name>D3</name>
+            <description>Floating point register 3</description>
+            <Index1>39</Index1>
+            <Index2>40</Index2>
+          </register>
+          <register>
+            <name>D4</name>
+            <description>Floating point register 4</description>
+            <Index1>41</Index1>
+            <Index2>42</Index2>
+          </register>
+          <register>
+            <name>D5</name>
+            <description>Floating point register 5</description>
+            <Index1>43</Index1>
+            <Index2>44</Index2>
+          </register>
+          <register>
+            <name>D6</name>
+            <description>Floating point register 6</description>
+            <Index1>45</Index1>
+            <Index2>46</Index2>
+          </register>
+          <register>
+            <name>D7</name>
+            <description>Floating point register 7</description>
+            <Index1>47</Index1>
+            <Index2>48</Index2>
+          </register>
+          <register>
+            <name>D8</name>
+            <description>Floating point register 8</description>
+            <Index1>49</Index1>
+            <Index2>50</Index2>
+          </register>
+          <register>
+            <name>D9</name>
+            <description>Floating point register 9</description>
+            <Index1>51</Index1>
+            <Index2>52</Index2>
+          </register>
+          <register>
+            <name>D10</name>
+            <description>Floating point register 10</description>
+            <Index1>53</Index1>
+            <Index2>54</Index2>
+          </register>
+          <register>
+            <name>D11</name>
+            <description>Floating point register 11</description>
+            <Index1>55</Index1>
+            <Index2>56</Index2>
+          </register>
+          <register>
+            <name>D12</name>
+            <description>Floating point register 12</description>
+            <Index1>57</Index1>
+            <Index2>58</Index2>
+          </register>
+          <register>
+            <name>D13</name>
+            <description>Floating point register 13</description>
+            <Index1>59</Index1>
+            <Index2>60</Index2>
+          </register>
+          <register>
+            <name>D14</name>
+            <description>Floating point register 14</description>
+            <Index1>61</Index1>
+            <Index2>62</Index2>
+          </register>
+          <register>
+            <name>D15</name>
+            <description>Floating point register 15</description>
+            <Index1>63</Index1>
+            <Index2>64</Index2>
+          </register>
+        </registers>
+      </group>
+      <group>
         <name>Peripherals</name>
         <description>Memory-Mapped CPU Registers</description>
         <size>32</size>
@@ -934,16 +1577,15 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Interrupt Set Enable Register %s</name>
-                <displayName>NVIC_ISER_%s</displayName>
-                <description>Enables, or reads the enable state of a group of interrupts</description>
+                <name>NVIC_ISER[%s]</name>
+                <description>Interrupt Set Enable Register enables or reads the enabled state of each group of 32 interrupts</description>
                 <addressOffset>0x0</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>SETENA_%s</name>
+                    <name>SETENA[%s]</name>
                     <description>Interrupt set-enable bits. For SETENA[m] in NVIC_ISERn, allows interrupt 32n+m to be accessed.</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
@@ -962,16 +1604,15 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Clear Enable Register %s</name>
-                <displayName>NVIC_ICER_%s</displayName>
-                <description>Clears, or reads the enable state of, a group of registers</description>
+                <name>NVIC_ICER[%s]</name>
+                <description>Interrupt Clear Enable Register disables or reads the enable state of a group of interrupts</description>
                 <addressOffset>0x80</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>CLRENA_%s</name>
+                    <name>CLRENA[%s]</name>
                     <description>Interrupt clear-enable bits. For SETENA[m] in NVIC_ICERn, allows interrupt 32n+m to be accessed.</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
@@ -990,16 +1631,15 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Set-Pending Register %s</name>
-                <displayName>NVIC_ISPR_%s</displayName>
-                <description>For a group of interrupts, changes interrupt status to pending, or shows the current pending status</description>
+                <name>NVIC_ISPR[%s]</name>
+                <description>Interrupt Set Pending Register changes status to pending, or shows the current pending status for a group of interrupts</description>
                 <addressOffset>0x100</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>SETPEND_%s</name>
+                    <name>SETPEND[%s]</name>
                     <description>Interrupt set-pending bits. For SETPEND[m] in NVIC_ISPRn, allows interrupt 32n + m to be accessed.</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
@@ -1018,16 +1658,15 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Clear Pending Register %s</name>
-                <displayName>NVIC_ICPR_%s</displayName>
-                <description>For a group of interrupts, clears the interrupt pending status, or shows the current pending status</description>
+                <name>NVIC_ICPR[%s]</name>
+                <description>Interrupt Clear Pending Register clears the pending status, or shows the current pending status for a group of interrupts</description>
                 <addressOffset>0x180</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>CLRPEND_%s</name>
+                    <name>CLRPEND[%s]</name>
                     <description>Interrupt clear-pending bits. Clears the pending state of interrupt (m+(32*n)), or shows whether the state of the interrupt is pending</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
@@ -1046,16 +1685,15 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Active Bit Register %s</name>
-                <displayName>NVIC_IABR_%s</displayName>
-                <description>For a group of interrupts, shows whether each interrupt is active</description>
+                <name>NVIC_IABR[%s]</name>
+                <description>Interrupt Active Bit Register shows whether each interrupt is active for a group of 32 interrupts</description>
                 <addressOffset>0x200</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-only</access>
                 <fields>
                   <field>
-                    <name>ACTIVE_%s</name>
+                    <name>ACTIVE[%s]</name>
                     <description>For ACTIVE[m] in NVIC_IABRn, indicates the active state for interrupt 32n+m.</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
@@ -1074,16 +1712,15 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Targete Non-Secure Register %s</name>
-                <displayName>NVIC_ITNS_%s</displayName>
-                <description>For a group of interrupts, specifies or reads whether each interrupt targets non-secure or secure state</description>
+                <name>NVIC_ITNS[%s]</name>
+                <description>Interrupt Targete Non-Secure Register specifies or reads whether each interrupt targets non-secure or secure state for a group of interrupts</description>
                 <addressOffset>0x280</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>ITNS_%s</name>
+                    <name>ITNS[%s]</name>
                     <description>For ITNS[m] in NVIC_ITNSn, this field indicates and allows modification of the target Security state for interrupt 32n+m.</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
@@ -1102,9 +1739,8 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Priority Register %s</name>
-                <displayName>NVIC_IPR_%s</displayName>
-                <description>Sets or reads interrupt priorities</description>
+                <name>IPR[%s]</name>
+                <description>Interrupt Priority Register sets or reads interrupt priorities</description>
                 <addressOffset>0x300</addressOffset>
                 <dim>120</dim>
                 <dimIncrement>4</dimIncrement>
@@ -3514,7 +4150,7 @@
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>CP_%s</name>
+                    <name>CP[%s]</name>
                     <description>Coprocessor %s privilege</description>
                     <bitRange>[1:0]</bitRange>
                     <dim>8</dim>
@@ -3568,7 +4204,7 @@
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>CP_%s</name>
+                    <name>CP[%s]</name>
                     <description>Enables Non-secure access to this coprocessor</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>8</dim>
@@ -3627,7 +4263,7 @@
                 <access>read-only</access>
                 <fields>
                   <field>
-                    <name>INTLINESNUM_%s</name>
+                    <name>INTLINESNUM[%s]</name>
                     <description>The total number of interrupt lines supported by an implementation, defined in groups of 32</description>
                     <bitRange>[3:0]</bitRange>
                     <dim>2</dim>
@@ -6375,6 +7011,545 @@
                 <description>Displays the configuration information that the CFGINFOSEL register selects</description>
                 <addressOffset>0x4</addressOffset>
                 <access>read-only</access>
+              </register>
+            </registers>
+          </peripheral>
+          <peripheral>
+            <name>FP_MVE</name>
+            <description>Floating-point and MVE Extension</description>
+            <groupName></groupName>
+            <baseAddress>0xE000EF34</baseAddress>
+            <addressBlock>
+              <offset>0x0</offset>
+              <size>0x18</size>
+              <usage>registers</usage>
+            </addressBlock>
+            <registers>
+              <register>
+                <name>Floating Point Context Control Register</name>
+                <displayName>FPCCR</displayName>
+                <description>Holds control data for the Floating Point Unit</description>
+                <addressOffset>0x0</addressOffset>
+                <access>read-write</access>
+                <fields>
+                  <field>
+                    <name>ASPEN</name>
+                    <description>Automatic state preservation enable</description>
+                    <bitRange>[31:31]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Disable CONTROL.FPCA setting on execution of a floating-point instruction</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Enable CONTROL.FPCA setting on execution of a floating-point instruction</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>LSPEN</name>
+                    <description>Automatic state preservation enable</description>
+                    <bitRange>[30:30]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Disable automatic lazy context save</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Enable automatic lazy state preservation for floating-point context</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>LSPENS</name>
+                    <description>Lazy state preservation enable Secure only</description>
+                    <bitRange>[29:29]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>LSPEN is readable and writeable from both Security states</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>LSPEN is readable from both Security states. Writes to LSPEN are ignored from the Non-secure state</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>CLRONRET</name>
+                    <description>Clear on return</description>
+                    <bitRange>[28:28]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Disabled</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Enabled</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>CLRONRETS</name>
+                    <description>Clear on return Secure only</description>
+                    <bitRange>[27:27]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>The CLRONRET field is accessibly from both Security states</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>The Non-secure view of the CLRONRET field is read-only</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>TS</name>
+                    <description>Treat as Secure</description>
+                    <bitRange>[26:26]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Disabled</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Enabled</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>UFRDY</name>
+                    <description>UsageFault ready</description>
+                    <bitRange>[10:10]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Not able to set the UsageFault exception to pending</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Able to set the UsageFault exception to pending</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>SPLIMVIOL</name>
+                    <description>Stack pointer limit violation</description>
+                    <bitRange>[9:9]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>The existing behavior is retained</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>The memory accesses associated with the floating-point state preservation are not performed</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>MONRDY</name>
+                    <description>DebugMonitor ready</description>
+                    <bitRange>[8:8]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Not able to set the DebugMonitor exception to pending</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Able to set the DebugMonitor exception to pending</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>SFRDY</name>
+                    <description>SecureFault ready</description>
+                    <bitRange>[7:7]</bitRange>
+                  </field>
+                  <field>
+                    <name>BFRDY</name>
+                    <description>BusFault ready</description>
+                    <bitRange>[6:6]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Not able to set the BusFault exception to pending</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Able to set the BusFault exception to pending</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>MMRDY</name>
+                    <description>MemManage ready</description>
+                    <bitRange>[5:5]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Not able to set the MemManage exception to pending</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Able to set the MemManage exception to pending</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>HFRDY</name>
+                    <description>HardFault ready</description>
+                    <bitRange>[4:4]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Not able to set the HardFault exception to pending</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Able to set the HardFault exception to pending</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>THREAD</name>
+                    <description>Thread mode</description>
+                    <bitRange>[3:3]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Handler mode</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Thread mode</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>S</name>
+                    <description>Security status of the floating point context</description>
+                    <bitRange>[2:2]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>floating-point context belongs to the Non-secure state</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>floating-point context belongs to the Secure state</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>USER</name>
+                    <description>Indicates the privilege level of the software executing, when the processor allocated the floating point stack</description>
+                    <bitRange>[1:1]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Privileged level</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Unprivileged level</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>LSPACT</name>
+                    <description>Lazy state preservation active</description>
+                    <bitRange>[0:0]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Lazy state preservation is not active</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Lazy state preservation is active</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                </fields>
+              </register>
+              <register>
+                <name>Floating Point Context Address Register</name>
+                <displayName>FPCAR</displayName>
+                <description>Holds the location of the unpopulated floating-point register space allocated on an exception stack frame</description>
+                <addressOffset>0x4</addressOffset>
+                <access>read-write</access>
+              </register>
+              <register>
+                <name>Floating Point Default Status Control Register</name>
+                <displayName>FPDSCR</displayName>
+                <description>Holds the default values for the floating-point status control data that the processor assigns to the FPSCR when it creates a new floating-point context</description>
+                <addressOffset>0x8</addressOffset>
+                <access>read-write</access>
+                <fields>
+                  <field>
+                    <name>AHP</name>
+                    <description>Default value for FPSCR.AHP</description>
+                    <bitRange>[26:26]</bitRange>
+                  </field>
+                  <field>
+                    <name>DN</name>
+                    <description>Default value for FPSCR.DN</description>
+                    <bitRange>[25:25]</bitRange>
+                  </field>
+                  <field>
+                    <name>FZ</name>
+                    <description>Default value for FPSCR.FZ</description>
+                    <bitRange>[24:24]</bitRange>
+                  </field>
+                  <field>
+                    <name>RMode</name>
+                    <description>Default value for FPSCR.RMode</description>
+                    <bitRange>[23:22]</bitRange>
+                  </field>
+                  <field>
+                    <name>FZ16</name>
+                    <description>Default value for FPSCR.FZ16</description>
+                    <bitRange>[19:19]</bitRange>
+                  </field>
+                  <field>
+                    <name>LTPSIZE</name>
+                    <description>Default value for FPSCR.LTPSIZE</description>
+                    <bitRange>[18:16]</bitRange>
+                  </field>
+                </fields>
+              </register>
+              <register>
+                <name>Media and FP Feature Register 0</name>
+                <displayName>MVFR0</displayName>
+                <description>Describes the features provided by the Floating-point extension</description>
+                <addressOffset>0xC</addressOffset>
+                <access>read-only</access>
+                <fields>
+                  <field>
+                    <name>FPRound</name>
+                    <description>Floating-point rounding modes</description>
+                    <bitRange>[31:28]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Rounding modes are not supported</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>All rounding modes are supported</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>FPSqrt</name>
+                    <description>Floating-point square root</description>
+                    <bitRange>[23:20]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Floating-point square root not supported</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Floating-point square root is supported</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>FPDivide</name>
+                    <description>Floating-point divide</description>
+                    <bitRange>[19:16]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Floating-point divide operations are not supported</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Floating-point divide operations are supported</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>FPDP</name>
+                    <description>Floating-point double-precision</description>
+                    <bitRange>[11:8]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Floating-point double-precision operations are not supported</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Floating-point double-precision operations are not supported</description>
+                        <value>2</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>FPSP</name>
+                    <description>Floating-point single-precision</description>
+                    <bitRange>[7:4]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Floating-point single-precision operations are not supported</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Floating-point single-precision operations are supported</description>
+                        <value>2</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>SIMDReg</name>
+                    <description>SIMD registers</description>
+                    <bitRange>[3:0]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Supported, 16 x 64-bit registers</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                </fields>
+              </register>
+              <register>
+                <name>Media and FP Feature Register 1</name>
+                <displayName>MVFR1</displayName>
+                <description>Describes the features provided by the Floating-point extension</description>
+                <addressOffset>0x10</addressOffset>
+                <access>read-only</access>
+                <fields>
+                  <field>
+                    <name>FMAC</name>
+                    <description>Fused multiply accumulate instructions</description>
+                    <bitRange>[31:28]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Fused multiply accumulate instructions are not supported</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Fused multiply accumulate instructions are supported</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>FPHP</name>
+                    <description>Floating-point half-precision conversion</description>
+                    <bitRange>[27:24]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Floating-point half-precision conversion instructions are not supported</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Half-precision to single-precision is implemented</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Half-precision to single and double-precision are implemented</description>
+                        <value>2</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>FP16</name>
+                    <description>Floating-point half-precision data processing</description>
+                    <bitRange>[23:20]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Floating-point half-precision data processing is not supported</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Floating-point half-precision data processing is supported</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>MVE</name>
+                    <description>Indicates support for MVE</description>
+                    <bitRange>[11:8]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>MVE is not supported</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>MVE is supported without Floating-point</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>MVE is supported with single and double-precision Floating-point</description>
+                        <value>2</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>FPDNaN</name>
+                    <description>Floating-point default NaN</description>
+                    <bitRange>[7:4]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Floating-point default NaN propagation is not supported</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Floating-point default NaN propagation is supported</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>FPFtZ</name>
+                    <description>Floating-point flush-to-zero</description>
+                    <bitRange>[3:0]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Floating-point flush-to-zero operations not supported</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Full denormalized numbers arithmetic supported</description>
+                        <value>1</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                </fields>
+              </register>
+              <register>
+                <name>Media and FP Feature Register 2</name>
+                <displayName>MVFR2</displayName>
+                <description>Describes the features provided by the floating-point extension</description>
+                <addressOffset>0x14</addressOffset>
+                <access>read-only</access>
+                <fields>
+                  <field>
+                    <name>FPMisc</name>
+                    <description>Floating-point miscellaneous</description>
+                    <bitRange>[7:4]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <description>Floating-point extensions not implemented</description>
+                        <value>0</value>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <description>Selection, directed conversion to integer, VMINNM and MAXNM supported</description>
+                        <value>4</value>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                </fields>
               </register>
             </registers>
           </peripheral>

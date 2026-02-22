@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <device schemaVersion="1.3.5" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_3_5.xsd">
   <cpu>
-    <name>CM4</name>
-    <displayName>Cortex-M4</displayName>
+    <name>CM7</name>
+    <displayName>Cortex-M7</displayName>
     <groups>
       <group>
         <name>Core</name>
@@ -333,9 +333,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Stimulus Port Register %s</name>
-                <displayName>ITM_STIM_%s</displayName>
-                <description>Provides the interface for generating instrumentation messages</description>
+                <name>ITM_STIM[%s]</name>
+                <description>Stimulus Port Register provides the interface for generating instrumentation messages</description>
                 <addressOffset>0x0</addressOffset>
                 <dim>256</dim>
                 <dimIncrement>4</dimIncrement>
@@ -364,9 +363,8 @@
                 </fields>
               </register>
               <register>
-                <name>Trace Enable Register %s</name>
-                <displayName>ITM_TER_%s</displayName>
-                <description>Provide an individual enable bit for each ITM_STIM register</description>
+                <name>ITM_TER[%s]</name>
+                <description>Trace Enable Register provides an individual enable bit for each STIM register</description>
                 <addressOffset>0xE00</addressOffset>
                 <dim>8</dim>
                 <dimIncrement>4</dimIncrement>
@@ -567,9 +565,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Control register</name>
-                <displayName>DWT_CTRL</displayName>
-                <description>Provides configuration and status information for the DWT unit, and used to control features of the unit</description>
+                <name>DWT_CTRL</name>
+                <description>Data Watchpoint Trace Control Register provides configuration and status information and control of the unit</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -918,9 +915,8 @@
                 </fields>
               </register>
               <register>
-                <name>Comparator register</name>
-                <displayName>DWT_COMP_%s</displayName>
-                <description>Provides a reference value for use by comparator n</description>
+                <name>DWT_COMP[%s]</name>
+                <description>Comparator register provides a reference value for use by watchpoint comparator n</description>
                 <addressOffset>0x20</addressOffset>
                 <access>read-write</access>
                 <dim>16</dim>
@@ -934,9 +930,8 @@
                 </fields>
               </register>
               <register>
-                <name>Comparator Mask Register %s</name>
-                <displayName>DWT_MASK_%s</displayName>
-                <description>Provides the size of the ignore mask applied to the access address for address range matching by comparator n</description>
+                <name>DWT_MASK[%s]</name>
+                <description>Comparator Mask register provides the size of the ignore mask applied to the access address for address range matching by comparator n</description>
                 <addressOffset>0x24</addressOffset>
                 <access>read-write</access>
                 <dim>16</dim>
@@ -950,9 +945,8 @@
                 </fields>
               </register>
               <register>
-                <name>Comparator Function Register %s</name>
-                <displayName>DWT_FUNCTION_%s</displayName>
-                <description>Controls the operation of comparator n</description>
+                <name>DWT_FUNCTION[%s]</name>
+                <description>Data Watchpoint Trace Comparator Function Register</description>
                 <addressOffset>0x28</addressOffset>
                 <access>read-write</access>
                 <dim>16</dim>
@@ -1078,7 +1072,7 @@
             </registers>
           </peripheral>
           <peripheral>
-            <name>DPB</name>
+            <name>FPB</name>
             <description>Flash Patch and Breakpoint</description>
             <groupName></groupName>
             <baseAddress>0xE0002000</baseAddress>
@@ -1089,7 +1083,7 @@
             </addressBlock>
             <registers>
               <register>
-                <name>FlashPatch Control Register</name>
+                <name>Flash Patch Control Register</name>
                 <displayName>FP_CTRL</displayName>
                 <description>Provides FPB implementation information, and the global enable for the FPB unit</description>
                 <addressOffset>0x0</addressOffset>
@@ -1148,7 +1142,7 @@
                 </fields>
               </register>
               <register>
-                <name>FlashPatch Remap register</name>
+                <name>Flash Patch Remap register</name>
                 <displayName>FP_REMAP</displayName>
                 <description>Indicates whether the implementation supports flash patch remap, and if it does, holds the SRAM address for remap</description>
                 <addressOffset>0x4</addressOffset>
@@ -1177,9 +1171,8 @@
                 </fields>
               </register>
               <register>
-                <name>FlashPatch Comparator Register %s</name>
-                <displayName>FP_COMP_%s</displayName>
-                <description>Holds an address for comparison with addresses in the Code memory region</description>
+                <name>FP_COMP[%s]</name>
+                <description>Flash Patch Comparator Register holds an address for comparison with addresses in the Code memory region</description>
                 <addressOffset>0x8</addressOffset>
                 <access>read-write</access>
                 <dim>8</dim>
@@ -1191,7 +1184,7 @@
                     <bitRange>[31:30]</bitRange>
                     <enumeratedValues>
                       <enumeratedValue>
-                        <description>Remap to remap address, see FlashPatch Remap register</description>
+                        <description>Remap to remap address, see Flash Patch Remap register</description>
                         <value>0</value>
                       </enumeratedValue>
                       <enumeratedValue>
@@ -1316,7 +1309,7 @@
                 <access>read-only</access>
                 <fields>
                   <field>
-                    <name>INTLINESNUM_%s</name>
+                    <name>INTLINESNUM[%s]</name>
                     <description>The total number of interrupt lines supported by an implementation, defined in groups of 32</description>
                     <bitRange>[3:0]</bitRange>
                     <dim>2</dim>
@@ -1499,17 +1492,16 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Interrupt Set-Enable Register %s</name>
-                <displayName>NVIC_ISER_%s</displayName>
-                <description>Enables, or reads the enable state of a group of interrupts</description>
+                <name>NVIC_ISER[%s]</name>
+                <description>Interrupt Set-Enable Register enables or reads the enable state of a group of interrupts</description>
                 <addressOffset>0x0</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>SETENA_%s</name>
-                    <description>For register NVIC_ISERn, enables or shows the current enabled state of interrupt (m+(32*n))</description>
+                    <name>SETENA[%s]</name>
+                    <description>For register ISER[n], enables or shows the current enabled state of interrupt (m+(32*n))</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
                     <dimIncrement>1</dimIncrement>
@@ -1527,17 +1519,16 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Clear-Enable Register %s</name>
-                <displayName>NVIC_ICER_%s</displayName>
-                <description>Disables, or reads the enable state of, a group of registers</description>
+                <name>NVIC_ICER[%s]</name>
+                <description>Interrupt Clear Enable Register disables or reads the enable state of a group of interrupts</description>
                 <addressOffset>0x80</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>CLRENA_%s</name>
-                    <description>For register NVIC_ICERn, disables or shows the current enabled state of interrupt (m+(32*n))</description>
+                    <name>CLRENA[%s]</name>
+                    <description>For register ICER[n], disables or shows the current enabled state of interrupt (m+(32*n))</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
                     <dimIncrement>1</dimIncrement>
@@ -1555,17 +1546,16 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Set-Pending Register %s</name>
-                <displayName>NVIC_ISPR_%s</displayName>
-                <description>For a group of interrupts, changes interrupt status to pending, or shows the current pending status</description>
+                <name>NVIC_ISPR[%s]</name>
+                <description>Interrupt Set Pending Register changes status to pending, or shows the current pending status for a group of interrupts</description>
                 <addressOffset>0x100</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>SETPEND_%s</name>
-                    <description>For register NVIC_ISPRn, changes the state of interrupt (m+(32*n)) to pending, or shows whether the state of the interrupt is pending</description>
+                    <name>SETPEND[%s]</name>
+                    <description>For register ISPR[n], changes the state of interrupt (m+(32*n)) to pending, or shows whether the state of the interrupt is pending</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
                     <dimIncrement>1</dimIncrement>
@@ -1583,17 +1573,16 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Clear-Pending Register %s</name>
-                <displayName>NVIC_ICPR_%s</displayName>
-                <description>For a group of interrupts, clears the interrupt pending status, or shows the current pending status</description>
+                <name>NVIC_ICPR[%s]</name>
+                <description>Interrupt Clear Pending Register clears the pending status, or shows the current pending status for a group of interrupts</description>
                 <addressOffset>0x180</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>CLRPEND_%s</name>
-                    <description>For register NVIC_ICPRn, clears the pending state of interrupt (m+(32*n)), or shows whether the state of the interrupt is pending</description>
+                    <name>CLRPEND[%s]</name>
+                    <description>For register ICPR[n], clears the pending state of interrupt (m+(32*n)), or shows whether the state of the interrupt is pending</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
                     <dimIncrement>1</dimIncrement>
@@ -1611,16 +1600,15 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Active Bit Register %s</name>
-                <displayName>NVIC_IABR_%s</displayName>
-                <description>For a group of 32 interrupts, shows whether each interrupt is active</description>
+                <name>NVIC_IABR[%s]</name>
+                <description>Interrupt Active Bit Register shows whether each interrupt is active for a group of 32 interrupts</description>
                 <addressOffset>0x200</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-only</access>
                 <fields>
                   <field>
-                    <name>ACTIVE_%s</name>
+                    <name>ACTIVE[%s]</name>
                     <description>For register NVIC_IABRn, shows whether interrupt (m+(32*n)) is active</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
@@ -1639,9 +1627,8 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Priority Register %s</name>
-                <displayName>NVIC_IPR_%s</displayName>
-                <description>Sets or reads interrupt priorities</description>
+                <name>IPR[%s]</name>
+                <description>Interrupt Priority Register sets or reads interrupt priorities</description>
                 <addressOffset>0x300</addressOffset>
                 <dim>124</dim>
                 <dimIncrement>4</dimIncrement>
@@ -1876,17 +1863,6 @@
                 <addressOffset>0xC</addressOffset>
                 <access>read-write</access>
                 <fields>
-                  <field>
-                    <name>VECTKEY</name>
-                    <description>Key to allow write to register</description>
-                    <bitRange>[31:16]</bitRange>
-                    <enumeratedValues>
-                      <enumeratedValue>
-                        <description>KEY</description>
-                        <value>0x05FA</value>
-                      </enumeratedValue>
-                    </enumeratedValues>
-                  </field>
                   <field>
                     <name>ENDIANNESS</name>
                     <description>Indicates the memory system endianness</description>
@@ -3741,7 +3717,7 @@
                     <bitRange>[23:21]</bitRange>
                   </field>
                   <field>
-                    <name>CType_%s</name>
+                    <name>CType[%s]</name>
                     <description>Indicates the type of cache implemented at each level</description>
                     <bitRange>[1:0]</bitRange>
                     <dim>7</dim>
@@ -3892,8 +3868,8 @@
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>CP_%s</name>
-                    <description>for n values 0-7, 10 and 11 Access privileges for coprocessor n</description>
+                    <name>CP[%s]</name>
+                    <description>Access privileges for coprocessor 0-7, 10 and 11</description>
                     <bitRange>[1:0]</bitRange>
                     <dim>16</dim>
                     <dimIncrement>2</dimIncrement>

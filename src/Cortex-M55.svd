@@ -598,16 +598,15 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Interrupt Set Enable Register %s</name>
-                <displayName>NVIC_ISER_%s</displayName>
-                <description>Enables, or reads the enable state of a group of interrupts</description>
+                <name>NVIC_ISER[%s]</name>
+                <description>Interrupt Set Enable Register enables or reads the enabled state of each group of 32 interrupts</description>
                 <addressOffset>0x0</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>SETENA_%s</name>
+                    <name>SETENA[%s]</name>
                     <description>Interrupt set-enable bits. For SETENA[m] in NVIC_ISERn, allows interrupt 32n+m to be accessed.</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
@@ -626,16 +625,15 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Clear Enable Register %s</name>
-                <displayName>NVIC_ICER_%s</displayName>
-                <description>Clears, or reads the enable state of, a group of registers</description>
+                <name>NVIC_ICER[%s]</name>
+                <description>Interrupt Clear Enable Register disables or reads the enable state of a group of interrupts</description>
                 <addressOffset>0x80</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>CLRENA_%s</name>
+                    <name>CLRENA[%s]</name>
                     <description>Interrupt clear-enable bits. For SETENA[m] in NVIC_ICERn, allows interrupt 32n+m to be accessed.</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
@@ -654,16 +652,15 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Set-Pending Register %s</name>
-                <displayName>NVIC_ISPR_%s</displayName>
-                <description>For a group of interrupts, changes interrupt status to pending, or shows the current pending status</description>
+                <name>NVIC_ISPR[%s]</name>
+                <description>Interrupt Set Pending Register changes status to pending, or shows the current pending status for a group of interrupts</description>
                 <addressOffset>0x100</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>SETPEND_%s</name>
+                    <name>SETPEND[%s]</name>
                     <description>Interrupt set-pending bits. For SETPEND[m] in NVIC_ISPRn, allows interrupt 32n + m to be accessed.</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
@@ -682,16 +679,15 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Clear Pending Register %s</name>
-                <displayName>NVIC_ICPR_%s</displayName>
-                <description>For a group of interrupts, clears the interrupt pending status, or shows the current pending status</description>
+                <name>NVIC_ICPR[%s]</name>
+                <description>Interrupt Clear Pending Register clears the pending status, or shows the current pending status for a group of interrupts</description>
                 <addressOffset>0x180</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>CLRPEND_%s</name>
+                    <name>CLRPEND[%s]</name>
                     <description>Interrupt clear-pending bits. Clears the pending state of interrupt (m+(32*n)), or shows whether the state of the interrupt is pending</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
@@ -710,16 +706,15 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Active Bit Register %s</name>
-                <displayName>NVIC_IABR_%s</displayName>
-                <description>For a group of interrupts, shows whether each interrupt is active</description>
+                <name>NVIC_IABR[%s]</name>
+                <description>Interrupt Active Bit Register shows whether each interrupt is active for a group of 32 interrupts</description>
                 <addressOffset>0x200</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-only</access>
                 <fields>
                   <field>
-                    <name>ACTIVE_%s</name>
+                    <name>ACTIVE[%s]</name>
                     <description>For ACTIVE[m] in NVIC_IABRn, indicates the active state for interrupt 32n+m.</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
@@ -738,16 +733,15 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Targete Non-Secure Register %s</name>
-                <displayName>NVIC_ITNS_%s</displayName>
-                <description>For a group of interrupts, specifies or reads whether each interrupt targets non-secure or secure state</description>
+                <name>NVIC_ITNS[%s]</name>
+                <description>Interrupt Targete Non-Secure Register specifies or reads whether each interrupt targets non-secure or secure state for a group of interrupts</description>
                 <addressOffset>0x280</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>ITNS_%s</name>
+                    <name>ITNS[%s]</name>
                     <description>For ITNS[m] in NVIC_ITNSn, this field indicates and allows modification of the target Security state for interrupt 32n+m.</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
@@ -766,9 +760,8 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Priority Register %s</name>
-                <displayName>NVIC_IPR_%s</displayName>
-                <description>Sets or reads interrupt priorities</description>
+                <name>IPR[%s]</name>
+                <description>Interrupt Priority Register sets or reads interrupt priorities</description>
                 <addressOffset>0x300</addressOffset>
                 <dim>120</dim>
                 <dimIncrement>4</dimIncrement>
@@ -3151,7 +3144,7 @@
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>CP_%s</name>
+                    <name>CP[%s]</name>
                     <description>Coprocessor %s privilege</description>
                     <bitRange>[1:0]</bitRange>
                     <dim>8</dim>
@@ -3205,7 +3198,7 @@
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>CP_%s</name>
+                    <name>CP[%s]</name>
                     <description>Enables Non-secure access to this coprocessor</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>8</dim>
@@ -3264,7 +3257,7 @@
                 <access>read-only</access>
                 <fields>
                   <field>
-                    <name>INTLINESNUM_%s</name>
+                    <name>INTLINESNUM[%s]</name>
                     <description>The total number of interrupt lines supported by an implementation, defined in groups of 32</description>
                     <bitRange>[3:0]</bitRange>
                     <dim>2</dim>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <device schemaVersion="1.3.5" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_3_5.xsd">
   <cpu>
-    <name>CM85F</name>
-    <displayName>Cortex-M85 (with FPU)</displayName>
+    <name>CM55F</name>
+    <displayName>Cortex-M55 (with FPU)</displayName>
     <groups>
       <group>
         <name>Core</name>
@@ -294,135 +294,6 @@
             <description>Process stack limit register</description>
             <Index>87</Index>
           </register>
-          <register>
-            <name>VPR</name>
-            <description>Vector Predication Status and Control Register</description>
-            <Index>92</Index>
-            <fields>
-              <field>
-                <name>MASK23</name>
-                <description>The VPT mask bits for beat 2 and 3</description>
-                <bitOffset>20</bitOffset>
-                <bitWidth>4</bitWidth>
-              </field>
-              <field>
-                <name>MASK01</name>
-                <description>The VPT mask bits for beat 0 and 1</description>
-                <bitOffset>16</bitOffset>
-                <bitWidth>4</bitWidth>
-              </field>
-              <field>
-                <name>P0</name>
-                <description>Each group of 4 bits determines the predication of each of the 4 bytes within the corresponding beat, regardless of instruction data type</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>16</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>PAC_KEY_P_0</name>
-            <description>Pointer Authentication Key Privileged Register</description>
-            <Index>93</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 0. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>PAC_KEY_P_1</name>
-            <description>Pointer Authentication Key Privileged Register</description>
-            <Index>94</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 1. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>PAC_KEY_P_2</name>
-            <description>Pointer Authentication Key Privileged Register</description>
-            <Index>95</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 2. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>PAC_KEY_P_3</name>
-            <description>Pointer Authentication Key Privileged Register</description>
-            <Index>96</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 3. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>PAC_KEY_U_0</name>
-            <description>Pointer Authentication Key Unprivileged Register</description>
-            <Index>97</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 0. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>PAC_KEY_U_1</name>
-            <description>Pointer Authentication Key Unprivileged Register</description>
-            <Index>98</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 1. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>PAC_KEY_U_2</name>
-            <description>Pointer Authentication Key Unprivileged Register</description>
-            <Index>99</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 2. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>PAC_KEY_U_3</name>
-            <description>Pointer Authentication Key Unprivileged Register</description>
-            <Index>100</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 3. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
         </registers>
       </group>
       <group>
@@ -564,110 +435,7 @@
             <description>Banked secure process stack limit register</description>
             <Index>71</Index>
           </register>
-          <register>
-            <name>PAC_KEY_P_0_S</name>
-            <description>Banked secure pointer Authentication Key Privileged Register</description>
-            <Index>101</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 0. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>PAC_KEY_P_1_S</name>
-            <description>Banked secure pointer Authentication Key Privileged Register</description>
-            <Index>102</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 1. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>PAC_KEY_P_2_S</name>
-            <description>Banked secure pointer Authentication Key Privileged Register</description>
-            <Index>103</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Banked secure pointer authentication key, word 2. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>PAC_KEY_P_3_S</name>
-            <description>Banked secure pointer Authentication Key Privileged Register</description>
-            <Index>104</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 3. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>PAC_KEY_U_0_S</name>
-            <description>Banked secure pointer Authentication Key Unprivileged Register</description>
-            <Index>105</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 0. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>PAC_KEY_U_1_S</name>
-            <description>Banked secure pointer Authentication Key Unprivileged Register</description>
-            <Index>106</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 1. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>PAC_KEY_U_2_S</name>
-            <description>Banked secure pointer Authentication Key Unprivileged Register</description>
-            <Index>107</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 2. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>PAC_KEY_U_3_S</name>
-            <description>Banked secure pointer Authentication Key Unprivileged Register</description>
-            <Index>108</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 3. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
+
         </registers>
       </group>
       <group>
@@ -808,110 +576,6 @@
             <name>PSPLIM_NS</name>
             <description>Banked non-secure process stack limit register</description>
             <Index>73</Index>
-          </register>
-          <register>
-            <name>PAC_KEY_P_0_NS</name>
-            <description>Banked non-secure pointer Authentication Key Privileged Register</description>
-            <Index>109</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 0. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>PAC_KEY_P_1_NS</name>
-            <description>Banked non-secure pointer Authentication Key Privileged Register</description>
-            <Index>110</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 1. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>PAC_KEY_P_2_NS</name>
-            <description>Banked non-secure pointer Authentication Key Privileged Register</description>
-            <Index>111</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 2. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>PAC_KEY_P_3_NS</name>
-            <description>Banked non-secure pointer Authentication Key Privileged Register</description>
-            <Index>112</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 3. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>PAC_KEY_U_0_NS</name>
-            <description>Banked non-secure pointer Authentication Key Unprivileged Register</description>
-            <Index>113</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 0. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>PAC_KEY_U_1_NS</name>
-            <description>Banked non-secure pointer Authentication Key Unprivileged Register</description>
-            <Index>114</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 1. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>PAC_KEY_U_2_NS</name>
-            <description>Banked non-secure pointer Authentication Key Unprivileged Register</description>
-            <Index>115</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 2. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>PAC_KEY_U_3_NS</name>
-            <description>Banked non-secure pointer Authentication Key Unprivileged Register</description>
-            <Index>116</Index>
-            <fields>
-              <field>
-                <name>VALUE</name>
-                <description>Pointer authentication key, word 3. Holds bits[31 + 32n:32n] of the 128-bit key.</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>32</bitWidth>
-              </field>
-            </fields>
           </register>
         </registers>
       </group>
@@ -1278,9 +942,9 @@
           <register>
             <name>FPSCR</name>
             <type>unsigned int</type>
+            <size>32</size>
             <description>Floating point status and control register</description>
             <Index>32</Index>
-            <size>32</size>
             <fields>
               <field>
                 <name>IOC</name>
@@ -1577,16 +1241,15 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Interrupt Set Enable Register %s</name>
-                <displayName>NVIC_ISER_%s</displayName>
-                <description>Enables, or reads the enable state of a group of interrupts</description>
+                <name>NVIC_ISER[%s]</name>
+                <description>Interrupt Set Enable Register enables or reads the enabled state of each group of 32 interrupts</description>
                 <addressOffset>0x0</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>SETENA_%s</name>
+                    <name>SETENA[%s]</name>
                     <description>Interrupt set-enable bits. For SETENA[m] in NVIC_ISERn, allows interrupt 32n+m to be accessed.</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
@@ -1605,16 +1268,15 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Clear Enable Register %s</name>
-                <displayName>NVIC_ICER_%s</displayName>
-                <description>Clears, or reads the enable state of, a group of registers</description>
+                <name>NVIC_ICER[%s]</name>
+                <description>Interrupt Clear Enable Register disables or reads the enable state of a group of interrupts</description>
                 <addressOffset>0x80</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>CLRENA_%s</name>
+                    <name>CLRENA[%s]</name>
                     <description>Interrupt clear-enable bits. For SETENA[m] in NVIC_ICERn, allows interrupt 32n+m to be accessed.</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
@@ -1633,16 +1295,15 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Set-Pending Register %s</name>
-                <displayName>NVIC_ISPR_%s</displayName>
-                <description>For a group of interrupts, changes interrupt status to pending, or shows the current pending status</description>
+                <name>NVIC_ISPR[%s]</name>
+                <description>Interrupt Set Pending Register changes status to pending, or shows the current pending status for a group of interrupts</description>
                 <addressOffset>0x100</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>SETPEND_%s</name>
+                    <name>SETPEND[%s]</name>
                     <description>Interrupt set-pending bits. For SETPEND[m] in NVIC_ISPRn, allows interrupt 32n + m to be accessed.</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
@@ -1661,16 +1322,15 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Clear Pending Register %s</name>
-                <displayName>NVIC_ICPR_%s</displayName>
-                <description>For a group of interrupts, clears the interrupt pending status, or shows the current pending status</description>
+                <name>NVIC_ICPR[%s]</name>
+                <description>Interrupt Clear Pending Register clears the pending status, or shows the current pending status for a group of interrupts</description>
                 <addressOffset>0x180</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>CLRPEND_%s</name>
+                    <name>CLRPEND[%s]</name>
                     <description>Interrupt clear-pending bits. Clears the pending state of interrupt (m+(32*n)), or shows whether the state of the interrupt is pending</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
@@ -1689,16 +1349,15 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Active Bit Register %s</name>
-                <displayName>NVIC_IABR_%s</displayName>
-                <description>For a group of interrupts, shows whether each interrupt is active</description>
+                <name>NVIC_IABR[%s]</name>
+                <description>Interrupt Active Bit Register shows whether each interrupt is active for a group of 32 interrupts</description>
                 <addressOffset>0x200</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-only</access>
                 <fields>
                   <field>
-                    <name>ACTIVE_%s</name>
+                    <name>ACTIVE[%s]</name>
                     <description>For ACTIVE[m] in NVIC_IABRn, indicates the active state for interrupt 32n+m.</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
@@ -1717,16 +1376,15 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Targete Non-Secure Register %s</name>
-                <displayName>NVIC_ITNS_%s</displayName>
-                <description>For a group of interrupts, specifies or reads whether each interrupt targets non-secure or secure state</description>
+                <name>NVIC_ITNS[%s]</name>
+                <description>Interrupt Targete Non-Secure Register specifies or reads whether each interrupt targets non-secure or secure state for a group of interrupts</description>
                 <addressOffset>0x280</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>ITNS_%s</name>
+                    <name>ITNS[%s]</name>
                     <description>For ITNS[m] in NVIC_ITNSn, this field indicates and allows modification of the target Security state for interrupt 32n+m.</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
@@ -1745,9 +1403,8 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Priority Register %s</name>
-                <displayName>NVIC_IPR_%s</displayName>
-                <description>Sets or reads interrupt priorities</description>
+                <name>IPR[%s]</name>
+                <description>Interrupt Priority Register sets or reads interrupt priorities</description>
                 <addressOffset>0x300</addressOffset>
                 <dim>120</dim>
                 <dimIncrement>4</dimIncrement>
@@ -1785,7 +1442,7 @@
                   <field>
                     <name>INTID</name>
                     <description>Interrupt ID of the interrupt to trigger, in the range 0-479.</description>
-                    <bitRange>[8:0]</bitRange>
+                    <bitRange>[0:8]</bitRange>
                   </field>
                 </fields>
               </register>
@@ -2395,6 +2052,11 @@
                     <name>PRI_14</name>
                     <description>Priority of system handler 14, PendSV</description>
                     <bitRange>[23:16]</bitRange>
+                  </field>
+                  <field>
+                    <name>PRI_12</name>
+                    <description>Priority of system handler 12, DebugMonitor</description>
+                    <bitRange>[7:0]</bitRange>
                   </field>
                 </fields>
               </register>
@@ -3340,38 +3002,6 @@
                 <description>no information available</description>
                 <addressOffset>0x4C</addressOffset>
                 <access>read-only</access>
-                <fields>
-                  <field>
-                    <name>UDE</name>
-                    <description>Indicates support for the Unprivileged Debug Extension</description>
-                    <bitRange>[21:28]</bitRange>
-                    <enumeratedValues>
-                      <enumeratedValue>
-                        <value>0</value>
-                        <description>Unprivileged Debug Extension is not implemented</description>
-                      </enumeratedValue>
-                      <enumeratedValue>
-                        <value>1</value>
-                        <description>Unprivileged Debug Extension is implemented</description>
-                      </enumeratedValue>
-                    </enumeratedValues>
-                  </field>
-                  <field>
-                    <name>MProfDbg</name>
-                    <description>Indicates the supported M-Proﬁle debug architecture</description>
-                    <bitRange>[23:20]</bitRange>
-                    <enumeratedValues>
-                      <enumeratedValue>
-                        <value>0</value>
-                        <description>Halting debug is not implemented</description>
-                      </enumeratedValue>
-                      <enumeratedValue>
-                        <value>2</value>
-                        <description>Halting debug is implemented</description>
-                      </enumeratedValue>
-                    </enumeratedValues>
-                  </field>
-                </fields>
               </register>
               <register>
                 <name>Auxiliary Feature Register 0</name>
@@ -4157,7 +3787,7 @@
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>CP_%s</name>
+                    <name>CP[%s]</name>
                     <description>Coprocessor %s privilege</description>
                     <bitRange>[1:0]</bitRange>
                     <dim>8</dim>
@@ -4211,7 +3841,7 @@
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>CP_%s</name>
+                    <name>CP[%s]</name>
                     <description>Enables Non-secure access to this coprocessor</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>8</dim>
@@ -4270,7 +3900,7 @@
                 <access>read-only</access>
                 <fields>
                   <field>
-                    <name>INTLINESNUM_%s</name>
+                    <name>INTLINESNUM[%s]</name>
                     <description>The total number of interrupt lines supported by an implementation, defined in groups of 32</description>
                     <bitRange>[3:0]</bitRange>
                     <dim>2</dim>
@@ -4301,6 +3931,34 @@
                     </enumeratedValues>
                   </field>
                   <field>
+                    <name>DISGSO</name>
+                    <description>Disable gather and scatter optimization for contiguous accesses</description>
+                    <bitRange>[18:18]</bitRange>
+                  </field>
+                  <field>
+                    <name>DISDI</name>
+                    <description>Disable dual-issue features</description>
+                    <bitRange>[17:16]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <value>0</value>
+                        <description>Full dual-issue, if DISFOLD is set to 0</description>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <value>1</value>
+                        <description>Disable dual-issue of arithmetic instructions</description>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <value>2</value>
+                        <description>Disable lane swapping</description>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <value>3</value>
+                        <description>Disable dual-issue of arithmetic instructions and lane swapping</description>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
                     <name>DISCRITAXIRUR</name>
                     <description>Disable critical AXI Read-Under-Read</description>
                     <bitRange>[15:15]</bitRange>
@@ -4312,36 +3970,6 @@
                       <enumeratedValue>
                         <value>1</value>
                         <description>AXI reads to Device memory and exclusive reads to shared memory are not initiated on the M-AXI read address channels if there are any outstanding reads on the M-AXI</description>
-                      </enumeratedValue>
-                    </enumeratedValues>
-                  </field>
-                  <field>
-                    <name>EVENTBUSEN</name>
-                    <description>Activate EVENTBUS output</description>
-                    <bitRange>[14:14]</bitRange>
-                    <enumeratedValues>
-                      <enumeratedValue>
-                        <value>0</value>
-                        <description>EVENTBUSEN is accessible by both Security states</description>
-                      </enumeratedValue>
-                      <enumeratedValue>
-                        <value>1</value>
-                        <description>EVENTBUSEN is accessible by Secure state only</description>
-                      </enumeratedValue>
-                    </enumeratedValues>
-                  </field>
-                  <field>
-                    <name>EVENTBUSEN_S</name>
-                    <description>Accessibility of EVENTBUSEN</description>
-                    <bitRange>[13:13]</bitRange>
-                    <enumeratedValues>
-                      <enumeratedValue>
-                        <value>0</value>
-                        <description>EVENTBUSEN is accessible by both Security states</description>
-                      </enumeratedValue>
-                      <enumeratedValue>
-                        <value>1</value>
-                        <description>EVENTBUSEN is accessible by Secure state only</description>
                       </enumeratedValue>
                     </enumeratedValues>
                   </field>
@@ -4387,6 +4015,61 @@
                       <enumeratedValue>
                         <value>1</value>
                         <description>Floating-point exception outputs are disabled</description>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>DISOLAP</name>
+                    <description>Disable overlapping of all instructions</description>
+                    <bitRange>[7:7]</bitRange>
+                  </field>
+                  <field>
+                    <name>DISOLAPS</name>
+                    <description>Disable overlapping of scalar-only instructions</description>
+                    <bitRange>[6:6]</bitRange>
+                  </field>
+                  <field>
+                    <name>DISLO</name>
+                    <description>Disable low overhead loops</description>
+                    <bitRange>[4:4]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <value>0</value>
+                        <description>Low overhead loops enabled</description>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <value>1</value>
+                        <description>Low overhead loops disabled</description>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>DISFOLD</name>
+                    <description>Determines whether dual-issue functionality is disabled</description>
+                    <bitRange>[2:2]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <value>0</value>
+                        <description>Normal operation</description>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <value>1</value>
+                        <description>Dual-issue functionality is disabled</description>
+                      </enumeratedValue>
+                    </enumeratedValues>
+                  </field>
+                  <field>
+                    <name>DISMCYCINT</name>
+                    <description>Disables interruption of multi-cycle instructions</description>
+                    <bitRange>[0:0]</bitRange>
+                    <enumeratedValues>
+                      <enumeratedValue>
+                        <value>0</value>
+                        <description>Normal operation</description>
+                      </enumeratedValue>
+                      <enumeratedValue>
+                        <value>1</value>
+                        <description>Disables interruption of multi-cycle instructions</description>
                       </enumeratedValue>
                     </enumeratedValues>
                   </field>
@@ -5650,21 +5333,6 @@
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>CPWRDN</name>
-                    <description>Indicates when the data and instruction caches are not accessible because they are either being powered down or being initialized using the automatic invalidation sequence</description>
-                    <bitRange>[17:17]</bitRange>
-                    <enumeratedValues>
-                      <enumeratedValue>
-                        <value>0</value>
-                        <description>Data and instruction cache is in normal operational state</description>
-                      </enumeratedValue>
-                      <enumeratedValue>
-                        <value>1</value>
-                        <description>Data and instruction cacheis powered down or automatic invalidation sequence is in process</description>
-                      </enumeratedValue>
-                    </enumeratedValues>
-                  </field>
-                  <field>
                     <name>DCCLEAN</name>
                     <description>Indicates whether the data cache contains any dirty lines</description>
                     <bitRange>[16:16]</bitRange>
@@ -5764,19 +5432,14 @@
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>DIS_NLP</name>
-                    <description>Disables Next Line Prefetch mode</description>
-                    <bitRange>[7:7]</bitRange>
-                    <enumeratedValues>
-                      <enumeratedValue>
-                        <value>0</value>
-                        <description>Next Line Prefetch is enabled</description>
-                      </enumeratedValue>
-                      <enumeratedValue>
-                        <value>1</value>
-                        <description>Next Line Prefetch is disabled</description>
-                      </enumeratedValue>
-                    </enumeratedValues>
+                    <name>MAX_LA</name>
+                    <description>This bit field is not used, and is RES0</description>
+                    <bitRange>[6:4]</bitRange>
+                  </field>
+                  <field>
+                    <name>MIN_LA</name>
+                    <description>This bit field is not used, and is RES0</description>
+                    <bitRange>[3:1]</bitRange>
                   </field>
                   <field>
                     <name>ENABLE</name>
@@ -6081,12 +5744,12 @@
                   <field>
                     <name>WAY</name>
                     <description>Cache way</description>
-                    <bitRange>[30:30]</bitRange>
+                    <bitRange>[31:30]</bitRange>
                   </field>
                   <field>
                     <name>SET</name>
                     <description>Set index. The number of significant bits of SET depends on the cache size.</description>
-                    <bitRange>[14:5]</bitRange>
+                    <bitRange>[13:5]</bitRange>
                   </field>
                   <field>
                     <name>OFFSET</name>
@@ -6887,6 +6550,13 @@
                 </fields>
               </register>
               <register>
+                <name>Data for TCU Error Bank Register 0</name>
+                <displayName>TEBRDATA0</displayName>
+                <description>Provides storage for corrected data that is associated with an error</description>
+                <addressOffset>0x24</addressOffset>
+                <access>read-only</access>
+              </register>
+              <register>
                 <name>TCM Error Bank Register 1</name>
                 <displayName>TEBR1</displayName>
                 <description>Record the location of errors in the TCM</description>
@@ -6991,6 +6661,13 @@
                     </enumeratedValues>
                   </field>
                 </fields>
+              </register>
+              <register>
+                <name>Data for TCU Error Bank Register 1</name>
+                <displayName>TEBRDATA1</displayName>
+                <description>Provides storage for corrected data that is associated with an error</description>
+                <addressOffset>0x2C</addressOffset>
+                <access>read-only</access>
               </register>
             </registers>
           </peripheral>
@@ -7733,21 +7410,6 @@
                       <enumeratedValue>
                         <value>1</value>
                         <description>At least one error was deferred</description>
-                      </enumeratedValue>
-                    </enumeratedValues>
-                  </field>
-                  <field>
-                    <name>POISON</name>
-                    <description>BusFault due to RPOISON or TEBRn.POISON</description>
-                    <bitRange>[22:22]</bitRange>
-                    <enumeratedValues>
-                      <enumeratedValue>
-                        <value>0</value>
-                        <description>No BusFault due to RPOISON or TEBRn.POISON has occurred</description>
-                      </enumeratedValue>
-                      <enumeratedValue>
-                        <value>1</value>
-                        <description>At least one BusFault due to RPOISON or TEBRn.POISON has occurred</description>
                       </enumeratedValue>
                     </enumeratedValues>
                   </field>

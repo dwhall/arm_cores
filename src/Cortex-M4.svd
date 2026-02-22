@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <device schemaVersion="1.3.5" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_3_5.xsd">
   <cpu>
-    <name>CM4F</name>
-    <displayName>Cortex-M4 (with FPU)</displayName>
+    <name>CM4</name>
+    <displayName>Cortex-M4</displayName>
     <groups>
       <group>
         <name>Core</name>
-        <description>All CPU Registers</description>
+        <description>CPU registers</description>
         <size>32</size>
         <access>RW</access>
         <type>unsigned int</type>
@@ -315,561 +315,6 @@
         </registers>
       </group>
       <group>
-        <name>FPU</name>
-        <description>FPU Registers</description>
-        <size>32</size>
-        <access>RW</access>
-        <type>float</type>
-        <registers>
-          <register>
-            <name>FPSCR</name>
-            <type>unsigned int</type>
-            <description>Floating point status and control register</description>
-            <Index>32</Index>
-            <fields>
-              <field>
-                <name>IOC</name>
-                <description>Invalid operation cumulative flag</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>DZC</name>
-                <description>Division by zero cumulative flag</description>
-                <bitOffset>1</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>OFC</name>
-                <description>Overflow cumulative flag</description>
-                <bitOffset>2</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>UFC</name>
-                <description>Underflow cumulative flag</description>
-                <bitOffset>3</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>IXC</name>
-                <description>Inexact cumulative flag</description>
-                <bitOffset>4</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>IDC</name>
-                <description>Input subnormal cumulative flag</description>
-                <bitOffset>7</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>IOE</name>
-                <description>Invalid operation exception enable bit</description>
-                <bitOffset>8</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>DZE</name>
-                <description>Division by Zero exception enable bit</description>
-                <bitOffset>9</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>OFE</name>
-                <description>Overflow exception enable bit</description>
-                <bitOffset>10</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>UFE</name>
-                <description>Underflow exception enable bit</description>
-                <bitOffset>11</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>IXE</name>
-                <description>Inexact exception enable bit</description>
-                <bitOffset>12</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>IDE</name>
-                <description>Input Subnormal exception enable bit</description>
-                <bitOffset>13</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>IDE</name>
-                <description>Input Subnormal exception enable bit</description>
-                <bitOffset>13</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>Len</name>
-                <description>Vector length</description>
-                <bitOffset>16</bitOffset>
-                <bitWidth>3</bitWidth>
-              </field>
-              <field>
-                <name>Stride</name>
-                <description>Stride control</description>
-                <bitOffset>20</bitOffset>
-                <bitWidth>2</bitWidth>
-              </field>
-              <field>
-                <name>R-Mode</name>
-                <description>Rounding mode control</description>
-                <bitOffset>22</bitOffset>
-                <bitWidth>2</bitWidth>
-              </field>
-              <field>
-                <name>FZ</name>
-                <description>Flush-to-zero mode enable bit</description>
-                <bitOffset>24</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>DN</name>
-                <description>Default NaN mode enable bit</description>
-                <bitOffset>25</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>QC</name>
-                <description>Saturation cumulative flag</description>
-                <bitOffset>27</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>V</name>
-                <description>Set if comparison produces an unordered result</description>
-                <bitOffset>28</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>C</name>
-                <description>Set if comparison produces an equal, greater than, or unordered result</description>
-                <bitOffset>29</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>Z</name>
-                <description>Set if comparison produces an equal result</description>
-                <bitOffset>30</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>S0</name>
-            <description>Floating point register 0</description>
-            <Index>33</Index>
-          </register>
-          <register>
-            <name>S1</name>
-            <description>Floating point register 1</description>
-            <Index>34</Index>
-          </register>
-          <register>
-            <name>S2</name>
-            <description>Floating point register 2</description>
-            <Index>35</Index>
-          </register>
-          <register>
-            <name>S3</name>
-            <description>Floating point register 3</description>
-            <Index>36</Index>
-          </register>
-          <register>
-            <name>S4</name>
-            <description>Floating point register 4</description>
-            <Index>37</Index>
-          </register>
-          <register>
-            <name>S5</name>
-            <description>Floating point register 5</description>
-            <Index>38</Index>
-          </register>
-          <register>
-            <name>S6</name>
-            <description>Floating point register 6</description>
-            <Index>39</Index>
-          </register>
-          <register>
-            <name>S7</name>
-            <description>Floating point register 7</description>
-            <Index>40</Index>
-          </register>
-          <register>
-            <name>S8</name>
-            <description>Floating point register 8</description>
-            <Index>41</Index>
-          </register>
-          <register>
-            <name>S9</name>
-            <description>Floating point register 9</description>
-            <Index>42</Index>
-          </register>
-          <register>
-            <name>S10</name>
-            <description>Floating point register 10</description>
-            <Index>43</Index>
-          </register>
-          <register>
-            <name>S11</name>
-            <description>Floating point register 11</description>
-            <Index>44</Index>
-          </register>
-          <register>
-            <name>S12</name>
-            <description>Floating point register 12</description>
-            <Index>45</Index>
-          </register>
-          <register>
-            <name>S13</name>
-            <description>Floating point register 13</description>
-            <Index>46</Index>
-          </register>
-          <register>
-            <name>S14</name>
-            <description>Floating point register 14</description>
-            <Index>47</Index>
-          </register>
-          <register>
-            <name>S15</name>
-            <description>Floating point register 15</description>
-            <Index>48</Index>
-          </register>
-          <register>
-            <name>S16</name>
-            <description>Floating point register 16</description>
-            <Index>49</Index>
-          </register>
-          <register>
-            <name>S17</name>
-            <description>Floating point register 17</description>
-            <Index>50</Index>
-          </register>
-          <register>
-            <name>S18</name>
-            <description>Floating point register 18</description>
-            <Index>51</Index>
-          </register>
-          <register>
-            <name>S19</name>
-            <description>Floating point register 19</description>
-            <Index>52</Index>
-          </register>
-          <register>
-            <name>S20</name>
-            <description>Floating point register 20</description>
-            <Index>53</Index>
-          </register>
-          <register>
-            <name>S21</name>
-            <description>Floating point register 21</description>
-            <Index>54</Index>
-          </register>
-          <register>
-            <name>S22</name>
-            <description>Floating point register 22</description>
-            <Index>55</Index>
-          </register>
-          <register>
-            <name>S23</name>
-            <description>Floating point register 23</description>
-            <Index>56</Index>
-          </register>
-          <register>
-            <name>S24</name>
-            <description>Floating point register 24</description>
-            <Index>57</Index>
-          </register>
-          <register>
-            <name>S25</name>
-            <description>Floating point register 25</description>
-            <Index>58</Index>
-          </register>
-          <register>
-            <name>S26</name>
-            <description>Floating point register 26</description>
-            <Index>59</Index>
-          </register>
-          <register>
-            <name>S27</name>
-            <description>Floating point register 27</description>
-            <Index>60</Index>
-          </register>
-          <register>
-            <name>S28</name>
-            <description>Floating point register 28</description>
-            <Index>61</Index>
-          </register>
-          <register>
-            <name>S29</name>
-            <description>Floating point register 29</description>
-            <Index>62</Index>
-          </register>
-          <register>
-            <name>S30</name>
-            <description>Floating point register 30</description>
-            <Index>63</Index>
-          </register>
-          <register>
-            <name>S31</name>
-            <description>Floating point register 31</description>
-            <Index>64</Index>
-          </register>
-        </registers>
-      </group>
-      <group>
-        <name>FPU (Double)</name>
-        <description>FPU Registers (double-precision)</description>
-        <size>64</size>
-        <access>RW</access>
-        <type>double</type>
-        <registers>
-          <register>
-            <name>FPSCR</name>
-            <type>unsigned int</type>
-            <description>Floating point status and control register</description>
-            <size>32</size>
-            <Index>32</Index>
-            <fields>
-              <field>
-                <name>IOC</name>
-                <description>Invalid operation cumulative flag</description>
-                <bitOffset>0</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>DZC</name>
-                <description>Division by zero cumulative flag</description>
-                <bitOffset>1</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>OFC</name>
-                <description>Overflow cumulative flag</description>
-                <bitOffset>2</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>UFC</name>
-                <description>Underflow cumulative flag</description>
-                <bitOffset>3</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>IXC</name>
-                <description>Inexact cumulative flag</description>
-                <bitOffset>4</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>IDC</name>
-                <description>Input subnormal cumulative flag</description>
-                <bitOffset>7</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>IOE</name>
-                <description>Invalid operation exception enable bit</description>
-                <bitOffset>8</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>DZE</name>
-                <description>Division by Zero exception enable bit</description>
-                <bitOffset>9</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>OFE</name>
-                <description>Overflow exception enable bit</description>
-                <bitOffset>10</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>UFE</name>
-                <description>Underflow exception enable bit</description>
-                <bitOffset>11</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>IXE</name>
-                <description>Inexact exception enable bit</description>
-                <bitOffset>12</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>IDE</name>
-                <description>Input Subnormal exception enable bit</description>
-                <bitOffset>13</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>IDE</name>
-                <description>Input Subnormal exception enable bit</description>
-                <bitOffset>13</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>Len</name>
-                <description>Vector length</description>
-                <bitOffset>16</bitOffset>
-                <bitWidth>3</bitWidth>
-              </field>
-              <field>
-                <name>Stride</name>
-                <description>Stride control</description>
-                <bitOffset>20</bitOffset>
-                <bitWidth>2</bitWidth>
-              </field>
-              <field>
-                <name>R-Mode</name>
-                <description>Rounding mode control</description>
-                <bitOffset>22</bitOffset>
-                <bitWidth>2</bitWidth>
-              </field>
-              <field>
-                <name>FZ</name>
-                <description>Flush-to-zero mode enable bit</description>
-                <bitOffset>24</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>DN</name>
-                <description>Default NaN mode enable bit</description>
-                <bitOffset>25</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>QC</name>
-                <description>Saturation cumulative flag</description>
-                <bitOffset>27</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>V</name>
-                <description>Set if comparison produces an unordered result</description>
-                <bitOffset>28</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>C</name>
-                <description>Set if comparison produces an equal, greater than, or unordered result</description>
-                <bitOffset>29</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-              <field>
-                <name>Z</name>
-                <description>Set if comparison produces an equal result</description>
-                <bitOffset>30</bitOffset>
-                <bitWidth>1</bitWidth>
-              </field>
-            </fields>
-          </register>
-          <register>
-            <name>D0</name>
-            <description>Floating point register 0</description>
-            <Index1>33</Index1>
-            <Index2>34</Index2>
-          </register>
-          <register>
-            <name>D1</name>
-            <description>Floating point register 1</description>
-            <Index1>35</Index1>
-            <Index2>36</Index2>
-          </register>
-          <register>
-            <name>D2</name>
-            <description>Floating point register 2</description>
-            <Index1>37</Index1>
-            <Index2>38</Index2>
-          </register>
-          <register>
-            <name>D3</name>
-            <description>Floating point register 3</description>
-            <Index1>39</Index1>
-            <Index2>40</Index2>
-          </register>
-          <register>
-            <name>D4</name>
-            <description>Floating point register 4</description>
-            <Index1>41</Index1>
-            <Index2>42</Index2>
-          </register>
-          <register>
-            <name>D5</name>
-            <description>Floating point register 5</description>
-            <Index1>43</Index1>
-            <Index2>44</Index2>
-          </register>
-          <register>
-            <name>D6</name>
-            <description>Floating point register 6</description>
-            <Index1>45</Index1>
-            <Index2>46</Index2>
-          </register>
-          <register>
-            <name>D7</name>
-            <description>Floating point register 7</description>
-            <Index1>47</Index1>
-            <Index2>48</Index2>
-          </register>
-          <register>
-            <name>D8</name>
-            <description>Floating point register 8</description>
-            <Index1>49</Index1>
-            <Index2>50</Index2>
-          </register>
-          <register>
-            <name>D9</name>
-            <description>Floating point register 9</description>
-            <Index1>51</Index1>
-            <Index2>52</Index2>
-          </register>
-          <register>
-            <name>D10</name>
-            <description>Floating point register 10</description>
-            <Index1>53</Index1>
-            <Index2>54</Index2>
-          </register>
-          <register>
-            <name>D11</name>
-            <description>Floating point register 11</description>
-            <Index1>55</Index1>
-            <Index2>56</Index2>
-          </register>
-          <register>
-            <name>D12</name>
-            <description>Floating point register 12</description>
-            <Index1>57</Index1>
-            <Index2>58</Index2>
-          </register>
-          <register>
-            <name>D13</name>
-            <description>Floating point register 13</description>
-            <Index1>59</Index1>
-            <Index2>60</Index2>
-          </register>
-          <register>
-            <name>D14</name>
-            <description>Floating point register 14</description>
-            <Index1>61</Index1>
-            <Index2>62</Index2>
-          </register>
-          <register>
-            <name>D15</name>
-            <description>Floating point register 15</description>
-            <Index1>63</Index1>
-            <Index2>64</Index2>
-          </register>
-        </registers>
-      </group>
-      <group>
         <name>Peripherals</name>
         <description>Memory-Mapped CPU Registers</description>
         <size>32</size>
@@ -888,9 +333,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Stimulus Port Register %s</name>
-                <displayName>ITM_STIM_%s</displayName>
-                <description>Provides the interface for generating instrumentation messages</description>
+                <name>ITM_STIM[%s]</name>
+                <description>Stimulus Port Register provides the interface for generating instrumentation messages</description>
                 <addressOffset>0x0</addressOffset>
                 <dim>256</dim>
                 <dimIncrement>4</dimIncrement>
@@ -919,9 +363,8 @@
                 </fields>
               </register>
               <register>
-                <name>Trace Enable Register %s</name>
-                <displayName>ITM_TER_%s</displayName>
-                <description>Provide an individual enable bit for each ITM_STIM register</description>
+                <name>ITM_TER[%s]</name>
+                <description>Trace Enable Register provides an individual enable bit for each STIM register</description>
                 <addressOffset>0xE00</addressOffset>
                 <dim>8</dim>
                 <dimIncrement>4</dimIncrement>
@@ -1122,9 +565,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Control register</name>
-                <displayName>DWT_CTRL</displayName>
-                <description>Provides configuration and status information for the DWT unit, and used to control features of the unit</description>
+                <name>DWT_CTRL</name>
+                <description>Data Watchpoint Trace Control Register provides configuration and status information and control of the unit</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1473,9 +915,8 @@
                 </fields>
               </register>
               <register>
-                <name>Comparator register</name>
-                <displayName>DWT_COMP_%s</displayName>
-                <description>Provides a reference value for use by comparator n</description>
+                <name>DWT_COMP[%s]</name>
+                <description>Comparator register provides a reference value for use by watchpoint comparator n</description>
                 <addressOffset>0x20</addressOffset>
                 <access>read-write</access>
                 <dim>16</dim>
@@ -1489,9 +930,8 @@
                 </fields>
               </register>
               <register>
-                <name>Comparator Mask Register %s</name>
-                <displayName>DWT_MASK_%s</displayName>
-                <description>Provides the size of the ignore mask applied to the access address for address range matching by comparator n</description>
+                <name>DWT_MASK[%s]</name>
+                <description>Comparator Mask register provides the size of the ignore mask applied to the access address for address range matching by comparator n</description>
                 <addressOffset>0x24</addressOffset>
                 <access>read-write</access>
                 <dim>16</dim>
@@ -1505,9 +945,8 @@
                 </fields>
               </register>
               <register>
-                <name>Comparator Function Register %s</name>
-                <displayName>DWT_FUNCTION_%s</displayName>
-                <description>Controls the operation of comparator n</description>
+                <name>DWT_FUNCTION[%s]</name>
+                <description>Data Watchpoint Trace Comparator Function Register</description>
                 <addressOffset>0x28</addressOffset>
                 <access>read-write</access>
                 <dim>16</dim>
@@ -1633,7 +1072,7 @@
             </registers>
           </peripheral>
           <peripheral>
-            <name>DPB</name>
+            <name>FPB</name>
             <description>Flash Patch and Breakpoint</description>
             <groupName></groupName>
             <baseAddress>0xE0002000</baseAddress>
@@ -1644,7 +1083,7 @@
             </addressBlock>
             <registers>
               <register>
-                <name>FlashPatch Control Register</name>
+                <name>Flash Patch Control Register</name>
                 <displayName>FP_CTRL</displayName>
                 <description>Provides FPB implementation information, and the global enable for the FPB unit</description>
                 <addressOffset>0x0</addressOffset>
@@ -1703,7 +1142,7 @@
                 </fields>
               </register>
               <register>
-                <name>FlashPatch Remap register</name>
+                <name>Flash Patch Remap register</name>
                 <displayName>FP_REMAP</displayName>
                 <description>Indicates whether the implementation supports flash patch remap, and if it does, holds the SRAM address for remap</description>
                 <addressOffset>0x4</addressOffset>
@@ -1732,9 +1171,8 @@
                 </fields>
               </register>
               <register>
-                <name>FlashPatch Comparator Register %s</name>
-                <displayName>FP_COMP_%s</displayName>
-                <description>Holds an address for comparison with addresses in the Code memory region</description>
+                <name>FP_COMP[%s]</name>
+                <description>Flash Patch Comparator Register holds an address for comparison with addresses in the Code memory region</description>
                 <addressOffset>0x8</addressOffset>
                 <access>read-write</access>
                 <dim>8</dim>
@@ -1746,7 +1184,7 @@
                     <bitRange>[31:30]</bitRange>
                     <enumeratedValues>
                       <enumeratedValue>
-                        <description>Remap to remap address</description>
+                        <description>Remap to remap address, see Flash Patch Remap register</description>
                         <value>0</value>
                       </enumeratedValue>
                       <enumeratedValue>
@@ -1871,7 +1309,7 @@
                 <access>read-only</access>
                 <fields>
                   <field>
-                    <name>INTLINESNUM_%s</name>
+                    <name>INTLINESNUM[%s]</name>
                     <description>The total number of interrupt lines supported by an implementation, defined in groups of 32</description>
                     <bitRange>[3:0]</bitRange>
                     <dim>2</dim>
@@ -2054,17 +1492,16 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Interrupt Set-Enable Register %s</name>
-                <displayName>NVIC_ISER_%s</displayName>
-                <description>Enables, or reads the enable state of a group of interrupts</description>
+                <name>NVIC_ISER[%s]</name>
+                <description>Interrupt Set-Enable Register enables or reads the enable state of a group of interrupts</description>
                 <addressOffset>0x0</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>SETENA_%s</name>
-                    <description>For register NVIC_ISERn, enables or shows the current enabled state of interrupt (m+(32*n))</description>
+                    <name>SETENA[%s]</name>
+                    <description>For register ISER[n], enables or shows the current enabled state of interrupt (m+(32*n))</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
                     <dimIncrement>1</dimIncrement>
@@ -2082,17 +1519,16 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Clear-Enable Register %s</name>
-                <displayName>NVIC_ICER_%s</displayName>
-                <description>Disables, or reads the enable state of, a group of registers</description>
+                <name>NVIC_ICER[%s]</name>
+                <description>Interrupt Clear Enable Register disables or reads the enable state of a group of interrupts</description>
                 <addressOffset>0x80</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>CLRENA_%s</name>
-                    <description>For register NVIC_ICERn, disables or shows the current enabled state of interrupt (m+(32*n))</description>
+                    <name>CLRENA[%s]</name>
+                    <description>For register ICER[n], disables or shows the current enabled state of interrupt (m+(32*n))</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
                     <dimIncrement>1</dimIncrement>
@@ -2110,17 +1546,16 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Set-Pending Register %s</name>
-                <displayName>NVIC_ISPR_%s</displayName>
-                <description>For a group of interrupts, changes interrupt status to pending, or shows the current pending status</description>
+                <name>NVIC_ISPR[%s]</name>
+                <description>Interrupt Set Pending Register changes status to pending, or shows the current pending status for a group of interrupts</description>
                 <addressOffset>0x100</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>SETPEND_%s</name>
-                    <description>For register NVIC_ISPRn, changes the state of interrupt (m+(32*n)) to pending, or shows whether the state of the interrupt is pending</description>
+                    <name>SETPEND[%s]</name>
+                    <description>For register ISPR[n], changes the state of interrupt (m+(32*n)) to pending, or shows whether the state of the interrupt is pending</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
                     <dimIncrement>1</dimIncrement>
@@ -2138,17 +1573,16 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Clear-Pending Register %s</name>
-                <displayName>NVIC_ICPR_%s</displayName>
-                <description>For a group of interrupts, clears the interrupt pending status, or shows the current pending status</description>
+                <name>NVIC_ICPR[%s]</name>
+                <description>Interrupt Clear Pending Register clears the pending status, or shows the current pending status for a group of interrupts</description>
                 <addressOffset>0x180</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>CLRPEND_%s</name>
-                    <description>For register NVIC_ICPRn, clears the pending state of interrupt (m+(32*n)), or shows whether the state of the interrupt is pending</description>
+                    <name>CLRPEND[%s]</name>
+                    <description>For register ICPR[n], clears the pending state of interrupt (m+(32*n)), or shows whether the state of the interrupt is pending</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
                     <dimIncrement>1</dimIncrement>
@@ -2166,16 +1600,15 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Active Bit Register %s</name>
-                <displayName>NVIC_IABR_%s</displayName>
-                <description>For a group of 32 interrupts, shows whether each interrupt is active</description>
+                <name>NVIC_IABR[%s]</name>
+                <description>Interrupt Active Bit Register shows whether each interrupt is active for a group of 32 interrupts</description>
                 <addressOffset>0x200</addressOffset>
                 <dim>16</dim>
                 <dimIncrement>4</dimIncrement>
                 <access>read-only</access>
                 <fields>
                   <field>
-                    <name>ACTIVE_%s</name>
+                    <name>ACTIVE[%s]</name>
                     <description>For register NVIC_IABRn, shows whether interrupt (m+(32*n)) is active</description>
                     <bitRange>[0:0]</bitRange>
                     <dim>32</dim>
@@ -2194,9 +1627,8 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Priority Register %s</name>
-                <displayName>NVIC_IPR_%s</displayName>
-                <description>Sets or reads interrupt priorities</description>
+                <name>IPR[%s]</name>
+                <description>Interrupt Priority Register sets or reads interrupt priorities</description>
                 <addressOffset>0x300</addressOffset>
                 <dim>124</dim>
                 <dimIncrement>4</dimIncrement>
@@ -3569,7 +3001,7 @@
                 <access>read-only</access>
                 <fields>
                   <field>
-                    <name>M profile debug model</name>
+                    <name>Debug model, M profile</name>
                     <description>Support for memory-mapped debug model for M profile processors</description>
                     <bitRange>[23:20]</bitRange>
                     <enumeratedValues>
@@ -4296,7 +3728,7 @@
                     <bitRange>[23:21]</bitRange>
                   </field>
                   <field>
-                    <name>CType_%s</name>
+                    <name>CType[%s]</name>
                     <description>Indicates the type of cache implemented at each level</description>
                     <bitRange>[1:0]</bitRange>
                     <dim>7</dim>
@@ -4447,8 +3879,8 @@
                 <access>read-write</access>
                 <fields>
                   <field>
-                    <name>CP_%s</name>
-                    <description>for n values 0-7, 10 and 11 Access privileges for coprocessor n</description>
+                    <name>CP[%s]</name>
+                    <description>Access privileges for coprocessor 0-7, 10 and 11</description>
                     <bitRange>[1:0]</bitRange>
                     <dim>16</dim>
                     <dimIncrement>2</dimIncrement>
@@ -5562,6 +4994,13 @@
                 <description>Invalidate instruction cache line by address to PoU</description>
                 <addressOffset>0x8</addressOffset>
                 <access>write-only</access>
+                <fields>
+                  <field>
+                    <name>ADDRESS</name>
+                    <description>Address. Writing to this field initiates the maintenance operation for the address written</description>
+                    <bitRange>[31:0]</bitRange>
+                  </field>
+                </fields>
               </register>
               <register>
                 <name>Data Cache line Invalidate by Address to PoC</name>
@@ -5569,6 +5008,13 @@
                 <description>Invalidate data or unified cache line by address to PoC</description>
                 <addressOffset>0xC</addressOffset>
                 <access>write-only</access>
+                <fields>
+                  <field>
+                    <name>ADDRESS</name>
+                    <description>Address. Writing to this field initiates the maintenance operation for the address written</description>
+                    <bitRange>[31:0]</bitRange>
+                  </field>
+                </fields>
               </register>
               <register>
                 <name>Data Cache line Invalidate by Set/Way</name>
@@ -5595,6 +5041,13 @@
                 <description>Clean data or unified cache line by address to PoU</description>
                 <addressOffset>0x14</addressOffset>
                 <access>write-only</access>
+                <fields>
+                  <field>
+                    <name>ADDRESS</name>
+                    <description>Address. Writing to this field initiates the maintenance operation for the address written</description>
+                    <bitRange>[31:0]</bitRange>
+                  </field>
+                </fields>
               </register>
               <register>
                 <name>Data Cache line Clean by Address to PoC</name>
@@ -5602,6 +5055,13 @@
                 <description>Clean data or unified cache line by address to PoC</description>
                 <addressOffset>0x18</addressOffset>
                 <access>write-only</access>
+                <fields>
+                  <field>
+                    <name>ADDRESS</name>
+                    <description>Address. Writing to this field initiates the maintenance operation for the address written</description>
+                    <bitRange>[31:0]</bitRange>
+                  </field>
+                </fields>
               </register>
               <register>
                 <name>Data Cache Clean line by Set/Way</name>
@@ -5628,6 +5088,13 @@
                 <description>Clean and invalidate data or unified cache line by address to PoC</description>
                 <addressOffset>0x20</addressOffset>
                 <access>write-only</access>
+                <fields>
+                  <field>
+                    <name>ADDRESS</name>
+                    <description>Address. Writing to this field initiates the maintenance operation for the address written</description>
+                    <bitRange>[31:0]</bitRange>
+                  </field>
+                </fields>
               </register>
               <register>
                 <name>Data Cache line Clean and Invalidate by Set/Way</name>

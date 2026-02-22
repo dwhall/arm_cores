@@ -6,10 +6,10 @@ proc doExec(cmd: string) =
   if exitCode != QuitSuccess: quit(output, exitCode)
 
 task build, "Builds all Cortex-M packages":
-  let seggerDir = joinPath(getCurrentDir(), "src", "segger")
+  let svdDir = joinPath(getCurrentDir(), "src")
   echo "minisvd2nim converting:"
-  for fullFn in listFiles(seggerDir):
+  for fullFn in listFiles(svdDir):
     let (dir, name, ext) = splitFile(fullFn)
     if name.startsWith("Cortex-M") and ext.endsWith("svd"):
       echo name, ext
-      doExec &"minisvd2nim --force --segger {fullFn}"
+      doExec &"minisvd2nim --force {fullFn}"
