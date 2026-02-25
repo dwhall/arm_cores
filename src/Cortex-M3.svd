@@ -382,9 +382,8 @@
                 </fields>
               </register>
               <register>
-                <name>Trace Privilege Register</name>
-                <displayName>ITM_TPR</displayName>
-                <description>Controls which stimulus ports can be accessed by unprivileged code</description>
+                <name>ITM_TPR</name>
+                <description>Trace Privilege Register controls which stimulus ports can be accessed by unprivileged code</description>
                 <addressOffset>0xE40</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -406,9 +405,8 @@
                 </fields>
               </register>
               <register>
-                <name>Trace Control Register</name>
-                <displayName>ITM_TCR</displayName>
-                <description>Configures and controls transfers through the ITM interface</description>
+                <name>ITM_TCR</name>
+                <description>Trace Control Register configures and controls transfers through the ITM interface</description>
                 <addressOffset>0xE80</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -811,9 +809,8 @@
                 </fields>
               </register>
               <register>
-                <name>Cycle Count register</name>
-                <displayName>DWT_CYCCNT</displayName>
-                <description>Shows or sets the value of the processor cycle counter, CYCCNT</description>
+                <name>DWT_CYCCNT</name>
+                <description>Cycle Count register shows or sets the value of the processor cycle counter, CYCCNT</description>
                 <addressOffset>0x4</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -825,9 +822,8 @@
                 </fields>
               </register>
               <register>
-                <name>CPI Count register</name>
-                <displayName>DWT_CPICNT</displayName>
-                <description>Counts additional cycles required to execute multi-cycle instructions and instruction fetch stalls</description>
+                <name>DWT_CPICNT</name>
+                <description>CPI Count register counts additional cycles required to execute multi-cycle instructions and instruction fetch stalls</description>
                 <addressOffset>0x8</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -839,9 +835,8 @@
                 </fields>
               </register>
               <register>
-                <name>Exception Overhead Count register</name>
-                <displayName>DWT_EXCCNT</displayName>
-                <description>Counts the total cycles spent in exception processing</description>
+                <name>DWT_EXCCNT</name>
+                <description>Exception Overhead Count register counts the total cycles spent in exception processing</description>
                 <addressOffset>0xC</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -853,9 +848,8 @@
                 </fields>
               </register>
               <register>
-                <name>Sleep Count register</name>
-                <displayName>DWT_SLEEPCNT</displayName>
-                <description>Counts the total number of cycles that the processor is sleeping</description>
+                <name>DWT_SLEEPCNT</name>
+                <description>Sleep Count register counts the total number of cycles that the processor is sleeping</description>
                 <addressOffset>0x10</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -867,9 +861,8 @@
                 </fields>
               </register>
               <register>
-                <name>LSU Count register</name>
-                <displayName>DWT_LSUCNT</displayName>
-                <description>Increments on the additional cycles required to execute all load or store instructions</description>
+                <name>DWT_LSUCNT</name>
+                <description>LSU Count register increments on the additional cycles required to execute all load or store instructions</description>
                 <addressOffset>0x14</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -881,9 +874,8 @@
                 </fields>
               </register>
               <register>
-                <name>Folded-instruction Count register</name>
-                <displayName>DWT_FOLDCNT</displayName>
-                <description>Increments on each instruction that takes 0 cycles</description>
+                <name>DWT_FOLDCNT</name>
+                <description>Folded-instruction Count register increments on each instruction that takes 0 cycles</description>
                 <addressOffset>0x18</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -895,9 +887,8 @@
                 </fields>
               </register>
               <register>
-                <name>Program Counter Sample Register</name>
-                <displayName>DWT_PCSR</displayName>
-                <description>Samples the current value of the program counter</description>
+                <name>DWT_PCSR</name>
+                <description>Program Counter Sample Register samples the current value of the program counter</description>
                 <addressOffset>0x1C</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -1077,9 +1068,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Flash Patch Control Register</name>
-                <displayName>FP_CTRL</displayName>
-                <description>Provides FPB implementation information, and the global enable for the FPB unit</description>
+                <name>FP_CTRL</name>
+                <description>Flash Patch Control Register provides FPB implementation information, and the global enable for the FPB unit</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1136,9 +1126,8 @@
                 </fields>
               </register>
               <register>
-                <name>Flash Patch Remap register</name>
-                <displayName>FP_REMAP</displayName>
-                <description>Indicates whether the implementation supports flash patch remap, and if it does, holds the SRAM address for remap</description>
+                <name>FP_REMAP</name>
+                <description>Flash Patch Remap register indicates whether the implementation supports flash patch remap, and if it does, holds the SRAM address for remap</description>
                 <addressOffset>0x4</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1296,9 +1285,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Interrupt Controller Type Register</name>
-                <displayName>ICTR</displayName>
-                <description>Provides information about the interrupt controller</description>
+                <name>ICTR</name>
+                <description>Interrupt Controller Type Register provides information about the interrupt controller</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -1312,9 +1300,8 @@
                 </fields>
               </register>
               <register>
-                <name>Auxiliary Control Register</name>
-                <displayName>ACTLR</displayName>
-                <description>Provides IMPLEMENTATION DEFINED configuration and control options</description>
+                <name>ACTLR</name>
+                <description>Auxiliary Control Register provides IMPLEMENTATION DEFINED configuration and control options</description>
                 <addressOffset>0x4</addressOffset>
                 <access>read-write</access>
               </register>
@@ -1332,9 +1319,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>SysTick Control and Status Register</name>
-                <displayName>SYST_CSR</displayName>
-                <description>Controls the system timer and provides status data</description>
+                <name>SYST_CSR</name>
+                <description>SysTick Control and Status Register controls the system timer and provides status data</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1401,9 +1387,8 @@
                 </fields>
               </register>
               <register>
-                <name>SysTick Reload Value Register</name>
-                <displayName>SYST_RVR</displayName>
-                <description>Holds the reload value of the SYST_CVR</description>
+                <name>SYST_RVR</name>
+                <description>SysTick Reload Value Register holds the reload value of the SYST_CVR</description>
                 <addressOffset>0x4</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1415,9 +1400,8 @@
                 </fields>
               </register>
               <register>
-                <name>SysTick Current Value Register</name>
-                <displayName>SYST_CVR</displayName>
-                <description>Reads or clears the current counter value</description>
+                <name>SYST_CVR</name>
+                <description>SysTick Current Value Register reads or clears the current counter value</description>
                 <addressOffset>0x8</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1429,9 +1413,8 @@
                 </fields>
               </register>
               <register>
-                <name>SysTick Calibration value Register</name>
-                <displayName>SYST_CALIB</displayName>
-                <description>Reads the calibration value and parameters for SysTick</description>
+                <name>SYST_CALIB</name>
+                <description>SysTick Calibration value Register reads the calibration value and parameters for SysTick</description>
                 <addressOffset>0xC</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -1664,9 +1647,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>CPUID Base Register</name>
-                <displayName>CPUID</displayName>
-                <description>Provides identification information for the processor</description>
+                <name>CPUID</name>
+                <description>CPUID Base Register provides identification information for the processor</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -1698,9 +1680,8 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Control and State Register</name>
-                <displayName>ICSR</displayName>
-                <description>Provides software control of the NMI, PendSV, and SysTick exceptions, and provides interrupt status information</description>
+                <name>ICSR</name>
+                <description>Interrupt Control and State Register provides software control of the NMI, PendSV, and SysTick exceptions, and provides interrupt status information</description>
                 <addressOffset>0x4</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1837,9 +1818,8 @@
                 </fields>
               </register>
               <register>
-                <name>Vector Table Offset Register</name>
-                <displayName>VTOR</displayName>
-                <description>Holds the vector table address</description>
+                <name>VTOR</name>
+                <description>Vector Table Offset Register holds the vector table address</description>
                 <addressOffset>0x8</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1851,9 +1831,8 @@
                 </fields>
               </register>
               <register>
-                <name>Application Interrupt and Reset Control Register</name>
-                <displayName>AIRCR</displayName>
-                <description>Sets or returns interrupt control data</description>
+                <name>AIRCR</name>
+                <description>Application Interrupt and Reset Control Register sets or returns interrupt control data</description>
                 <addressOffset>0xC</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1905,9 +1884,8 @@
                 </fields>
               </register>
               <register>
-                <name>System Control Register</name>
-                <displayName>SCR</displayName>
-                <description>Sets or returns system control data</description>
+                <name>SCR</name>
+                <description>System Control Register sets or returns system control data</description>
                 <addressOffset>0x10</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1959,9 +1937,8 @@
                 </fields>
               </register>
               <register>
-                <name>Configuration and Control Register</name>
-                <displayName>CCR</displayName>
-                <description>Sets or returns configuration and control data, and provides control over caching and branch prediction</description>
+                <name>CCR</name>
+                <description>Configuration and Control Register sets or returns configuration and control data, and provides control over caching and branch prediction</description>
                 <addressOffset>0x14</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -2103,9 +2080,8 @@
                 </fields>
               </register>
               <register>
-                <name>System Handler Priority Register 1</name>
-                <displayName>SHPR1</displayName>
-                <description>Sets or returns priority for system handlers 4-7</description>
+                <name>SHPR1</name>
+                <description>System Handler Priority Register 1 sets or returns priority for system handlers 4-7</description>
                 <addressOffset>0x18</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -2132,9 +2108,8 @@
                 </fields>
               </register>
               <register>
-                <name>System Handler Priority Register 2</name>
-                <displayName>SHPR2</displayName>
-                <description>Sets or returns priority for system handlers 8-11</description>
+                <name>SHPR2</name>
+                <description>System Handler Priority Register 2 sets or returns priority for system handlers 8-11</description>
                 <addressOffset>0x1C</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -2161,9 +2136,8 @@
                 </fields>
               </register>
               <register>
-                <name>System Handler Priority Register 3</name>
-                <displayName>SHPR3</displayName>
-                <description>Sets or returns priority for system handlers 12-15</description>
+                <name>SHPR3</name>
+                <description>System Handler Priority Register 3 sets or returns priority for system handlers 12-15</description>
                 <addressOffset>0x20</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -2190,9 +2164,8 @@
                 </fields>
               </register>
               <register>
-                <name>System Handler Control and State Register</name>
-                <displayName>SHCSR</displayName>
-                <description>Controls and provides the active and pending status of system exceptions</description>
+                <name>SHCSR</name>
+                <description>System Handler Control and State Register controls and provides the active and pending status of system exceptions</description>
                 <addressOffset>0x24</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -2409,9 +2382,8 @@
                 </fields>
               </register>
               <register>
-                <name>Configurable Fault Status Register</name>
-                <displayName>CFSR</displayName>
-                <description>Contains the three Configurable Fault Status Registers</description>
+                <name>CFSR</name>
+                <description>Configurable Fault Status Register contains the three Configurable Fault Status Registers</description>
                 <addressOffset>0x28</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -2433,9 +2405,8 @@
                 </fields>
               </register>
               <register>
-                <name>Usage Fault Status Register</name>
-                <displayName>UFSR</displayName>
-                <description>Provides information on UsageFault exceptions</description>
+                <name>UFSR</name>
+                <description>Usage Fault Status Register provides information on UsageFault exceptions</description>
                 <addressOffset>0x28</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -2532,9 +2503,8 @@
                 </fields>
               </register>
               <register>
-                <name>Bus Fault Status Register</name>
-                <displayName>BFSR</displayName>
-                <description>Provides information on BusFault exceptions</description>
+                <name>BFSR</name>
+                <description>Bus Fault Status Register provides information on BusFault exceptions</description>
                 <addressOffset>0x28</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -2646,9 +2616,8 @@
                 </fields>
               </register>
               <register>
-                <name>MemManage Fault Status Register</name>
-                <displayName>MMFSR</displayName>
-                <description>Provides information on MemManage exceptions</description>
+                <name>MMFSR</name>
+                <description>MemManage Fault Status Register provides information on MemManage exceptions</description>
                 <addressOffset>0x28</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -2745,9 +2714,8 @@
                 </fields>
               </register>
               <register>
-                <name>HardFault Status Register</name>
-                <displayName>HFSR</displayName>
-                <description>Shows the cause of any HardFault</description>
+                <name>HFSR</name>
+                <description>HardFault Status Register shows the cause of any HardFault</description>
                 <addressOffset>0x2C</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -2799,9 +2767,8 @@
                 </fields>
               </register>
               <register>
-                <name>Debug Fault Status Register</name>
-                <displayName>DFSR</displayName>
-                <description>Shows which debug event occurred</description>
+                <name>DFSR</name>
+                <description>Debug Fault Status Register shows which debug event occurred</description>
                 <addressOffset>0x30</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -2883,30 +2850,26 @@
                 </fields>
               </register>
               <register>
-                <name>MemManage Fault Address Register</name>
-                <displayName>MMFAR</displayName>
-                <description>Shows the address of the memory location that caused an MPU fault</description>
+                <name>MMFAR</name>
+                <description>MemManage Fault Address Register shows the address of the memory location that caused an MPU fault</description>
                 <addressOffset>0x34</addressOffset>
                 <access>read-write</access>
               </register>
               <register>
-                <name>BusFault Address Register</name>
-                <displayName>BFAR</displayName>
-                <description>Shows the address associated with a precise data access BusFault</description>
+                <name>BFAR</name>
+                <description>BusFault Address Register shows the address associated with a precise data access BusFault</description>
                 <addressOffset>0x38</addressOffset>
                 <access>read-write</access>
               </register>
               <register>
-                <name>Auxiliary Fault Status Register</name>
-                <displayName>AFSR</displayName>
-                <description>Provides implementation-specific fault status information and control</description>
+                <name>AFSR</name>
+                <description>Auxiliary Fault Status Register provides implementation-specific fault status information and control</description>
                 <addressOffset>0x3C</addressOffset>
                 <access>read-write</access>
               </register>
               <register>
-                <name>Processor Feature Register 0</name>
-                <displayName>ID_PFR0</displayName>
-                <description>Gives top-level information about the instruction sets supported by the processor</description>
+                <name>ID_PFR0</name>
+                <description>Processor Feature Register 0 gives top-level information about the instruction sets supported by the processor</description>
                 <addressOffset>0x40</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2949,9 +2912,8 @@
                 </fields>
               </register>
               <register>
-                <name>Processor Feature Register 1</name>
-                <displayName>ID_PFR1</displayName>
-                <description>Gives top-level information about the instruction sets supported by the processor</description>
+                <name>ID_PFR1</name>
+                <description>Processor Feature Register 1 gives top-level information about the instruction sets supported by the processor</description>
                 <addressOffset>0x44</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2977,9 +2939,8 @@
                 </fields>
               </register>
               <register>
-                <name>Debug Feature Register 0</name>
-                <displayName>ID_DFR0</displayName>
-                <description>Gives top-level information about the debug system used in the processor</description>
+                <name>ID_DFR0</name>
+                <description>Debug Feature Register 0 gives top-level information about the debug system used in the processor</description>
                 <addressOffset>0x48</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -3001,16 +2962,14 @@
                 </fields>
               </register>
               <register>
-                <name>Auxiliary Feature Register 0</name>
-                <displayName>ID_AFR0</displayName>
-                <description>Gives information about the IMPLEMENTATION DEFINED features of a processor implementation</description>
+                <name>ID_AFR0</name>
+                <description>Auxiliary Feature Register 0 gives information about the IMPLEMENTATION DEFINED features of a processor implementation</description>
                 <addressOffset>0x4C</addressOffset>
                 <access>read-only</access>
               </register>
               <register>
-                <name>Memory Model Feature Register 0</name>
-                <displayName>ID_MMFR0</displayName>
-                <description>Gives information about the implemented memory model and memory management support</description>
+                <name>ID_MMFR0</name>
+                <description>Memory Model Feature Register 0 gives information about the implemented memory model and memory management support</description>
                 <addressOffset>0x50</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -3104,16 +3063,14 @@
                 </fields>
               </register>
               <register>
-                <name>Memory Model Feature Register 1</name>
-                <displayName>ID_MMFR1</displayName>
-                <description>Gives information about the implemented memory model and memory management support</description>
+                <name>ID_MMFR1</name>
+                <description>Memory Model Feature Register 1 gives information about the implemented memory model and memory management support</description>
                 <addressOffset>0x54</addressOffset>
                 <access>read-only</access>
               </register>
               <register>
-                <name>Memory Model Feature Register 2</name>
-                <displayName>ID_MMFR2</displayName>
-                <description>Gives information about the implemented memory model and memory management support</description>
+                <name>ID_MMFR2</name>
+                <description>Memory Model Feature Register 2 gives information about the implemented memory model and memory management support</description>
                 <addressOffset>0x58</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -3135,16 +3092,14 @@
                 </fields>
               </register>
               <register>
-                <name>Memory Model Feature Register 3</name>
-                <displayName>ID_MMFR3</displayName>
-                <description>Gives information about the implemented memory model and memory management support</description>
+                <name>ID_MMFR3</name>
+                <description>Memory Model Feature Register 3 gives information about the implemented memory model and memory management support</description>
                 <addressOffset>0x5C</addressOffset>
                 <access>read-only</access>
               </register>
               <register>
-                <name>Instruction Set Attribute Register 0</name>
-                <displayName>ID_ISAR0</displayName>
-                <description>Gives information about the instruction sets implemented by the processor</description>
+                <name>ID_ISAR0</name>
+                <description>Instruction Set Attribute Register 0 gives information about the instruction sets implemented by the processor</description>
                 <addressOffset>0x60</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -3249,9 +3204,8 @@
                 </fields>
               </register>
               <register>
-                <name>Instruction Set Attribute Register 1</name>
-                <displayName>ID_ISAR1</displayName>
-                <description>Gives information about the instruction sets implemented by the processor</description>
+                <name>ID_ISAR1</name>
+                <description>Instruction Set Attribute Register 1 gives information about the instruction sets implemented by the processor</description>
                 <addressOffset>0x64</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -3330,9 +3284,8 @@
                 </fields>
               </register>
               <register>
-                <name>Instruction Set Attribute Register 2</name>
-                <displayName>ID_ISAR2</displayName>
-                <description>Gives information about the instruction sets implemented by the processor</description>
+                <name>ID_ISAR2</name>
+                <description>Instruction Set Attribute Register 2 gives information about the instruction sets implemented by the processor</description>
                 <addressOffset>0x68</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -3472,9 +3425,8 @@
                 </fields>
               </register>
               <register>
-                <name>Instruction Set Attribute Register 3</name>
-                <displayName>ID_ISAR3</displayName>
-                <description>Gives information about the instruction sets implemented by the processor</description>
+                <name>ID_ISAR3</name>
+                <description>Instruction Set Attribute Register 3 gives information about the instruction sets implemented by the processor</description>
                 <addressOffset>0x6C</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -3584,9 +3536,8 @@
                 </fields>
               </register>
               <register>
-                <name>Instruction Set Attribute Register 4</name>
-                <displayName>ID_ISAR4</displayName>
-                <description>Gives information about the instruction sets implemented by the processor</description>
+                <name>ID_ISAR4</name>
+                <description>Instruction Set Attribute Register 4 gives information about the instruction sets implemented by the processor</description>
                 <addressOffset>0x70</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -3689,9 +3640,8 @@
                 </fields>
               </register>
               <register>
-                <name>Cache Level ID Register</name>
-                <displayName>CLIDR</displayName>
-                <description>The CLIDR identifies: ? The type of cache, or caches, implemented at each level, up to a maximum of seven levels</description>
+                <name>CLIDR</name>
+                <description>Cache Level ID Register the CLIDR identifies: ? The type of cache, or caches, implemented at each level, up to a maximum of seven levels</description>
                 <addressOffset>0x78</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -3742,9 +3692,8 @@
                 </fields>
               </register>
               <register>
-                <name>Cache Type Register</name>
-                <displayName>CTR</displayName>
-                <description>The CTR provides information about the architecture of the caches</description>
+                <name>CTR</name>
+                <description>Cache Type Register the CTR provides information about the architecture of the caches</description>
                 <addressOffset>0x7C</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -3782,9 +3731,8 @@
                 </fields>
               </register>
               <register>
-                <name>Cache Size ID Registers</name>
-                <displayName>CCSIDR</displayName>
-                <description>The CCSIDR provides information about the architecture of the caches</description>
+                <name>CCSIDR</name>
+                <description>Cache Size ID Registers the CCSIDR provides information about the architecture of the caches</description>
                 <addressOffset>0x80</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -3826,9 +3774,8 @@
                 </fields>
               </register>
               <register>
-                <name>Cache Size Selection Register</name>
-                <displayName>CSSELR</displayName>
-                <description>The CSSELR selects the current CCSIDR by specifying the required cache level</description>
+                <name>CSSELR</name>
+                <description>Cache Size Selection Register the CSSELR selects the current CCSIDR by specifying the required cache level</description>
                 <addressOffset>0x84</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -3855,9 +3802,8 @@
                 </fields>
               </register>
               <register>
-                <name>Coprocessor Access Control Register</name>
-                <displayName>CPACR</displayName>
-                <description>Specifies the access privileges for coprocessors</description>
+                <name>CPACR</name>
+                <description>Coprocessor Access Control Register specifies the access privileges for coprocessors</description>
                 <addressOffset>0x88</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -3902,9 +3848,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>MPU Type Register</name>
-                <displayName>MPU_TYPE</displayName>
-                <description>The MPU Type Register indicates how many regions the MPU support</description>
+                <name>MPU_TYPE</name>
+                <description>MPU Type Register the MPU Type Register indicates how many regions the MPU support</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -3926,9 +3871,8 @@
                 </fields>
               </register>
               <register>
-                <name>MPU Control Register</name>
-                <displayName>MPU_CTRL</displayName>
-                <description>Enables the MPU, and when the MPU is enabled, controls whether the default memory map is enabled as a background region for privileged accesses, and whether the MPU is enabled for HardFaults, NMIs</description>
+                <name>MPU_CTRL</name>
+                <description>MPU Control Register enables the MPU, and when the MPU is enabled, controls whether the default memory map is enabled as a background region for privileged accesses, and whether the MPU is enabled for HardFaults, NMIs</description>
                 <addressOffset>0x4</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -3980,9 +3924,8 @@
                 </fields>
               </register>
               <register>
-                <name>MPU Region Number Register</name>
-                <displayName>MPU_RNR</displayName>
-                <description>Selects the region currently accessed by MPU_RBAR and MPU_RASR</description>
+                <name>MPU_RNR</name>
+                <description>MPU Region Number Register selects the region currently accessed by MPU_RBAR and MPU_RASR</description>
                 <addressOffset>0x8</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -3994,9 +3937,8 @@
                 </fields>
               </register>
               <register>
-                <name>MPU Region Base Address Register</name>
-                <displayName>MPU_RBAR</displayName>
-                <description>Holds the base address of the region identified by MPU_RNR</description>
+                <name>MPU_RBAR</name>
+                <description>MPU Region Base Address Register holds the base address of the region identified by MPU_RNR</description>
                 <addressOffset>0xC</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -4031,9 +3973,8 @@
                 </fields>
               </register>
               <register>
-                <name>MPU Region Attribute and Size Register</name>
-                <displayName>MPU_RASR</displayName>
-                <description>Defines the size and access behavior of the region identified by MPU_RNR, and enables that region</description>
+                <name>MPU_RASR</name>
+                <description>MPU Region Attribute and Size Register defines the size and access behavior of the region identified by MPU_RNR, and enables that region</description>
                 <addressOffset>0x10</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -4093,9 +4034,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Debug Halting Control and Status Register</name>
-                <displayName>DHCSR</displayName>
-                <description>Controls halting debug</description>
+                <name>DHCSR</name>
+                <description>Debug Halting Control and Status Register controls halting debug</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -4272,9 +4212,8 @@
                 </fields>
               </register>
               <register>
-                <name>Debug Core Register Selector Register</name>
-                <displayName>DCRSR</displayName>
-                <description>provides debug access to the ARM core registers, special-purpose registers, and Floating-point extension regi</description>
+                <name>DCRSR</name>
+                <description>Debug Core Register Selector Register provides debug access to the ARM core registers, special-purpose registers, and Floating-point extension regi</description>
                 <addressOffset>0x4</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -4335,9 +4274,8 @@
                 </fields>
               </register>
               <register>
-                <name>Debug Core Register Data Register</name>
-                <displayName>DCRDR</displayName>
-                <description>provides debug access to the ARM core registers, special-purpose registers, and Floating-point extensio</description>
+                <name>DCRDR</name>
+                <description>Debug Core Register Data Register provides debug access to the ARM core registers, special-purpose registers, and Floating-point extensio</description>
                 <addressOffset>0x8</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -4349,9 +4287,8 @@
                 </fields>
               </register>
               <register>
-                <name>Debug Exception and Monitor Control Register</name>
-                <displayName>DEMCR</displayName>
-                <description>Manages vector catch behavior and DebugMonitor handling when debugging</description>
+                <name>DEMCR</name>
+                <description>Debug Exception and Monitor Control Register manages vector catch behavior and DebugMonitor handling when debugging</description>
                 <addressOffset>0xC</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -4556,9 +4493,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Software Triggered Interrupt Register</name>
-                <displayName>STIR</displayName>
-                <description>Provides a mechanism for software to generate an interrupt</description>
+                <name>STIR</name>
+                <description>Software Triggered Interrupt Register provides a mechanism for software to generate an interrupt</description>
                 <addressOffset>0x0</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -4583,9 +4519,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Floating Point Context Control Register</name>
-                <displayName>FPCCR</displayName>
-                <description>Holds control data for the Floating Point Unit</description>
+                <name>FPCCR</name>
+                <description>Floating Point Context Control Register holds control data for the Floating Point Unit</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -4727,16 +4662,14 @@
                 </fields>
               </register>
               <register>
-                <name>Floating Point Context Address Register</name>
-                <displayName>FPCAR</displayName>
-                <description>Holds the location of the unpopulated floating-point register space allocated on an exception stack frame</description>
+                <name>FPCAR</name>
+                <description>Floating Point Context Address Register holds the location of the unpopulated floating-point register space allocated on an exception stack frame</description>
                 <addressOffset>0x4</addressOffset>
                 <access>read-write</access>
               </register>
               <register>
-                <name>Floating Point Default Status Control Register</name>
-                <displayName>FPDSCR</displayName>
-                <description>Holds the default values for the floating-point status control data that the processor assigns to the FPSCR when it creates a new floating-point context</description>
+                <name>FPDSCR</name>
+                <description>Floating Point Default Status Control Register holds the default values for the floating-point status control data that the processor assigns to the FPSCR when it creates a new floating-point context</description>
                 <addressOffset>0x8</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -4763,9 +4696,8 @@
                 </fields>
               </register>
               <register>
-                <name>Media and FP Feature Register 0</name>
-                <displayName>MVFR0</displayName>
-                <description>Describes the features provided by the Floating-point extension</description>
+                <name>MVFR0</name>
+                <description>Media and FP Feature Register 0 describes the features provided by the Floating-point extension</description>
                 <addressOffset>0xC</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -4864,9 +4796,8 @@
                 </fields>
               </register>
               <register>
-                <name>Media and FP Feature Register 1</name>
-                <displayName>MVFR1</displayName>
-                <description>Describes the features provided by the Floating-point extension</description>
+                <name>MVFR1</name>
+                <description>Media and FP Feature Register 1 describes the features provided by the Floating-point extension</description>
                 <addressOffset>0x10</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -4921,9 +4852,8 @@
                 </fields>
               </register>
               <register>
-                <name>Media and FP Feature Register 2</name>
-                <displayName>MVFR2</displayName>
-                <description>Describes the features provided by the floating-point extension</description>
+                <name>MVFR2</name>
+                <description>Media and FP Feature Register 2 describes the features provided by the floating-point extension</description>
                 <addressOffset>0x14</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -4958,9 +4888,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Instruction Cache Invalidate All to PoU</name>
-                <displayName>ICIALLU</displayName>
-                <description>Invalidate all instruction caches to PoU</description>
+                <name>ICIALLU</name>
+                <description>Instruction Cache Invalidate All to PoU invalidate all instruction caches to PoU</description>
                 <addressOffset>0x0</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -4972,9 +4901,8 @@
                 </fields>
               </register>
               <register>
-                <name>Instruction Cache line Invalidate by Address to PoU</name>
-                <displayName>ICIMVAU</displayName>
-                <description>Invalidate instruction cache line by address to PoU</description>
+                <name>ICIMVAU</name>
+                <description>Instruction Cache line Invalidate by Address to PoU invalidate instruction cache line by address to PoU</description>
                 <addressOffset>0x8</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -4986,9 +4914,8 @@
                 </fields>
               </register>
               <register>
-                <name>Data Cache line Invalidate by Address to PoC</name>
-                <displayName>DCIMVAC</displayName>
-                <description>Invalidate data or unified cache line by address to PoC</description>
+                <name>DCIMVAC</name>
+                <description>Data Cache line Invalidate by Address to PoC invalidate data or unified cache line by address to PoC</description>
                 <addressOffset>0xC</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -5000,9 +4927,8 @@
                 </fields>
               </register>
               <register>
-                <name>Data Cache line Invalidate by Set/Way</name>
-                <displayName>DCISW</displayName>
-                <description>Invalidate data or unified cache line by set/way</description>
+                <name>DCISW</name>
+                <description>Data Cache line Invalidate by Set/Way invalidate data or unified cache line by set/way</description>
                 <addressOffset>0x10</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -5019,9 +4945,8 @@
                 </fields>
               </register>
               <register>
-                <name>Data Cache line Clean by address to PoU</name>
-                <displayName>DCCMVAU</displayName>
-                <description>Clean data or unified cache line by address to PoU</description>
+                <name>DCCMVAU</name>
+                <description>Data Cache line Clean by address to PoU clean data or unified cache line by address to PoU</description>
                 <addressOffset>0x14</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -5033,9 +4958,8 @@
                 </fields>
               </register>
               <register>
-                <name>Data Cache line Clean by Address to PoC</name>
-                <displayName>DCCMVAC</displayName>
-                <description>Clean data or unified cache line by address to PoC</description>
+                <name>DCCMVAC</name>
+                <description>Data Cache line Clean by Address to PoC clean data or unified cache line by address to PoC</description>
                 <addressOffset>0x18</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -5047,9 +4971,8 @@
                 </fields>
               </register>
               <register>
-                <name>Data Cache Clean line by Set/Way</name>
-                <displayName>DCCSW</displayName>
-                <description>Clean data or unified cache line by set/way</description>
+                <name>DCCSW</name>
+                <description>Data Cache Clean line by Set/Way clean data or unified cache line by set/way</description>
                 <addressOffset>0x1C</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -5066,9 +4989,8 @@
                 </fields>
               </register>
               <register>
-                <name>Data Cache line Clean and Invalidate by Address to PoC</name>
-                <displayName>DCCIMVAC</displayName>
-                <description>Clean and invalidate data or unified cache line by address to PoC</description>
+                <name>DCCIMVAC</name>
+                <description>Data Cache line Clean and Invalidate by Address to PoC clean and invalidate data or unified cache line by address to PoC</description>
                 <addressOffset>0x20</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -5080,9 +5002,8 @@
                 </fields>
               </register>
               <register>
-                <name>Data Cache line Clean and Invalidate by Set/Way</name>
-                <displayName>DCCISW</displayName>
-                <description>Clean and invalidate data or unified cache line by set/way</description>
+                <name>DCCISW</name>
+                <description>Data Cache line Clean and Invalidate by Set/Way clean and invalidate data or unified cache line by set/way</description>
                 <addressOffset>0x24</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -5099,9 +5020,8 @@
                 </fields>
               </register>
               <register>
-                <name>Branch Predictor Invalidate All</name>
-                <displayName>BPIALL</displayName>
-                <description>Invalidate all entries from branch predictors</description>
+                <name>BPIALL</name>
+                <description>Branch Predictor Invalidate All invalidate all entries from branch predictors</description>
                 <addressOffset>0x28</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -5126,9 +5046,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Supported Parallel Port Sizes Register</name>
-                <displayName>TPIU_SSPSR</displayName>
-                <description>Indicates the supported parallel trace port sizes</description>
+                <name>TPIU_SSPSR</name>
+                <description>Supported Parallel Port Sizes Register indicates the supported parallel trace port sizes</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -5150,9 +5069,8 @@
                 </fields>
               </register>
               <register>
-                <name>Current Parallel Port Size Register</name>
-                <displayName>TPIU_CSPSR</displayName>
-                <description>Defines the width of the current parallel trace port</description>
+                <name>TPIU_CSPSR</name>
+                <description>Current Parallel Port Size Register defines the width of the current parallel trace port</description>
                 <addressOffset>0x4</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -5174,9 +5092,8 @@
                 </fields>
               </register>
               <register>
-                <name>Asynchronous Clock Prescaler Register</name>
-                <displayName>TPIU_ACPR</displayName>
-                <description>Defines a prescaler value for the baud rate of the Serial Wire Output (SWO)</description>
+                <name>TPIU_ACPR</name>
+                <description>Asynchronous Clock Prescaler Register defines a prescaler value for the baud rate of the Serial Wire Output (SWO)</description>
                 <addressOffset>0x10</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -5188,9 +5105,8 @@
                 </fields>
               </register>
               <register>
-                <name>Selected Pin Protocol Register</name>
-                <displayName>TPIU_SPPR</displayName>
-                <description>Selects the protocol used for trace output</description>
+                <name>TPIU_SPPR</name>
+                <description>Selected Pin Protocol Register selects the protocol used for trace output</description>
                 <addressOffset>0xF0</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -5216,9 +5132,8 @@
                 </fields>
               </register>
               <register>
-                <name>TPIU Type register</name>
-                <displayName>TPIU_TYPE</displayName>
-                <description>Defines the SWO options supported by the TPIU</description>
+                <name>TPIU_TYPE</name>
+                <description>TPIU Type register defines the SWO options supported by the TPIU</description>
                 <addressOffset>0xF00</addressOffset>
                 <access>read-only</access>
                 <fields>

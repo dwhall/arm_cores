@@ -740,9 +740,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>ITM Component Identification Register 0</name>
-                <displayName>ITM_CIDR0</displayName>
-                <description>Provides CoreSight discovery information for the ITM</description>
+                <name>ITM_CIDR0</name>
+                <description>ITM Component Identification Register 0 provides CoreSight discovery information for the ITM</description>
                 <addressOffset>0xFF0</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -754,9 +753,8 @@
                 </fields>
               </register>
               <register>
-                <name>ITM Component Identification Register 1</name>
-                <displayName>ITM_CIDR1</displayName>
-                <description>Provides CoreSight discovery information for the ITM</description>
+                <name>ITM_CIDR1</name>
+                <description>ITM Component Identification Register 1 provides CoreSight discovery information for the ITM</description>
                 <addressOffset>0xFF4</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -773,9 +771,8 @@
                 </fields>
               </register>
               <register>
-                <name>ITM Component Identification Register 2</name>
-                <displayName>ITM_CIDR2</displayName>
-                <description>Provides CoreSight discovery information for the ITM</description>
+                <name>ITM_CIDR2</name>
+                <description>ITM Component Identification Register 2 provides CoreSight discovery information for the ITM</description>
                 <addressOffset>0xFF8</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -787,9 +784,8 @@
                 </fields>
               </register>
               <register>
-                <name>ITM Component Identification Register 3</name>
-                <displayName>ITM_CIDR3</displayName>
-                <description>Provides CoreSight discovery information for the ITM</description>
+                <name>ITM_CIDR3</name>
+                <description>ITM Component Identification Register 3 provides CoreSight discovery information for the ITM</description>
                 <addressOffset>0xFFC</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -801,9 +797,8 @@
                 </fields>
               </register>
               <register>
-                <name>ITM Device Architecture Register</name>
-                <displayName>ITM_DEVARCH</displayName>
-                <description>Provides CoreSight discovery information for the ITM</description>
+                <name>ITM_DEVARCH</name>
+                <description>ITM Device Architecture Register provides CoreSight discovery information for the ITM</description>
                 <addressOffset>0xFBC</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -865,9 +860,8 @@
                 </fields>
               </register>
               <register>
-                <name>ITM Device Type Register</name>
-                <displayName>ITM_DEVTYPE</displayName>
-                <description>Provides CoreSight discovery information for the ITM</description>
+                <name>ITM_DEVTYPE</name>
+                <description>ITM Device Type Register provides CoreSight discovery information for the ITM</description>
                 <addressOffset>0xFCC</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -904,9 +898,8 @@
                 </fields>
               </register>
               <register>
-                <name>ITM Software Lock Access Register</name>
-                <displayName>ITM_LAR</displayName>
-                <description>Provides CoreSight Software Lock control for the ITM, see the CoreSight Architecture Specification for details</description>
+                <name>ITM_LAR</name>
+                <description>ITM Software Lock Access Register provides CoreSight Software Lock control for the ITM, see the CoreSight Architecture Specification for details</description>
                 <addressOffset>0xFB0</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -918,9 +911,8 @@
                 </fields>
               </register>
               <register>
-                <name>ITM Software Lock Status Register</name>
-                <displayName>ITM_LSR</displayName>
-                <description>Provides CoreSight Software Lock status information for the ITM, see the CoreSight Architecture Specification for details</description>
+                <name>ITM_LSR</name>
+                <description>ITM Software Lock Status Register provides CoreSight Software Lock status information for the ITM, see the CoreSight Architecture Specification for details</description>
                 <addressOffset>0xFB4</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -962,9 +954,8 @@
                 </fields>
               </register>
               <register>
-                <name>ITM Peripheral Identification Register 0</name>
-                <displayName>ITM_PIDR0</displayName>
-                <description>Provides CoreSight discovery information for the ITM</description>
+                <name>ITM_PIDR0</name>
+                <description>ITM Peripheral Identification Register 0 provides CoreSight discovery information for the ITM</description>
                 <addressOffset>0xFE0</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -976,9 +967,8 @@
                 </fields>
               </register>
               <register>
-                <name>ITM Peripheral Identification Register 1</name>
-                <displayName>ITM_PIDR1</displayName>
-                <description>Provides CoreSight discovery information for the ITM</description>
+                <name>ITM_PIDR1</name>
+                <description>ITM Peripheral Identification Register 1 provides CoreSight discovery information for the ITM</description>
                 <addressOffset>0xFE4</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -995,9 +985,8 @@
                 </fields>
               </register>
               <register>
-                <name>ITM Peripheral Identification Register 2</name>
-                <displayName>ITM_PIDR2</displayName>
-                <description>Provides CoreSight discovery information for the ITM</description>
+                <name>ITM_PIDR2</name>
+                <description>ITM Peripheral Identification Register 2 provides CoreSight discovery information for the ITM</description>
                 <addressOffset>0xFE8</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -1019,9 +1008,8 @@
                 </fields>
               </register>
               <register>
-                <name>ITM Peripheral Identification Register 3</name>
-                <displayName>ITM_PIDR3</displayName>
-                <description>Provides CoreSight discovery information for the ITM</description>
+                <name>ITM_PIDR3</name>
+                <description>ITM Peripheral Identification Register 3 provides CoreSight discovery information for the ITM</description>
                 <addressOffset>0xFEC</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -1038,9 +1026,8 @@
                 </fields>
               </register>
               <register>
-                <name>ITM Peripheral Identification Register 4</name>
-                <displayName>ITM_PIDR4</displayName>
-                <description>Provides CoreSight discovery information for the ITM</description>
+                <name>ITM_PIDR4</name>
+                <description>ITM Peripheral Identification Register 4 provides CoreSight discovery information for the ITM</description>
                 <addressOffset>0xFD0</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -1057,30 +1044,26 @@
                 </fields>
               </register>
               <register>
-                <name>ITM Peripheral Identification Register 5</name>
-                <displayName>ITM_PIDR5</displayName>
-                <description>Provides CoreSight discovery information for the ITM</description>
+                <name>ITM_PIDR5</name>
+                <description>ITM Peripheral Identification Register 5 provides CoreSight discovery information for the ITM</description>
                 <addressOffset>0xFD4</addressOffset>
                 <access>read-only</access>
               </register>
               <register>
-                <name>ITM Peripheral Identification Register 6</name>
-                <displayName>ITM_PIDR6</displayName>
-                <description>Provides CoreSight discovery information for the ITM</description>
+                <name>ITM_PIDR6</name>
+                <description>ITM Peripheral Identification Register 6 provides CoreSight discovery information for the ITM</description>
                 <addressOffset>0xFD8</addressOffset>
                 <access>read-only</access>
               </register>
               <register>
-                <name>ITM Peripheral Identification Register 7</name>
-                <displayName>ITM_PIDR7</displayName>
-                <description>Provides CoreSight discovery information for the ITM</description>
+                <name>ITM_PIDR7</name>
+                <description>ITM Peripheral Identification Register 7 provides CoreSight discovery information for the ITM</description>
                 <addressOffset>0xFDC</addressOffset>
                 <access>read-only</access>
               </register>
               <register>
-                <name>ITM Stimulus Port Register</name>
-                <displayName>STIM</displayName>
-                <description>Provides the interface for generating Instrumentation packets</description>
+                <name>STIM</name>
+                <description>ITM Stimulus Port Register provides the interface for generating Instrumentation packets</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1122,9 +1105,8 @@
                 </fields>
               </register>
               <register>
-                <name>ITM Trace Control Register</name>
-                <displayName>ITM_TCR</displayName>
-                <description>Configures and controls transfers through the ITM interface</description>
+                <name>ITM_TCR</name>
+                <description>ITM Trace Control Register configures and controls transfers through the ITM interface</description>
                 <addressOffset>0xE80</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1320,9 +1302,8 @@
                 </fields>
               </register>
               <register>
-                <name>ITM Trace Privilege Register</name>
-                <displayName>ITM_TPR</displayName>
-                <description>Controls which stimulus ports can be accessed by unprivileged code</description>
+                <name>ITM_TPR</name>
+                <description>ITM Trace Privilege Register controls which stimulus ports can be accessed by unprivileged code</description>
                 <addressOffset>0xE40</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1357,9 +1338,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>DWT Component Identification Register 0</name>
-                <displayName>DWT_CIDR0</displayName>
-                <description>Provides CoreSight discovery information for the DWT</description>
+                <name>DWT_CIDR0</name>
+                <description>DWT Component Identification Register 0 provides CoreSight discovery information for the DWT</description>
                 <addressOffset>0xFF0</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -1371,9 +1351,8 @@
                 </fields>
               </register>
               <register>
-                <name>DWT Component Identification Register 1</name>
-                <displayName>DWT_CIDR1</displayName>
-                <description>Provides CoreSight discovery information for the DWT</description>
+                <name>DWT_CIDR1</name>
+                <description>DWT Component Identification Register 1 provides CoreSight discovery information for the DWT</description>
                 <addressOffset>0xFF4</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -1390,9 +1369,8 @@
                 </fields>
               </register>
               <register>
-                <name>DWT Component Identification Register 2</name>
-                <displayName>DWT_CIDR2</displayName>
-                <description>Provides CoreSight discovery information for the DWT</description>
+                <name>DWT_CIDR2</name>
+                <description>DWT Component Identification Register 2 provides CoreSight discovery information for the DWT</description>
                 <addressOffset>0xFF8</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -1404,9 +1382,8 @@
                 </fields>
               </register>
               <register>
-                <name>DWT Component Identification Register 3</name>
-                <displayName>DWT_CIDR3</displayName>
-                <description>Provides CoreSight discovery information for the DWT</description>
+                <name>DWT_CIDR3</name>
+                <description>DWT Component Identification Register 3 provides CoreSight discovery information for the DWT</description>
                 <addressOffset>0xFFC</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -1448,9 +1425,8 @@
                 </fields>
               </register>
               <register>
-                <name>DWT CPI Count Register</name>
-                <displayName>DWT_CPICNT</displayName>
-                <description>Counts additional cycles required to execute multicycle instructions and instruction fetch stalls</description>
+                <name>DWT_CPICNT</name>
+                <description>DWT CPI Count Register counts additional cycles required to execute multicycle instructions and instruction fetch stalls</description>
                 <addressOffset>0x8</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1723,9 +1699,8 @@
                 </fields>
               </register>
               <register>
-                <name>DWT Cycle Count Register</name>
-                <displayName>DWT_CYCCNT</displayName>
-                <description>Shows or sets the value of the processor cycle counter, CYCCNT</description>
+                <name>DWT_CYCCNT</name>
+                <description>DWT Cycle Count Register shows or sets the value of the processor cycle counter, CYCCNT</description>
                 <addressOffset>0x4</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1737,9 +1712,8 @@
                 </fields>
               </register>
               <register>
-                <name>DWT Device Architecture Register</name>
-                <displayName>DWT_DEVARCH</displayName>
-                <description>Provides CoreSight discovery information for the DWT</description>
+                <name>DWT_DEVARCH</name>
+                <description>DWT Device Architecture Register provides CoreSight discovery information for the DWT</description>
                 <addressOffset>0xFBC</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -1801,9 +1775,8 @@
                 </fields>
               </register>
               <register>
-                <name>DWT Device Type Register</name>
-                <displayName>DWT_DEVTYPE</displayName>
-                <description>Provides CoreSight discovery information for the DWT</description>
+                <name>DWT_DEVTYPE</name>
+                <description>DWT Device Type Register provides CoreSight discovery information for the DWT</description>
                 <addressOffset>0xFCC</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -1832,9 +1805,8 @@
                 </fields>
               </register>
               <register>
-                <name>DWT Exception Overhead Count Register</name>
-                <displayName>DWT_EXCCNT</displayName>
-                <description>Counts the total cycles spent in exception processing</description>
+                <name>DWT_EXCCNT</name>
+                <description>DWT Exception Overhead Count Register counts the total cycles spent in exception processing</description>
                 <addressOffset>0xC</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1846,9 +1818,8 @@
                 </fields>
               </register>
               <register>
-                <name>DWT Folded Instruction Count Register</name>
-                <displayName>DWT_FOLDCNT</displayName>
-                <description>Increments on the additional cycles required to execute all load or store instructions</description>
+                <name>DWT_FOLDCNT</name>
+                <description>DWT Folded Instruction Count Register increments on the additional cycles required to execute all load or store instructions</description>
                 <addressOffset>0x18</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1981,9 +1952,8 @@
                 </fields>
               </register>
               <register>
-                <name>DWT Software Lock Access Register</name>
-                <displayName>DWT_LAR</displayName>
-                <description>Provides CoreSight Software Lock control for the DWT, see the CoreSight Architecture Specification for details</description>
+                <name>DWT_LAR</name>
+                <description>DWT Software Lock Access Register provides CoreSight Software Lock control for the DWT, see the CoreSight Architecture Specification for details</description>
                 <addressOffset>0xFB0</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -1995,9 +1965,8 @@
                 </fields>
               </register>
               <register>
-                <name>DWT Software Lock Status Register</name>
-                <displayName>DWT_LSR</displayName>
-                <description>Provides CoreSight Software Lock status information for the DWT, see the CoreSight Architecture Specification for details</description>
+                <name>DWT_LSR</name>
+                <description>DWT Software Lock Status Register provides CoreSight Software Lock status information for the DWT, see the CoreSight Architecture Specification for details</description>
                 <addressOffset>0xFB4</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2039,9 +2008,8 @@
                 </fields>
               </register>
               <register>
-                <name>DWT LSU Count Register</name>
-                <displayName>DWT_LSUCNT</displayName>
-                <description>Increments on the additional cycles required to execute all load or store instructions</description>
+                <name>DWT_LSUCNT</name>
+                <description>DWT LSU Count Register increments on the additional cycles required to execute all load or store instructions</description>
                 <addressOffset>0x14</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -2053,9 +2021,8 @@
                 </fields>
               </register>
               <register>
-                <name>DWT Program Counter Sample Register</name>
-                <displayName>DWT_PCSR</displayName>
-                <description>Samples the current value of the program counter</description>
+                <name>DWT_PCSR</name>
+                <description>DWT Program Counter Sample Register samples the current value of the program counter</description>
                 <addressOffset>0x1C</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2067,9 +2034,8 @@
                 </fields>
               </register>
               <register>
-                <name>DWT Peripheral Identification Register 0</name>
-                <displayName>DWT_PIDR0</displayName>
-                <description>Provides CoreSight discovery information for the DWT</description>
+                <name>DWT_PIDR0</name>
+                <description>DWT Peripheral Identification Register 0 provides CoreSight discovery information for the DWT</description>
                 <addressOffset>0xFE0</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2081,9 +2047,8 @@
                 </fields>
               </register>
               <register>
-                <name>DWT Peripheral Identification Register 1</name>
-                <displayName>DWT_PIDR1</displayName>
-                <description>Provides CoreSight discovery information for the DWT</description>
+                <name>DWT_PIDR1</name>
+                <description>DWT Peripheral Identification Register 1 provides CoreSight discovery information for the DWT</description>
                 <addressOffset>0xFE4</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2100,9 +2065,8 @@
                 </fields>
               </register>
               <register>
-                <name>DWT Peripheral Identification Register 2</name>
-                <displayName>DWT_PIDR2</displayName>
-                <description>Provides CoreSight discovery information for the DWT</description>
+                <name>DWT_PIDR2</name>
+                <description>DWT Peripheral Identification Register 2 provides CoreSight discovery information for the DWT</description>
                 <addressOffset>0xFE8</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2124,9 +2088,8 @@
                 </fields>
               </register>
               <register>
-                <name>DWT Peripheral Identification Register 3</name>
-                <displayName>DWT_PIDR3</displayName>
-                <description>Provides CoreSight discovery information for the DWT</description>
+                <name>DWT_PIDR3</name>
+                <description>DWT Peripheral Identification Register 3 provides CoreSight discovery information for the DWT</description>
                 <addressOffset>0xFEC</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2143,9 +2106,8 @@
                 </fields>
               </register>
               <register>
-                <name>DWT Peripheral Identification Register 4</name>
-                <displayName>DWT_PIDR4</displayName>
-                <description>Provides CoreSight discovery information for the DWT</description>
+                <name>DWT_PIDR4</name>
+                <description>DWT Peripheral Identification Register 4 provides CoreSight discovery information for the DWT</description>
                 <addressOffset>0xFD0</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2162,30 +2124,26 @@
                 </fields>
               </register>
               <register>
-                <name>DWT Peripheral Identification Register 5</name>
-                <displayName>DWT_PIDR5</displayName>
-                <description>Provides CoreSight discovery information for the DWT</description>
+                <name>DWT_PIDR5</name>
+                <description>DWT Peripheral Identification Register 5 provides CoreSight discovery information for the DWT</description>
                 <addressOffset>0xFD4</addressOffset>
                 <access>read-only</access>
               </register>
               <register>
-                <name>DWT Peripheral Identification Register 6</name>
-                <displayName>DWT_PIDR6</displayName>
-                <description>Provides CoreSight discovery information for the DWT</description>
+                <name>DWT_PIDR6</name>
+                <description>DWT Peripheral Identification Register 6 provides CoreSight discovery information for the DWT</description>
                 <addressOffset>0xFD8</addressOffset>
                 <access>read-only</access>
               </register>
               <register>
-                <name>DWT Peripheral Identification Register 7</name>
-                <displayName>DWT_PIDR7</displayName>
-                <description>Provides CoreSight discovery information for the DWT</description>
+                <name>DWT_PIDR7</name>
+                <description>DWT Peripheral Identification Register 7 provides CoreSight discovery information for the DWT</description>
                 <addressOffset>0xFDC</addressOffset>
                 <access>read-only</access>
               </register>
               <register>
-                <name>DWT Sleep Count Register</name>
-                <displayName>DWT_SLEEPCNT</displayName>
-                <description>Counts the total number of cycles that the processor is sleeping</description>
+                <name>DWT_SLEEPCNT</name>
+                <description>DWT Sleep Count Register counts the total number of cycles that the processor is sleeping</description>
                 <addressOffset>0x10</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -2210,9 +2168,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>FP Component Identification Register 0</name>
-                <displayName>FP_CIDR0</displayName>
-                <description>Provides CoreSight discovery information for the FP</description>
+                <name>FP_CIDR0</name>
+                <description>FP Component Identification Register 0 provides CoreSight discovery information for the FP</description>
                 <addressOffset>0xFF0</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2224,9 +2181,8 @@
                 </fields>
               </register>
               <register>
-                <name>FP Component Identification Register 1</name>
-                <displayName>FP_CIDR1</displayName>
-                <description>Provides CoreSight discovery information for the FP</description>
+                <name>FP_CIDR1</name>
+                <description>FP Component Identification Register 1 provides CoreSight discovery information for the FP</description>
                 <addressOffset>0xFF4</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2243,9 +2199,8 @@
                 </fields>
               </register>
               <register>
-                <name>FP Component Identification Register 2</name>
-                <displayName>FP_CIDR2</displayName>
-                <description>Provides CoreSight discovery information for the FP</description>
+                <name>FP_CIDR2</name>
+                <description>FP Component Identification Register 2 provides CoreSight discovery information for the FP</description>
                 <addressOffset>0xFF8</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2257,9 +2212,8 @@
                 </fields>
               </register>
               <register>
-                <name>FP Component Identification Register 3</name>
-                <displayName>FP_CIDR3</displayName>
-                <description>Provides CoreSight discovery information for the FP</description>
+                <name>FP_CIDR3</name>
+                <description>FP Component Identification Register 3 provides CoreSight discovery information for the FP</description>
                 <addressOffset>0xFFC</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2321,9 +2275,8 @@
                 </fields>
               </register>
               <register>
-                <name>Flash Patch Control Register</name>
-                <displayName>FP_CTRL</displayName>
-                <description>Provides FPB implementation information, and the global enable for the FPB unit</description>
+                <name>FP_CTRL</name>
+                <description>Flash Patch Control Register provides FPB implementation information, and the global enable for the FPB unit</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -2381,9 +2334,8 @@
                 </fields>
               </register>
               <register>
-                <name>FPB Device Architecture Register</name>
-                <displayName>FP_DEVARCH</displayName>
-                <description>Provides CoreSight discovery information for the FPB</description>
+                <name>FP_DEVARCH</name>
+                <description>FPB Device Architecture Register provides CoreSight discovery information for the FPB</description>
                 <addressOffset>0xFBC</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2449,9 +2401,8 @@
                 </fields>
               </register>
               <register>
-                <name>FPB Device Type Register</name>
-                <displayName>FP_DEVTYPE</displayName>
-                <description>Provides CoreSight discovery information for the FPB</description>
+                <name>FP_DEVTYPE</name>
+                <description>FPB Device Type Register provides CoreSight discovery information for the FPB</description>
                 <addressOffset>0xFCC</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2480,9 +2431,8 @@
                 </fields>
               </register>
               <register>
-                <name>FPB Software Lock Access Register</name>
-                <displayName>FP_LAR</displayName>
-                <description>Provides CoreSight Software Lock control for the FPB, see the CoreSight Architecture Specification for details</description>
+                <name>FP_LAR</name>
+                <description>FPB Software Lock Access Register provides CoreSight Software Lock control for the FPB, see the CoreSight Architecture Specification for details</description>
                 <addressOffset>0xFB0</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -2494,9 +2444,8 @@
                 </fields>
               </register>
               <register>
-                <name>FPB Software Lock Status Register</name>
-                <displayName>FP_LSR</displayName>
-                <description>Provides CoreSight Software Lock status information for the FPB, see the CoreSight Architecture Specification for details</description>
+                <name>FP_LSR</name>
+                <description>FPB Software Lock Status Register provides CoreSight Software Lock status information for the FPB, see the CoreSight Architecture Specification for details</description>
                 <addressOffset>0xFB4</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2538,9 +2487,8 @@
                 </fields>
               </register>
               <register>
-                <name>FP Peripheral Identification Register 0</name>
-                <displayName>FP_PIDR0</displayName>
-                <description>Provides CoreSight discovery information for the FP</description>
+                <name>FP_PIDR0</name>
+                <description>FP Peripheral Identification Register 0 provides CoreSight discovery information for the FP</description>
                 <addressOffset>0xFE0</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2552,9 +2500,8 @@
                 </fields>
               </register>
               <register>
-                <name>FP Peripheral Identification Register 1</name>
-                <displayName>FP_PIDR1</displayName>
-                <description>Provides CoreSight discovery information for the FP</description>
+                <name>FP_PIDR1</name>
+                <description>FP Peripheral Identification Register 1 provides CoreSight discovery information for the FP</description>
                 <addressOffset>0xFE4</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2571,9 +2518,8 @@
                 </fields>
               </register>
               <register>
-                <name>FP Peripheral Identification Register 2</name>
-                <displayName>FP_PIDR2</displayName>
-                <description>Provides CoreSight discovery information for the FP</description>
+                <name>FP_PIDR2</name>
+                <description>FP Peripheral Identification Register 2 provides CoreSight discovery information for the FP</description>
                 <addressOffset>0xFE8</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2595,9 +2541,8 @@
                 </fields>
               </register>
               <register>
-                <name>FP Peripheral Identification Register 3</name>
-                <displayName>FP_PIDR3</displayName>
-                <description>Provides CoreSight discovery information for the FP</description>
+                <name>FP_PIDR3</name>
+                <description>FP Peripheral Identification Register 3 provides CoreSight discovery information for the FP</description>
                 <addressOffset>0xFEC</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2614,9 +2559,8 @@
                 </fields>
               </register>
               <register>
-                <name>FP Peripheral Identification Register 4</name>
-                <displayName>FP_PIDR4</displayName>
-                <description>Provides CoreSight discovery information for the FP</description>
+                <name>FP_PIDR4</name>
+                <description>FP Peripheral Identification Register 4 provides CoreSight discovery information for the FP</description>
                 <addressOffset>0xFD0</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2633,30 +2577,26 @@
                 </fields>
               </register>
               <register>
-                <name>FP Peripheral Identification Register 5</name>
-                <displayName>FP_PIDR5</displayName>
-                <description>Provides CoreSight discovery information for the FP</description>
+                <name>FP_PIDR5</name>
+                <description>FP Peripheral Identification Register 5 provides CoreSight discovery information for the FP</description>
                 <addressOffset>0xFD4</addressOffset>
                 <access>read-only</access>
               </register>
               <register>
-                <name>FP Peripheral Identification Register 6</name>
-                <displayName>FP_PIDR6</displayName>
-                <description>Provides CoreSight discovery information for the FP</description>
+                <name>FP_PIDR6</name>
+                <description>FP Peripheral Identification Register 6 provides CoreSight discovery information for the FP</description>
                 <addressOffset>0xFD8</addressOffset>
                 <access>read-only</access>
               </register>
               <register>
-                <name>FP Peripheral Identification Register 7</name>
-                <displayName>FP_PIDR7</displayName>
-                <description>Provides CoreSight discovery information for the FP</description>
+                <name>FP_PIDR7</name>
+                <description>FP Peripheral Identification Register 7 provides CoreSight discovery information for the FP</description>
                 <addressOffset>0xFDC</addressOffset>
                 <access>read-only</access>
               </register>
               <register>
-                <name>Flash Patch Remap Register</name>
-                <displayName>FP_REMAP</displayName>
-                <description>Indicates whether the implementation supports Flash Patch remap and, if it does, holds the target address for remap</description>
+                <name>FP_REMAP</name>
+                <description>Flash Patch Remap Register indicates whether the implementation supports Flash Patch remap and, if it does, holds the target address for remap</description>
                 <addressOffset>0x4</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2696,9 +2636,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Auxiliary Control Register</name>
-                <displayName>ACTLR</displayName>
-                <description>Provides IMPLEMENTATION DEFINED configuration and control options</description>
+                <name>ACTLR</name>
+                <description>Auxiliary Control Register provides IMPLEMENTATION DEFINED configuration and control options</description>
                 <addressOffset>0x4</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -2710,9 +2649,8 @@
                 </fields>
               </register>
               <register>
-                <name>Coprocessor Power Control Register</name>
-                <displayName>CPPWR</displayName>
-                <description>Specifies whether coprocessors are permitted to enter a non-retentive power state</description>
+                <name>CPPWR</name>
+                <description>Coprocessor Power Control Register specifies whether coprocessors are permitted to enter a non-retentive power state</description>
                 <addressOffset>0x8</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -2789,9 +2727,8 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Controller Type Register</name>
-                <displayName>ICTR</displayName>
-                <description>Provides information about the interrupt controller</description>
+                <name>ICTR</name>
+                <description>Interrupt Controller Type Register provides information about the interrupt controller</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2816,9 +2753,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>SysTick Calibration Value Register</name>
-                <displayName>SYST_CALIB</displayName>
-                <description>Reads the SysTick timer calibration value and parameters for the selected Security state</description>
+                <name>SYST_CALIB</name>
+                <description>SysTick Calibration Value Register reads the SysTick timer calibration value and parameters for the selected Security state</description>
                 <addressOffset>0xC</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -2860,9 +2796,8 @@
                 </fields>
               </register>
               <register>
-                <name>SysTick Control and Status Register</name>
-                <displayName>SYST_CSR</displayName>
-                <description>Controls the SysTick timer and provides status data for the selected Security state</description>
+                <name>SYST_CSR</name>
+                <description>SysTick Control and Status Register controls the SysTick timer and provides status data for the selected Security state</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -2929,9 +2864,8 @@
                 </fields>
               </register>
               <register>
-                <name>SysTick Current Value Register</name>
-                <displayName>SYST_CVR</displayName>
-                <description>Reads or clears the SysTick timer current counter value for the selected Security state</description>
+                <name>SYST_CVR</name>
+                <description>SysTick Current Value Register reads or clears the SysTick timer current counter value for the selected Security state</description>
                 <addressOffset>0x8</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -2948,9 +2882,8 @@
                 </fields>
               </register>
               <register>
-                <name>SysTick Reload Value Register</name>
-                <displayName>SYST_RVR</displayName>
-                <description>Provides access SysTick timer counter reload value for the selected Security state</description>
+                <name>SYST_RVR</name>
+                <description>SysTick Reload Value Register provides access SysTick timer counter reload value for the selected Security state</description>
                 <addressOffset>0x4</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -3165,9 +3098,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>CPUID Base Register</name>
-                <displayName>CPUID</displayName>
-                <description>Provides identification information for the PE, including an implementer code for the device and a device ID number</description>
+                <name>CPUID</name>
+                <description>CPUID Base Register provides identification information for the PE, including an implementer code for the device and a device ID number</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -3215,9 +3147,8 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Control and State Register</name>
-                <displayName>ICSR</displayName>
-                <description>Controls and provides status information for NMI, PendSV, SysTick and interrupts</description>
+                <name>ICSR</name>
+                <description>Interrupt Control and State Register controls and provides status information for NMI, PendSV, SysTick and interrupts</description>
                 <addressOffset>0x4</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -3429,16 +3360,14 @@
                 </fields>
               </register>
               <register>
-                <name>Vector Table Offset Register</name>
-                <displayName>VTOR</displayName>
-                <description>Holds the vector table address for the selected Security state</description>
+                <name>VTOR</name>
+                <description>Vector Table Offset Register holds the vector table address for the selected Security state</description>
                 <addressOffset>0x8</addressOffset>
                 <access>read-write</access>
               </register>
               <register>
-                <name>Application Interrupt and Reset Control Register</name>
-                <displayName>AIRCR</displayName>
-                <description>Sets or returns interrupt control and reset configuration</description>
+                <name>AIRCR</name>
+                <description>Application Interrupt and Reset Control Register sets or returns interrupt control and reset configuration</description>
                 <addressOffset>0xC</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -3582,9 +3511,8 @@
                 </fields>
               </register>
               <register>
-                <name>System Control Register</name>
-                <displayName>SCR</displayName>
-                <description>Sets or returns system control data</description>
+                <name>SCR</name>
+                <description>System Control Register sets or returns system control data</description>
                 <addressOffset>0x10</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -3651,9 +3579,8 @@
                 </fields>
               </register>
               <register>
-                <name>Configuration and Control Register</name>
-                <displayName>CCR</displayName>
-                <description>Sets or returns configuration and control data</description>
+                <name>CCR</name>
+                <description>Configuration and Control Register sets or returns configuration and control data</description>
                 <addressOffset>0x14</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -3780,9 +3707,8 @@
                 </fields>
               </register>
               <register>
-                <name>System Handler Priority Register 1</name>
-                <displayName>SHPR1</displayName>
-                <description>Sets or returns priority for system handlers 4 - 7</description>
+                <name>SHPR1</name>
+                <description>System Handler Priority Register 1 sets or returns priority for system handlers 4 - 7</description>
                 <addressOffset>0x18</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -3809,9 +3735,8 @@
                 </fields>
               </register>
               <register>
-                <name>System Handler Priority Register 2</name>
-                <displayName>SHPR2</displayName>
-                <description>Sets or returns priority for system handlers 8 - 11</description>
+                <name>SHPR2</name>
+                <description>System Handler Priority Register 2 sets or returns priority for system handlers 8 - 11</description>
                 <addressOffset>0x1C</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -3838,9 +3763,8 @@
                 </fields>
               </register>
               <register>
-                <name>System Handler Priority Register 3</name>
-                <displayName>SHPR3</displayName>
-                <description>Sets or returns priority for system handlers 12 - 15</description>
+                <name>SHPR3</name>
+                <description>System Handler Priority Register 3 sets or returns priority for system handlers 12 - 15</description>
                 <addressOffset>0x20</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -3867,9 +3791,8 @@
                 </fields>
               </register>
               <register>
-                <name>System Handler Control and State Register</name>
-                <displayName>SHCSR</displayName>
-                <description>Provides access to the active and pending status of system exceptions</description>
+                <name>SHCSR</name>
+                <description>System Handler Control and State Register provides access to the active and pending status of system exceptions</description>
                 <addressOffset>0x24</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -4176,9 +4099,8 @@
                 </fields>
               </register>
               <register>
-                <name>Configurable Fault Status Register</name>
-                <displayName>CFSR</displayName>
-                <description>Contains the three Configurable Fault Status Registers</description>
+                <name>CFSR</name>
+                <description>Configurable Fault Status Register contains the three Configurable Fault Status Registers</description>
                 <addressOffset>0x28</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -4200,9 +4122,8 @@
                 </fields>
               </register>
               <register>
-                <name>Usage Fault Status Register</name>
-                <displayName>UFSR</displayName>
-                <description>Provides information on UsageFault exceptions</description>
+                <name>UFSR</name>
+                <description>Usage Fault Status Register provides information on UsageFault exceptions</description>
                 <addressOffset>0x28</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -4314,9 +4235,8 @@
                 </fields>
               </register>
               <register>
-                <name>Bus Fault Status Register</name>
-                <displayName>BFSR</displayName>
-                <description>Provides information on BusFault exceptions</description>
+                <name>BFSR</name>
+                <description>Bus Fault Status Register provides information on BusFault exceptions</description>
                 <addressOffset>0x28</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -4428,9 +4348,8 @@
                 </fields>
               </register>
               <register>
-                <name>MemManage Fault Status Register</name>
-                <displayName>MMFSR</displayName>
-                <description>Provides information on MemManage exceptions</description>
+                <name>MMFSR</name>
+                <description>MemManage Fault Status Register provides information on MemManage exceptions</description>
                 <addressOffset>0x28</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -4527,9 +4446,8 @@
                 </fields>
               </register>
               <register>
-                <name>HardFault Status Register</name>
-                <displayName>HFSR</displayName>
-                <description>Shows the cause of any HardFaults</description>
+                <name>HFSR</name>
+                <description>HardFault Status Register shows the cause of any HardFaults</description>
                 <addressOffset>0x2C</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -4577,9 +4495,8 @@
                 </fields>
               </register>
               <register>
-                <name>Debug Fault Status Register</name>
-                <displayName>DFSR</displayName>
-                <description>Shows which debug event occurred</description>
+                <name>DFSR</name>
+                <description>Debug Fault Status Register shows which debug event occurred</description>
                 <addressOffset>0x30</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -4661,9 +4578,8 @@
                 </fields>
               </register>
               <register>
-                <name>MemManage Fault Address Register</name>
-                <displayName>MMFAR</displayName>
-                <description>Shows the address of the memory location that caused an MPU fault</description>
+                <name>MMFAR</name>
+                <description>MemManage Fault Address Register shows the address of the memory location that caused an MPU fault</description>
                 <addressOffset>0x34</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -4675,16 +4591,14 @@
                 </fields>
               </register>
               <register>
-                <name>BusFault Address Register</name>
-                <displayName>BFAR</displayName>
-                <description>Shows the address associated with a precise data access BusFault</description>
+                <name>BFAR</name>
+                <description>BusFault Address Register shows the address associated with a precise data access BusFault</description>
                 <addressOffset>0x38</addressOffset>
                 <access>read-write</access>
               </register>
               <register>
-                <name>Auxiliary Fault Status Register</name>
-                <displayName>AFSR</displayName>
-                <description>Provides IMPLEMENTATION DEFINED fault status information</description>
+                <name>AFSR</name>
+                <description>Auxiliary Fault Status Register provides IMPLEMENTATION DEFINED fault status information</description>
                 <addressOffset>0x3C</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -4696,9 +4610,8 @@
                 </fields>
               </register>
               <register>
-                <name>Processor Feature Register 0</name>
-                <displayName>ID_PFR0</displayName>
-                <description>Gives top-level information about the instruction set supported by the PE</description>
+                <name>ID_PFR0</name>
+                <description>Processor Feature Register 0 gives top-level information about the instruction set supported by the PE</description>
                 <addressOffset>0x40</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -4727,9 +4640,8 @@
                 </fields>
               </register>
               <register>
-                <name>Processor Feature Register 1</name>
-                <displayName>ID_PFR1</displayName>
-                <description>Gives information about the programmers' model and Extensions support</description>
+                <name>ID_PFR1</name>
+                <description>Processor Feature Register 1 gives information about the programmers' model and Extensions support</description>
                 <addressOffset>0x44</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -4762,9 +4674,8 @@
                 </fields>
               </register>
               <register>
-                <name>Debug Feature Register 0</name>
-                <displayName>ID_DFR0</displayName>
-                <description>Provides top level information about the debug system</description>
+                <name>ID_DFR0</name>
+                <description>Debug Feature Register 0 provides top level information about the debug system</description>
                 <addressOffset>0x48</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -4786,9 +4697,8 @@
                 </fields>
               </register>
               <register>
-                <name>Auxiliary Feature Register 0</name>
-                <displayName>ID_AFR0</displayName>
-                <description>Provides information about the IMPLEMENTATION DEFINED features of the PE</description>
+                <name>ID_AFR0</name>
+                <description>Auxiliary Feature Register 0 provides information about the IMPLEMENTATION DEFINED features of the PE</description>
                 <addressOffset>0x4C</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -4800,9 +4710,8 @@
                 </fields>
               </register>
               <register>
-                <name>Memory Model Feature Register 0</name>
-                <displayName>ID_MMFR0</displayName>
-                <description>Provides information about the implemented memory model and memory management support</description>
+                <name>ID_MMFR0</name>
+                <description>Memory Model Feature Register 0 provides information about the implemented memory model and memory management support</description>
                 <addressOffset>0x50</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -4884,16 +4793,14 @@
                 </fields>
               </register>
               <register>
-                <name>Memory Model Feature Register 1</name>
-                <displayName>ID_MMFR1</displayName>
-                <description>Provides information about the implemented memory model and memory management support</description>
+                <name>ID_MMFR1</name>
+                <description>Memory Model Feature Register 1 provides information about the implemented memory model and memory management support</description>
                 <addressOffset>0x54</addressOffset>
                 <access>read-only</access>
               </register>
               <register>
-                <name>Memory Model Feature Register 2</name>
-                <displayName>ID_MMFR2</displayName>
-                <description>Provides information about the implemented memory model and memory management support</description>
+                <name>ID_MMFR2</name>
+                <description>Memory Model Feature Register 2 provides information about the implemented memory model and memory management support</description>
                 <addressOffset>0x58</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -4915,9 +4822,8 @@
                 </fields>
               </register>
               <register>
-                <name>Memory Model Feature Register 3</name>
-                <displayName>ID_MMFR3</displayName>
-                <description>Provides information about the implemented memory model and memory management support</description>
+                <name>ID_MMFR3</name>
+                <description>Memory Model Feature Register 3 provides information about the implemented memory model and memory management support</description>
                 <addressOffset>0x5C</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -4969,9 +4875,8 @@
                 </fields>
               </register>
               <register>
-                <name>Instruction Set Attribute Register 0</name>
-                <displayName>ID_ISAR0</displayName>
-                <description>Provides information about the instruction set implemented by the PE</description>
+                <name>ID_ISAR0</name>
+                <description>Instruction Set Attribute Register 0 provides information about the instruction set implemented by the PE</description>
                 <addressOffset>0x60</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -5052,9 +4957,8 @@
                 </fields>
               </register>
               <register>
-                <name>Instruction Set Attribute Register 1</name>
-                <displayName>ID_ISAR1</displayName>
-                <description>Provides information about the instruction set implemented by the PE</description>
+                <name>ID_ISAR1</name>
+                <description>Instruction Set Attribute Register 1 provides information about the instruction set implemented by the PE</description>
                 <addressOffset>0x64</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -5109,9 +5013,8 @@
                 </fields>
               </register>
               <register>
-                <name>Instruction Set Attribute Register 2</name>
-                <displayName>ID_ISAR2</displayName>
-                <description>Provides information about the instruction set implemented by the PE</description>
+                <name>ID_ISAR2</name>
+                <description>Instruction Set Attribute Register 2 provides information about the instruction set implemented by the PE</description>
                 <addressOffset>0x68</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -5211,9 +5114,8 @@
                 </fields>
               </register>
               <register>
-                <name>Instruction Set Attribute Register 3</name>
-                <displayName>ID_ISAR3</displayName>
-                <description>Provides information about the instruction set implemented by the PE</description>
+                <name>ID_ISAR3</name>
+                <description>Instruction Set Attribute Register 3 provides information about the instruction set implemented by the PE</description>
                 <addressOffset>0x6C</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -5305,9 +5207,8 @@
                 </fields>
               </register>
               <register>
-                <name>Instruction Set Attribute Register 4</name>
-                <displayName>ID_ISAR4</displayName>
-                <description>Provides information about the instruction set implemented by the PE</description>
+                <name>ID_ISAR4</name>
+                <description>Instruction Set Attribute Register 4 provides information about the instruction set implemented by the PE</description>
                 <addressOffset>0x70</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -5380,16 +5281,14 @@
                 </fields>
               </register>
               <register>
-                <name>Instruction Set Attribute Register 5</name>
-                <displayName>ID_ISAR5</displayName>
-                <description>Provides information about the instruction set implemented by the PE</description>
+                <name>ID_ISAR5</name>
+                <description>Instruction Set Attribute Register 5 provides information about the instruction set implemented by the PE</description>
                 <addressOffset>0x74</addressOffset>
                 <access>read-only</access>
               </register>
               <register>
-                <name>Cache Level ID Register</name>
-                <displayName>CLIDR</displayName>
-                <description>Identifies the type of caches implemented and the level of coherency and unification</description>
+                <name>CLIDR</name>
+                <description>Cache Level ID Register identifies the type of caches implemented and the level of coherency and unification</description>
                 <addressOffset>0x78</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -5461,9 +5360,8 @@
                 </fields>
               </register>
               <register>
-                <name>Cache Type Register</name>
-                <displayName>CTR</displayName>
-                <description>Provides information about the architecture of the caches</description>
+                <name>CTR</name>
+                <description>Cache Type Register provides information about the architecture of the caches</description>
                 <addressOffset>0x7C</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -5502,9 +5400,8 @@
                 </fields>
               </register>
               <register>
-                <name>Current Cache Size ID register</name>
-                <displayName>CCSIDR</displayName>
-                <description>The CCSIDR provides information about the architecture of the currently selected cache</description>
+                <name>CCSIDR</name>
+                <description>Current Cache Size ID register the CCSIDR provides information about the architecture of the currently selected cache</description>
                 <addressOffset>0x80</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -5581,9 +5478,8 @@
                 </fields>
               </register>
               <register>
-                <name>Cache Size Selection Register</name>
-                <displayName>CSSELR</displayName>
-                <description>Selects the current Cache Size ID Register, CCSIDR, by specifying the required cache level and the cache type (either instruction or data cache)</description>
+                <name>CSSELR</name>
+                <description>Cache Size Selection Register selects the current Cache Size ID Register, CCSIDR, by specifying the required cache level and the cache type (either instruction or data cache)</description>
                 <addressOffset>0x84</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -5640,9 +5536,8 @@
                 </fields>
               </register>
               <register>
-                <name>Coprocessor Access Control Register</name>
-                <displayName>CPACR</displayName>
-                <description>Specifies the access privileges for coprocessors and the FP Extension</description>
+                <name>CPACR</name>
+                <description>Coprocessor Access Control Register specifies the access privileges for coprocessors and the FP Extension</description>
                 <addressOffset>0x88</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -5692,9 +5587,8 @@
                 </fields>
               </register>
               <register>
-                <name>Non-secure Access Control Register</name>
-                <displayName>NSACR</displayName>
-                <description>Defines the Non-secure access permissions for both the FP Extension and coprocessors CP0 to CP7</description>
+                <name>NSACR</name>
+                <description>Non-secure Access Control Register defines the Non-secure access permissions for both the FP Extension and coprocessors CP0 to CP7</description>
                 <addressOffset>0x8C</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -5749,9 +5643,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>MPU Control Register</name>
-                <displayName>MPU_CTRL</displayName>
-                <description>Enables the MPU and, when the MPU is enabled, controls whether the default memory map is enabled as a background region for privileged accesses, and whether the MPU is enabled for HardFaults, NM</description>
+                <name>MPU_CTRL</name>
+                <description>MPU Control Register enables the MPU and, when the MPU is enabled, controls whether the default memory map is enabled as a background region for privileged accesses, and whether the MPU is enabled for HardFaults, NM</description>
                 <addressOffset>0x4</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -5803,9 +5696,8 @@
                 </fields>
               </register>
               <register>
-                <name>MPU Memory Attribute Indirection Register 0</name>
-                <displayName>MPU_MAIR0</displayName>
-                <description>Along with MPU_MAIR1, provides the memory attribute encodings corresponding to the AttrIndx values</description>
+                <name>MPU_MAIR0</name>
+                <description>MPU Memory Attribute Indirection Register 0 along with MPU_MAIR1, provides the memory attribute encodings corresponding to the AttrIndx values</description>
                 <addressOffset>0x30</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -5817,9 +5709,8 @@
                 </fields>
               </register>
               <register>
-                <name>MPU Memory Attribute Indirection Register 1</name>
-                <displayName>MPU_MAIR1</displayName>
-                <description>Along with MPU_MAIR0, provides the memory attribute encodings corresponding to the AttrIndx values</description>
+                <name>MPU_MAIR1</name>
+                <description>MPU Memory Attribute Indirection Register 1 along with MPU_MAIR0, provides the memory attribute encodings corresponding to the AttrIndx values</description>
                 <addressOffset>0x34</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -5831,9 +5722,8 @@
                 </fields>
               </register>
               <register>
-                <name>MPU Region Base Address Register</name>
-                <displayName>MPU_RBAR</displayName>
-                <description>Provides indirect read and write access to the base address of the currently selected MPU region for the selected Security state</description>
+                <name>MPU_RBAR</name>
+                <description>MPU Region Base Address Register provides indirect read and write access to the base address of the currently selected MPU region for the selected Security state</description>
                 <addressOffset>0xC</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -5970,9 +5860,8 @@
                 </fields>
               </register>
               <register>
-                <name>MPU Region Limit Address Register</name>
-                <displayName>MPU_RLAR</displayName>
-                <description>Provides indirect read and write access to the limit address of the currently selected MPU region for the selected Security state</description>
+                <name>MPU_RLAR</name>
+                <description>MPU Region Limit Address Register provides indirect read and write access to the limit address of the currently selected MPU region for the selected Security state</description>
                 <addressOffset>0x10</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -6039,9 +5928,8 @@
                 </fields>
               </register>
               <register>
-                <name>MPU Region Number Register</name>
-                <displayName>MPU_RNR</displayName>
-                <description>Selects the region currently accessed by MPU_RBAR and MPU_RLAR</description>
+                <name>MPU_RNR</name>
+                <description>MPU Region Number Register selects the region currently accessed by MPU_RBAR and MPU_RLAR</description>
                 <addressOffset>0x8</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -6053,9 +5941,8 @@
                 </fields>
               </register>
               <register>
-                <name>MPU Type Register</name>
-                <displayName>MPU_TYPE</displayName>
-                <description>The MPU Type Register indicates how many regions the MPU for the selected Security state supports</description>
+                <name>MPU_TYPE</name>
+                <description>MPU Type Register the MPU Type Register indicates how many regions the MPU for the selected Security state supports</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -6085,9 +5972,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>SAU Control Register</name>
-                <displayName>SAU_CTRL</displayName>
-                <description>Allows enabling of the Security Attribution Unit</description>
+                <name>SAU_CTRL</name>
+                <description>SAU Control Register allows enabling of the Security Attribution Unit</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -6124,9 +6010,8 @@
                 </fields>
               </register>
               <register>
-                <name>SAU Region Base Address Register</name>
-                <displayName>SAU_RBAR</displayName>
-                <description>Provides indirect read and write access to the base address of the currently selected SAU region</description>
+                <name>SAU_RBAR</name>
+                <description>SAU Region Base Address Register provides indirect read and write access to the base address of the currently selected SAU region</description>
                 <addressOffset>0xC</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -6138,9 +6023,8 @@
                 </fields>
               </register>
               <register>
-                <name>SAU Region Limit Address Register</name>
-                <displayName>SAU_RLAR</displayName>
-                <description>Provides indirect read and write access to the limit address of the currently selected SAU region</description>
+                <name>SAU_RLAR</name>
+                <description>SAU Region Limit Address Register provides indirect read and write access to the limit address of the currently selected SAU region</description>
                 <addressOffset>0x10</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -6182,9 +6066,8 @@
                 </fields>
               </register>
               <register>
-                <name>SAU Region Number Register</name>
-                <displayName>SAU_RNR</displayName>
-                <description>Selects the region currently accessed by SAU_RBAR and SAU_RLAR</description>
+                <name>SAU_RNR</name>
+                <description>SAU Region Number Register selects the region currently accessed by SAU_RBAR and SAU_RLAR</description>
                 <addressOffset>0x8</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -6196,9 +6079,8 @@
                 </fields>
               </register>
               <register>
-                <name>SAU Type Register</name>
-                <displayName>SAU_TYPE</displayName>
-                <description>Indicates the number of regions implemented by the Security Attribution Unit</description>
+                <name>SAU_TYPE</name>
+                <description>SAU Type Register indicates the number of regions implemented by the Security Attribution Unit</description>
                 <addressOffset>0x4</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -6210,9 +6092,8 @@
                 </fields>
               </register>
               <register>
-                <name>Secure Fault Address Register</name>
-                <displayName>SFAR</displayName>
-                <description>Shows the address of the memory location that caused a Security violation</description>
+                <name>SFAR</name>
+                <description>Secure Fault Address Register shows the address of the memory location that caused a Security violation</description>
                 <addressOffset>0x18</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -6224,9 +6105,8 @@
                 </fields>
               </register>
               <register>
-                <name>Secure Fault Status Register</name>
-                <displayName>SFSR</displayName>
-                <description>Provides information about any security related faults</description>
+                <name>SFSR</name>
+                <description>Secure Fault Status Register provides information about any security related faults</description>
                 <addressOffset>0x14</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -6366,9 +6246,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Debug Authentication Control Register</name>
-                <displayName>DAUTHCTRL</displayName>
-                <description>This register allows the IMPLEMENTATION DEFINED authentication interface to be overridden from software</description>
+                <name>DAUTHCTRL</name>
+                <description>Debug Authentication Control Register this register allows the IMPLEMENTATION DEFINED authentication interface to be overridden from software</description>
                 <addressOffset>0x14</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -6427,9 +6306,8 @@
                 </fields>
               </register>
               <register>
-                <name>Debug Core Register Data Register</name>
-                <displayName>DCRDR</displayName>
-                <description>provides debug access to the general-purpose registers, special-purpose registers, and the FP Extension registers</description>
+                <name>DCRDR</name>
+                <description>Debug Core Register Data Register provides debug access to the general-purpose registers, special-purpose registers, and the FP Extension registers</description>
                 <addressOffset>0x8</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -6441,9 +6319,8 @@
                 </fields>
               </register>
               <register>
-                <name>Debug Core Register Select Register</name>
-                <displayName>DCRSR</displayName>
-                <description>provides debug access to the general-purpose registers, special-purpose registers, and the FP extension registers</description>
+                <name>DCRSR</name>
+                <description>Debug Core Register Select Register provides debug access to the general-purpose registers, special-purpose registers, and the FP extension registers</description>
                 <addressOffset>0x4</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -6485,9 +6362,8 @@
                 </fields>
               </register>
               <register>
-                <name>Debug Exception and Monitor Control Register</name>
-                <displayName>DEMCR</displayName>
-                <description>Manages vector catch behavior and DebugMonitor handling when debugging</description>
+                <name>DEMCR</name>
+                <description>Debug Exception and Monitor Control Register manages vector catch behavior and DebugMonitor handling when debugging</description>
                 <addressOffset>0xC</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -6709,9 +6585,8 @@
                 </fields>
               </register>
               <register>
-                <name>Debug Halting Control and Status Register</name>
-                <displayName>DHCSR</displayName>
-                <description>Controls Halting debug</description>
+                <name>DHCSR</name>
+                <description>Debug Halting Control and Status Register controls Halting debug</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -6924,9 +6799,8 @@
                 </fields>
               </register>
               <register>
-                <name>Debug Security Control and Status Register</name>
-                <displayName>DSCSR</displayName>
-                <description>Provides control and status information for Secure debug</description>
+                <name>DSCSR</name>
+                <description>Debug Security Control and Status Register provides control and status information for Secure debug</description>
                 <addressOffset>0x18</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -7006,9 +6880,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Software Triggered Interrupt Register</name>
-                <displayName>STIR</displayName>
-                <description>Provides a mechanism for software to generate an interrupt</description>
+                <name>STIR</name>
+                <description>Software Triggered Interrupt Register provides a mechanism for software to generate an interrupt</description>
                 <addressOffset>0x0</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -7038,9 +6911,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Floating-Point Context Address Register</name>
-                <displayName>FPCAR</displayName>
-                <description>Holds the location of the unpopulated floating-point register space allocated on an exception stack frame</description>
+                <name>FPCAR</name>
+                <description>Floating-Point Context Address Register holds the location of the unpopulated floating-point register space allocated on an exception stack frame</description>
                 <addressOffset>0x4</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -7052,9 +6924,8 @@
                 </fields>
               </register>
               <register>
-                <name>Floating-Point Context Control Register</name>
-                <displayName>FPCCR</displayName>
-                <description>Holds control data for the Floating-point extension</description>
+                <name>FPCCR</name>
+                <description>Floating-Point Context Control Register holds control data for the Floating-point extension</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -7306,9 +7177,8 @@
                 </fields>
               </register>
               <register>
-                <name>Floating-Point Default Status Control Register</name>
-                <displayName>FPDSCR</displayName>
-                <description>Holds the default values for the floating-point status control data that the PE assigns to the FPSCR when it creates a new floating-point context</description>
+                <name>FPDSCR</name>
+                <description>Floating-Point Default Status Control Register holds the default values for the floating-point status control data that the PE assigns to the FPSCR when it creates a new floating-point context</description>
                 <addressOffset>0x8</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -7335,9 +7205,8 @@
                 </fields>
               </register>
               <register>
-                <name>Media and VFP Feature Register 0</name>
-                <displayName>MVFR0</displayName>
-                <description>Describes the features provided by the Floating-point Extension</description>
+                <name>MVFR0</name>
+                <description>Media and VFP Feature Register 0 describes the features provided by the Floating-point Extension</description>
                 <addressOffset>0xC</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -7418,9 +7287,8 @@
                 </fields>
               </register>
               <register>
-                <name>Media and VFP Feature Register 1</name>
-                <displayName>MVFR1</displayName>
-                <description>Describes the features provided by the Floating-point Extension</description>
+                <name>MVFR1</name>
+                <description>Media and VFP Feature Register 1 describes the features provided by the Floating-point Extension</description>
                 <addressOffset>0x10</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -7475,9 +7343,8 @@
                 </fields>
               </register>
               <register>
-                <name>Media and VFP Feature Register 2</name>
-                <displayName>MVFR2</displayName>
-                <description>Describes the features provided by the Floating-point Extension</description>
+                <name>MVFR2</name>
+                <description>Media and VFP Feature Register 2 describes the features provided by the Floating-point Extension</description>
                 <addressOffset>0x14</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -7508,9 +7375,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Branch Predictor Invalidate All</name>
-                <displayName>BPIALL</displayName>
-                <description>Invalidate all entries from branch predictors</description>
+                <name>BPIALL</name>
+                <description>Branch Predictor Invalidate All invalidate all entries from branch predictors</description>
                 <addressOffset>0x28</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -7522,9 +7388,8 @@
                 </fields>
               </register>
               <register>
-                <name>Data Cache line Clean and Invalidate by Address to PoC</name>
-                <displayName>DCCIMVAC</displayName>
-                <description>Clean and invalidate data or unified cache line by address to PoC</description>
+                <name>DCCIMVAC</name>
+                <description>Data Cache line Clean and Invalidate by Address to PoC clean and invalidate data or unified cache line by address to PoC</description>
                 <addressOffset>0x20</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -7536,9 +7401,8 @@
                 </fields>
               </register>
               <register>
-                <name>Data Cache line Clean and Invalidate by Set/Way</name>
-                <displayName>DCCISW</displayName>
-                <description>Clean and invalidate data or unified cache line by set/way</description>
+                <name>DCCISW</name>
+                <description>Data Cache line Clean and Invalidate by Set/Way clean and invalidate data or unified cache line by set/way</description>
                 <addressOffset>0x24</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -7555,9 +7419,8 @@
                 </fields>
               </register>
               <register>
-                <name>Data Cache line Clean by Address to PoC</name>
-                <displayName>DCCMVAC</displayName>
-                <description>Clean data or unified cache line by address to PoC</description>
+                <name>DCCMVAC</name>
+                <description>Data Cache line Clean by Address to PoC clean data or unified cache line by address to PoC</description>
                 <addressOffset>0x18</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -7569,9 +7432,8 @@
                 </fields>
               </register>
               <register>
-                <name>Data Cache line Clean by address to PoU</name>
-                <displayName>DCCMVAU</displayName>
-                <description>Clean data or unified cache line by address to PoU</description>
+                <name>DCCMVAU</name>
+                <description>Data Cache line Clean by address to PoU clean data or unified cache line by address to PoU</description>
                 <addressOffset>0x14</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -7583,9 +7445,8 @@
                 </fields>
               </register>
               <register>
-                <name>Data Cache Clean line by Set/Way</name>
-                <displayName>DCCSW</displayName>
-                <description>Clean data or unified cache line by set/way</description>
+                <name>DCCSW</name>
+                <description>Data Cache Clean line by Set/Way clean data or unified cache line by set/way</description>
                 <addressOffset>0x1C</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -7602,9 +7463,8 @@
                 </fields>
               </register>
               <register>
-                <name>Data Cache line Invalidate by Address to PoC</name>
-                <displayName>DCIMVAC</displayName>
-                <description>Invalidate data or unified cache line by address to PoC</description>
+                <name>DCIMVAC</name>
+                <description>Data Cache line Invalidate by Address to PoC invalidate data or unified cache line by address to PoC</description>
                 <addressOffset>0xC</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -7616,9 +7476,8 @@
                 </fields>
               </register>
               <register>
-                <name>Data Cache line Invalidate by Set/Way</name>
-                <displayName>DCISW</displayName>
-                <description>Invalidate data or unified cache line by set/way</description>
+                <name>DCISW</name>
+                <description>Data Cache line Invalidate by Set/Way invalidate data or unified cache line by set/way</description>
                 <addressOffset>0x10</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -7635,9 +7494,8 @@
                 </fields>
               </register>
               <register>
-                <name>Instruction Cache Invalidate All to PoU</name>
-                <displayName>ICIALLU</displayName>
-                <description>Invalidate all instruction caches to PoU</description>
+                <name>ICIALLU</name>
+                <description>Instruction Cache Invalidate All to PoU invalidate all instruction caches to PoU</description>
                 <addressOffset>0x0</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -7649,9 +7507,8 @@
                 </fields>
               </register>
               <register>
-                <name>Instruction Cache line Invalidate by Address to PoU</name>
-                <displayName>ICIMVAU</displayName>
-                <description>Invalidate instruction cache line by address to PoU</description>
+                <name>ICIMVAU</name>
+                <description>Instruction Cache line Invalidate by Address to PoU invalidate instruction cache line by address to PoU</description>
                 <addressOffset>0x8</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -7676,9 +7533,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Debug Authentication Status Register</name>
-                <displayName>DAUTHSTATUS</displayName>
-                <description>Provides information about the state of the IMPLEMENTATION DEFINED authentication interface for debug</description>
+                <name>DAUTHSTATUS</name>
+                <description>Debug Authentication Status Register provides information about the state of the IMPLEMENTATION DEFINED authentication interface for debug</description>
                 <addressOffset>0x8</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -7741,9 +7597,8 @@
                 </fields>
               </register>
               <register>
-                <name>SCS Component Identification Register 0</name>
-                <displayName>DCIDR0</displayName>
-                <description>Provides CoreSight discovery information for the SCS</description>
+                <name>DCIDR0</name>
+                <description>SCS Component Identification Register 0 provides CoreSight discovery information for the SCS</description>
                 <addressOffset>0x40</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -7755,9 +7610,8 @@
                 </fields>
               </register>
               <register>
-                <name>SCS Component Identification Register 1</name>
-                <displayName>DCIDR1</displayName>
-                <description>Provides CoreSight discovery information for the SCS</description>
+                <name>DCIDR1</name>
+                <description>SCS Component Identification Register 1 provides CoreSight discovery information for the SCS</description>
                 <addressOffset>0x44</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -7774,9 +7628,8 @@
                 </fields>
               </register>
               <register>
-                <name>SCS Component Identification Register 2</name>
-                <displayName>DCIDR2</displayName>
-                <description>Provides CoreSight discovery information for the SCS</description>
+                <name>DCIDR2</name>
+                <description>SCS Component Identification Register 2 provides CoreSight discovery information for the SCS</description>
                 <addressOffset>0x48</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -7788,9 +7641,8 @@
                 </fields>
               </register>
               <register>
-                <name>SCS Component Identification Register 3</name>
-                <displayName>DCIDR3</displayName>
-                <description>Provides CoreSight discovery information for the SCS</description>
+                <name>DCIDR3</name>
+                <description>SCS Component Identification Register 3 provides CoreSight discovery information for the SCS</description>
                 <addressOffset>0x4C</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -7802,9 +7654,8 @@
                 </fields>
               </register>
               <register>
-                <name>SCS Device Architecture Register</name>
-                <displayName>DDEVARCH</displayName>
-                <description>Provides CoreSight discovery information for the SCS</description>
+                <name>DDEVARCH</name>
+                <description>SCS Device Architecture Register provides CoreSight discovery information for the SCS</description>
                 <addressOffset>0xC</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -7866,9 +7717,8 @@
                 </fields>
               </register>
               <register>
-                <name>SCS Device Type Register</name>
-                <displayName>DDEVTYPE</displayName>
-                <description>Provides CoreSight discovery information for the SCS</description>
+                <name>DDEVTYPE</name>
+                <description>SCS Device Type Register provides CoreSight discovery information for the SCS</description>
                 <addressOffset>0x1C</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -7897,9 +7747,8 @@
                 </fields>
               </register>
               <register>
-                <name>SCS Software Lock Access Register</name>
-                <displayName>DLAR</displayName>
-                <description>Provides CoreSight Software Lock control for the SCS, see the CoreSight Architecture Specification for details</description>
+                <name>DLAR</name>
+                <description>SCS Software Lock Access Register provides CoreSight Software Lock control for the SCS, see the CoreSight Architecture Specification for details</description>
                 <addressOffset>0x0</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -7911,9 +7760,8 @@
                 </fields>
               </register>
               <register>
-                <name>SCS Software Lock Status Register</name>
-                <displayName>DLSR</displayName>
-                <description>Provides CoreSight Software Lock status information for the SCS, see the CoreSight Architecture Specification for details</description>
+                <name>DLSR</name>
+                <description>SCS Software Lock Status Register provides CoreSight Software Lock status information for the SCS, see the CoreSight Architecture Specification for details</description>
                 <addressOffset>0x4</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -7955,9 +7803,8 @@
                 </fields>
               </register>
               <register>
-                <name>SCS Peripheral Identification Register 0</name>
-                <displayName>DPIDR0</displayName>
-                <description>Provides CoreSight discovery information for the SCS</description>
+                <name>DPIDR0</name>
+                <description>SCS Peripheral Identification Register 0 provides CoreSight discovery information for the SCS</description>
                 <addressOffset>0x30</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -7969,9 +7816,8 @@
                 </fields>
               </register>
               <register>
-                <name>SCS Peripheral Identification Register 1</name>
-                <displayName>DPIDR1</displayName>
-                <description>Provides CoreSight discovery information for the SCS</description>
+                <name>DPIDR1</name>
+                <description>SCS Peripheral Identification Register 1 provides CoreSight discovery information for the SCS</description>
                 <addressOffset>0x34</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -7988,9 +7834,8 @@
                 </fields>
               </register>
               <register>
-                <name>SCS Peripheral Identification Register 2</name>
-                <displayName>DPIDR2</displayName>
-                <description>Provides CoreSight discovery information for the SCS</description>
+                <name>DPIDR2</name>
+                <description>SCS Peripheral Identification Register 2 provides CoreSight discovery information for the SCS</description>
                 <addressOffset>0x38</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -8012,9 +7857,8 @@
                 </fields>
               </register>
               <register>
-                <name>SCS Peripheral Identification Register 3</name>
-                <displayName>DPIDR3</displayName>
-                <description>Provides CoreSight discovery information for the SCS</description>
+                <name>DPIDR3</name>
+                <description>SCS Peripheral Identification Register 3 provides CoreSight discovery information for the SCS</description>
                 <addressOffset>0x3C</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -8031,9 +7875,8 @@
                 </fields>
               </register>
               <register>
-                <name>SCS Peripheral Identification Register 4</name>
-                <displayName>DPIDR4</displayName>
-                <description>Provides CoreSight discovery information for the SCS</description>
+                <name>DPIDR4</name>
+                <description>SCS Peripheral Identification Register 4 provides CoreSight discovery information for the SCS</description>
                 <addressOffset>0x20</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -8050,23 +7893,20 @@
                 </fields>
               </register>
               <register>
-                <name>SCS Peripheral Identification Register 5</name>
-                <displayName>DPIDR5</displayName>
-                <description>Provides CoreSight discovery information for the SCS</description>
+                <name>DPIDR5</name>
+                <description>SCS Peripheral Identification Register 5 provides CoreSight discovery information for the SCS</description>
                 <addressOffset>0x24</addressOffset>
                 <access>read-only</access>
               </register>
               <register>
-                <name>SCS Peripheral Identification Register 6</name>
-                <displayName>DPIDR6</displayName>
-                <description>Provides CoreSight discovery information for the SCS</description>
+                <name>DPIDR6</name>
+                <description>SCS Peripheral Identification Register 6 provides CoreSight discovery information for the SCS</description>
                 <addressOffset>0x28</addressOffset>
                 <access>read-only</access>
               </register>
               <register>
-                <name>SCS Peripheral Identification Register 7</name>
-                <displayName>DPIDR7</displayName>
-                <description>Provides CoreSight discovery information for the SCS</description>
+                <name>DPIDR7</name>
+                <description>SCS Peripheral Identification Register 7 provides CoreSight discovery information for the SCS</description>
                 <addressOffset>0x2C</addressOffset>
                 <access>read-only</access>
               </register>
@@ -8084,9 +7924,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>TPIU Asynchronous Clock Prescaler Register</name>
-                <displayName>TPIU_ACPR</displayName>
-                <description>Defines a prescaler value for the baud rate of the Serial Wire Output (SWO)</description>
+                <name>TPIU_ACPR</name>
+                <description>TPIU Asynchronous Clock Prescaler Register defines a prescaler value for the baud rate of the Serial Wire Output (SWO)</description>
                 <addressOffset>0x10</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -8098,9 +7937,8 @@
                 </fields>
               </register>
               <register>
-                <name>TPIU Component Identification Register 0</name>
-                <displayName>TPIU_CIDR0</displayName>
-                <description>Provides CoreSight discovery information for the TPIU</description>
+                <name>TPIU_CIDR0</name>
+                <description>TPIU Component Identification Register 0 provides CoreSight discovery information for the TPIU</description>
                 <addressOffset>0xFF0</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -8112,9 +7950,8 @@
                 </fields>
               </register>
               <register>
-                <name>TPIU Component Identification Register 1</name>
-                <displayName>TPIU_CIDR1</displayName>
-                <description>Provides CoreSight discovery information for the TPIU</description>
+                <name>TPIU_CIDR1</name>
+                <description>TPIU Component Identification Register 1 provides CoreSight discovery information for the TPIU</description>
                 <addressOffset>0xFF4</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -8131,9 +7968,8 @@
                 </fields>
               </register>
               <register>
-                <name>TPIU Component Identification Register 2</name>
-                <displayName>TPIU_CIDR2</displayName>
-                <description>Provides CoreSight discovery information for the TPIU</description>
+                <name>TPIU_CIDR2</name>
+                <description>TPIU Component Identification Register 2 provides CoreSight discovery information for the TPIU</description>
                 <addressOffset>0xFF8</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -8145,9 +7981,8 @@
                 </fields>
               </register>
               <register>
-                <name>TPIU Component Identification Register 3</name>
-                <displayName>TPIU_CIDR3</displayName>
-                <description>Provides CoreSight discovery information for the TPIU</description>
+                <name>TPIU_CIDR3</name>
+                <description>TPIU Component Identification Register 3 provides CoreSight discovery information for the TPIU</description>
                 <addressOffset>0xFFC</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -8159,9 +7994,8 @@
                 </fields>
               </register>
               <register>
-                <name>TPIU Current Parallel Port Sizes Register</name>
-                <displayName>TPIU_CSPSR</displayName>
-                <description>Controls the width of the parallel trace port</description>
+                <name>TPIU_CSPSR</name>
+                <description>TPIU Current Parallel Port Sizes Register controls the width of the parallel trace port</description>
                 <addressOffset>0x4</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -8187,9 +8021,8 @@
                 </fields>
               </register>
               <register>
-                <name>TPIU Device Type Register</name>
-                <displayName>TPIU_DEVTYPE</displayName>
-                <description>Provides CoreSight discovery information for the TPIU</description>
+                <name>TPIU_DEVTYPE</name>
+                <description>TPIU Device Type Register provides CoreSight discovery information for the TPIU</description>
                 <addressOffset>0xFCC</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -8226,9 +8059,8 @@
                 </fields>
               </register>
               <register>
-                <name>TPIU Formatter and Flush Control Register</name>
-                <displayName>TPIU_FFCR</displayName>
-                <description>Controls the TPIU formatter</description>
+                <name>TPIU_FFCR</name>
+                <description>TPIU Formatter and Flush Control Register controls the TPIU formatter</description>
                 <addressOffset>0x304</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -8256,9 +8088,8 @@
                 </fields>
               </register>
               <register>
-                <name>TPIU Formatter and Flush Status Register</name>
-                <displayName>TPIU_FFSR</displayName>
-                <description>Shows the status and capabilities of the TPIU formatter</description>
+                <name>TPIU_FFSR</name>
+                <description>TPIU Formatter and Flush Status Register shows the status and capabilities of the TPIU formatter</description>
                 <addressOffset>0x300</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -8311,9 +8142,8 @@
                 </fields>
               </register>
               <register>
-                <name>TPIU Software Lock Access Register</name>
-                <displayName>TPIU_LAR</displayName>
-                <description>Provides CoreSight Software Lock control for the TPIU, see the CoreSight Architecture Specification for details</description>
+                <name>TPIU_LAR</name>
+                <description>TPIU Software Lock Access Register provides CoreSight Software Lock control for the TPIU, see the CoreSight Architecture Specification for details</description>
                 <addressOffset>0xFB0</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -8325,9 +8155,8 @@
                 </fields>
               </register>
               <register>
-                <name>TPIU Software Lock Status Register</name>
-                <displayName>TPIU_LSR</displayName>
-                <description>Provides CoreSight Software Lock status information for the TPIU, see the CoreSight Architecture Specification for details</description>
+                <name>TPIU_LSR</name>
+                <description>TPIU Software Lock Status Register provides CoreSight Software Lock status information for the TPIU, see the CoreSight Architecture Specification for details</description>
                 <addressOffset>0xFB4</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -8369,9 +8198,8 @@
                 </fields>
               </register>
               <register>
-                <name>TPIU Peripheral Identification Register 0</name>
-                <displayName>TPIU_PIDR0</displayName>
-                <description>Provides CoreSight discovery information for the TPIU</description>
+                <name>TPIU_PIDR0</name>
+                <description>TPIU Peripheral Identification Register 0 provides CoreSight discovery information for the TPIU</description>
                 <addressOffset>0xFE0</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -8383,9 +8211,8 @@
                 </fields>
               </register>
               <register>
-                <name>TPIU Peripheral Identification Register 1</name>
-                <displayName>TPIU_PIDR1</displayName>
-                <description>Provides CoreSight discovery information for the TPIU</description>
+                <name>TPIU_PIDR1</name>
+                <description>TPIU Peripheral Identification Register 1 provides CoreSight discovery information for the TPIU</description>
                 <addressOffset>0xFE4</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -8402,9 +8229,8 @@
                 </fields>
               </register>
               <register>
-                <name>TPIU Peripheral Identification Register 2</name>
-                <displayName>TPIU_PIDR2</displayName>
-                <description>Provides CoreSight discovery information for the TPIU</description>
+                <name>TPIU_PIDR2</name>
+                <description>TPIU Peripheral Identification Register 2 provides CoreSight discovery information for the TPIU</description>
                 <addressOffset>0xFE8</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -8426,9 +8252,8 @@
                 </fields>
               </register>
               <register>
-                <name>TPIU Peripheral Identification Register 3</name>
-                <displayName>TPIU_PIDR3</displayName>
-                <description>Provides CoreSight discovery information for the TPIU</description>
+                <name>TPIU_PIDR3</name>
+                <description>TPIU Peripheral Identification Register 3 provides CoreSight discovery information for the TPIU</description>
                 <addressOffset>0xFEC</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -8445,9 +8270,8 @@
                 </fields>
               </register>
               <register>
-                <name>TPIU Peripheral Identification Register 4</name>
-                <displayName>TPIU_PIDR4</displayName>
-                <description>Provides CoreSight discovery information for the TPIU</description>
+                <name>TPIU_PIDR4</name>
+                <description>TPIU Peripheral Identification Register 4 provides CoreSight discovery information for the TPIU</description>
                 <addressOffset>0xFD0</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -8464,30 +8288,26 @@
                 </fields>
               </register>
               <register>
-                <name>TPIU Peripheral Identification Register 5</name>
-                <displayName>TPIU_PIDR5</displayName>
-                <description>Provides CoreSight discovery information for the TPIU</description>
+                <name>TPIU_PIDR5</name>
+                <description>TPIU Peripheral Identification Register 5 provides CoreSight discovery information for the TPIU</description>
                 <addressOffset>0xFD4</addressOffset>
                 <access>read-only</access>
               </register>
               <register>
-                <name>TPIU Peripheral Identification Register 6</name>
-                <displayName>TPIU_PIDR6</displayName>
-                <description>Provides CoreSight discovery information for the TPIU</description>
+                <name>TPIU_PIDR6</name>
+                <description>TPIU Peripheral Identification Register 6 provides CoreSight discovery information for the TPIU</description>
                 <addressOffset>0xFD8</addressOffset>
                 <access>read-only</access>
               </register>
               <register>
-                <name>TPIU Peripheral Identification Register 7</name>
-                <displayName>TPIU_PIDR7</displayName>
-                <description>Provides CoreSight discovery information for the TPIU</description>
+                <name>TPIU_PIDR7</name>
+                <description>TPIU Peripheral Identification Register 7 provides CoreSight discovery information for the TPIU</description>
                 <addressOffset>0xFDC</addressOffset>
                 <access>read-only</access>
               </register>
               <register>
-                <name>TPIU Periodic Synchronization Control Register</name>
-                <displayName>TPIU_PSCR</displayName>
-                <description>Defines the reload value for the Periodic Synchronization Counter register</description>
+                <name>TPIU_PSCR</name>
+                <description>TPIU Periodic Synchronization Control Register defines the reload value for the Periodic Synchronization Counter register</description>
                 <addressOffset>0x308</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -8513,9 +8333,8 @@
                 </fields>
               </register>
               <register>
-                <name>TPIU Selected Pin Protocol Register</name>
-                <displayName>TPIU_SPPR</displayName>
-                <description>Selects the protocol used for trace output</description>
+                <name>TPIU_SPPR</name>
+                <description>TPIU Selected Pin Protocol Register selects the protocol used for trace output</description>
                 <addressOffset>0xF0</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -8537,9 +8356,8 @@
                 </fields>
               </register>
               <register>
-                <name>TPIU Supported Parallel Port Sizes Register</name>
-                <displayName>TPIU_SSPSR</displayName>
-                <description>Indicates the supported parallel trace port sizes</description>
+                <name>TPIU_SSPSR</name>
+                <description>TPIU Supported Parallel Port Sizes Register indicates the supported parallel trace port sizes</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -8561,9 +8379,8 @@
                 </fields>
               </register>
               <register>
-                <name>TPIU Device Identifier Register</name>
-                <displayName>TPIU_TYPE</displayName>
-                <description>Describes the TPIU to a debugger</description>
+                <name>TPIU_TYPE</name>
+                <description>TPIU Device Identifier Register describes the TPIU to a debugger</description>
                 <addressOffset>0xFC8</addressOffset>
                 <access>read-only</access>
                 <fields>

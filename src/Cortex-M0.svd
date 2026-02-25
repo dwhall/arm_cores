@@ -272,9 +272,8 @@
                 </fields>
               </register>
               <register>
-                <name>Program Counter Sample Register</name>
-                <displayName>DWT_PCSR</displayName>
-                <description>Samples the current value of the program counter</description>
+                <name>DWT_PCSR</name>
+                <description>Program Counter Sample Register samples the current value of the program counter</description>
                 <addressOffset>0x1C</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -359,9 +358,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Breakpoint Control Register</name>
-                <displayName>BP_CTRL</displayName>
-                <description>Provides BPU implementation information, and the global enable for the BPU</description>
+                <name>BP_CTRL</name>
+                <description>Breakpoint Control Register provides BPU implementation information, and the global enable for the BPU</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -459,9 +457,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Auxiliary Control Register</name>
-                <displayName>ACTLR</displayName>
-                <description>Provides IMPLEMENTATION DEFINED configuration and control options</description>
+                <name>ACTLR</name>
+                <description>Auxiliary Control Register provides IMPLEMENTATION DEFINED configuration and control options</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-write</access>
               </register>
@@ -479,9 +476,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>SysTick Control and Status Register</name>
-                <displayName>SYST_CSR</displayName>
-                <description>Controls the system timer and provides status data</description>
+                <name>SYST_CSR</name>
+                <description>SysTick Control and Status Register controls the system timer and provides status data</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -548,9 +544,8 @@
                 </fields>
               </register>
               <register>
-                <name>SysTick Reload Value Register</name>
-                <displayName>SYST_RVR</displayName>
-                <description>Holds the reload value of the SYST_CVR</description>
+                <name>SYST_RVR</name>
+                <description>SysTick Reload Value Register holds the reload value of the SYST_CVR</description>
                 <addressOffset>0x4</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -562,9 +557,8 @@
                 </fields>
               </register>
               <register>
-                <name>SysTick Current Value Register</name>
-                <displayName>SYST_CVR</displayName>
-                <description>Reads or clears the current counter value</description>
+                <name>SYST_CVR</name>
+                <description>SysTick Current Value Register reads or clears the current counter value</description>
                 <addressOffset>0x8</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -576,9 +570,8 @@
                 </fields>
               </register>
               <register>
-                <name>SysTick Calibration value Register</name>
-                <displayName>SYST_CALIB</displayName>
-                <description>Reads the calibration value and parameters for SysTick</description>
+                <name>SYST_CALIB</name>
+                <description>SysTick Calibration value Register reads the calibration value and parameters for SysTick</description>
                 <addressOffset>0xC</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -784,9 +777,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>CPUID Base Register</name>
-                <displayName>CPUID</displayName>
-                <description>Provides identification information for the processor</description>
+                <name>CPUID</name>
+                <description>CPUID Base Register provides identification information for the processor</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -818,9 +810,8 @@
                 </fields>
               </register>
               <register>
-                <name>Interrupt Control and State Register</name>
-                <displayName>ICSR</displayName>
-                <description>Provides software control of the NMI, PendSV, and SysTick exceptions, and provides interrupt status information</description>
+                <name>ICSR</name>
+                <description>Interrupt Control and State Register provides software control of the NMI, PendSV, and SysTick exceptions, and provides interrupt status information</description>
                 <addressOffset>0x4</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -957,9 +948,8 @@
                 </fields>
               </register>
               <register>
-                <name>Vector Table Offset Register</name>
-                <displayName>VTOR</displayName>
-                <description>Holds the vector table address</description>
+                <name>VTOR</name>
+                <description>Vector Table Offset Register holds the vector table address</description>
                 <addressOffset>0x8</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -971,9 +961,8 @@
                 </fields>
               </register>
               <register>
-                <name>Application Interrupt and Reset Control Register</name>
-                <displayName>AIRCR</displayName>
-                <description>Sets or returns interrupt control data</description>
+                <name>AIRCR</name>
+                <description>Application Interrupt and Reset Control Register sets or returns interrupt control data</description>
                 <addressOffset>0xC</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1030,9 +1019,8 @@
                 </fields>
               </register>
               <register>
-                <name>System Control Register</name>
-                <displayName>SCR</displayName>
-                <description>Sets or returns system control data</description>
+                <name>SCR</name>
+                <description>System Control Register sets or returns system control data</description>
                 <addressOffset>0x10</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1084,9 +1072,8 @@
                 </fields>
               </register>
               <register>
-                <name>Configuration and Control Register</name>
-                <displayName>CCR</displayName>
-                <description>Sets or returns configuration and control data, and provides control over caching and branch prediction</description>
+                <name>CCR</name>
+                <description>Configuration and Control Register sets or returns configuration and control data, and provides control over caching and branch prediction</description>
                 <addressOffset>0x14</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1123,9 +1110,8 @@
                 </fields>
               </register>
               <register>
-                <name>System Handler Priority Register 2</name>
-                <displayName>SHPR2</displayName>
-                <description>Sets or returns priority for system handlers 8-11</description>
+                <name>SHPR2</name>
+                <description>System Handler Priority Register 2 sets or returns priority for system handlers 8-11</description>
                 <addressOffset>0x1C</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1137,9 +1123,8 @@
                 </fields>
               </register>
               <register>
-                <name>System Handler Priority Register 3</name>
-                <displayName>SHPR3</displayName>
-                <description>Sets or returns priority for system handlers 12-15</description>
+                <name>SHPR3</name>
+                <description>System Handler Priority Register 3 sets or returns priority for system handlers 12-15</description>
                 <addressOffset>0x20</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1156,9 +1141,8 @@
                 </fields>
               </register>
               <register>
-                <name>System Handler Control and State Register</name>
-                <displayName>SHCSR</displayName>
-                <description>Controls and provides the active and pending status of system exceptions</description>
+                <name>SHCSR</name>
+                <description>System Handler Control and State Register controls and provides the active and pending status of system exceptions</description>
                 <addressOffset>0x24</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1180,9 +1164,8 @@
                 </fields>
               </register>
               <register>
-                <name>Debug Fault Status Register</name>
-                <displayName>DFSR</displayName>
-                <description>Shows which debug event occurred</description>
+                <name>DFSR</name>
+                <description>Debug Fault Status Register shows which debug event occurred</description>
                 <addressOffset>0x30</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1277,9 +1260,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>MPU Type Register</name>
-                <displayName>MPU_TYPE</displayName>
-                <description>The MPU Type Register indicates how many regions the MPU support</description>
+                <name>MPU_TYPE</name>
+                <description>MPU Type Register the MPU Type Register indicates how many regions the MPU support</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-only</access>
                 <fields>
@@ -1301,9 +1283,8 @@
                 </fields>
               </register>
               <register>
-                <name>MPU Control Register</name>
-                <displayName>MPU_CTRL</displayName>
-                <description>Enables the MPU, and when the MPU is enabled, controls whether the default memory map is enabled as a background region for privileged accesses, and whether the MPU is enabled for HardFaults, NMIs</description>
+                <name>MPU_CTRL</name>
+                <description>MPU Control Register enables the MPU, and when the MPU is enabled, controls whether the default memory map is enabled as a background region for privileged accesses, and whether the MPU is enabled for HardFaults, NMIs</description>
                 <addressOffset>0x4</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1355,9 +1336,8 @@
                 </fields>
               </register>
               <register>
-                <name>MPU Region Number Register</name>
-                <displayName>MPU_RNR</displayName>
-                <description>Selects the region currently accessed by MPU_RBAR and MPU_RASR</description>
+                <name>MPU_RNR</name>
+                <description>MPU Region Number Register selects the region currently accessed by MPU_RBAR and MPU_RASR</description>
                 <addressOffset>0x8</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1369,9 +1349,8 @@
                 </fields>
               </register>
               <register>
-                <name>MPU Region Base Address Register</name>
-                <displayName>MPU_RBAR</displayName>
-                <description>Holds the base address of the region identified by MPU_RNR</description>
+                <name>MPU_RBAR</name>
+                <description>MPU Region Base Address Register holds the base address of the region identified by MPU_RNR</description>
                 <addressOffset>0xC</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1406,9 +1385,8 @@
                 </fields>
               </register>
               <register>
-                <name>MPU Region Attribute and Size Register</name>
-                <displayName>MPU_RASR</displayName>
-                <description>Defines the size and access behavior of the region identified by MPU_RNR, and enables that region</description>
+                <name>MPU_RASR</name>
+                <description>MPU Region Attribute and Size Register defines the size and access behavior of the region identified by MPU_RNR, and enables that region</description>
                 <addressOffset>0x10</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1468,9 +1446,8 @@
             </addressBlock>
             <registers>
               <register>
-                <name>Debug Halting Control and Status Register</name>
-                <displayName>DHCSR</displayName>
-                <description>Controls halting debug</description>
+                <name>DHCSR</name>
+                <description>Debug Halting Control and Status Register controls halting debug</description>
                 <addressOffset>0x0</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1647,9 +1624,8 @@
                 </fields>
               </register>
               <register>
-                <name>Debug Core Register Selector Register</name>
-                <displayName>DCRSR</displayName>
-                <description>provides debug access to the ARM core registers, special-purpose registers, and Floating-point extension regi</description>
+                <name>DCRSR</name>
+                <description>Debug Core Register Selector Register provides debug access to the ARM core registers, special-purpose registers, and Floating-point extension regi</description>
                 <addressOffset>0x4</addressOffset>
                 <access>write-only</access>
                 <fields>
@@ -1710,9 +1686,8 @@
                 </fields>
               </register>
               <register>
-                <name>Debug Core Register Data Register</name>
-                <displayName>DCRDR</displayName>
-                <description>the DCRDR provides debug access to the ARM core registers, special-purpose registers, and Floating-point extensio</description>
+                <name>DCRDR</name>
+                <description>Debug Core Register Data Register the DCRDR provides debug access to the ARM core registers, special-purpose registers, and Floating-point extensio</description>
                 <addressOffset>0x8</addressOffset>
                 <access>read-write</access>
                 <fields>
@@ -1724,9 +1699,8 @@
                 </fields>
               </register>
               <register>
-                <name>Debug Exception and Monitor Control Register</name>
-                <displayName>DEMCR</displayName>
-                <description>Manages vector catch behavior and DebugMonitor handling when debugging</description>
+                <name>DEMCR</name>
+                <description>Debug Exception and Monitor Control Register manages vector catch behavior and DebugMonitor handling when debugging</description>
                 <addressOffset>0xC</addressOffset>
                 <access>read-write</access>
                 <fields>
