@@ -5,10 +5,9 @@ import metagenerator
 
 #!fmt: off
 declarePeripheral(peripheralName = ICB, baseAddress = 0xE000E004'u32, peripheralDesc = "Implementation Control Block")
-declareRegister(peripheralName = ICB, registerName = ICTR, addressOffset = 0x0'u32, readAccess = true, writeAccess = false, registerDesc = "Provides information about the interrupt controller")
-declareField(peripheralName = ICB, registerName = ICTR, fieldName = INTLINESNUM_0, bitOffset = 0, bitWidth = 4, readAccess = true, writeAccess = false, fieldDesc = "The total number of interrupt lines supported by an implementation, defined in groups of 32")
-declareField(peripheralName = ICB, registerName = ICTR, fieldName = INTLINESNUM_1, bitOffset = 16, bitWidth = 4, readAccess = true, writeAccess = false, fieldDesc = "The total number of interrupt lines supported by an implementation, defined in groups of 32")
-declareRegister(peripheralName = ICB, registerName = ACTLR, addressOffset = 0x4'u32, readAccess = true, writeAccess = true, registerDesc = "Allow software to control the processor features and functionality")
+declareRegister(peripheralName = ICB, registerName = ICTR, addressOffset = 0x0'u32, readAccess = true, writeAccess = false, registerDesc = "Interrupt Controller Type Register provides information about the interrupt controller")
+declareDimField(peripheralName = ICB, registerName = ICTR, fieldName = INTLINESNUM, dim = 2, dimIncrement = 16, readAccess = true, writeAccess = false, fieldDesc = "The total number of interrupt lines supported by an implementation, defined in groups of 32")
+declareRegister(peripheralName = ICB, registerName = ACTLR, addressOffset = 0x4'u32, readAccess = true, writeAccess = true, registerDesc = "Auxiliary Control Register allow software to control the processor features and functionality")
 declareField(peripheralName = ICB, registerName = ACTLR, fieldName = DISCRITAXIRUW, bitOffset = 27, bitWidth = 1, readAccess = true, writeAccess = true, fieldDesc = "Disable-Critical-AXI-Read-Under-Write")
 declareField(peripheralName = ICB, registerName = ACTLR, fieldName = DISGSO, bitOffset = 18, bitWidth = 1, readAccess = true, writeAccess = true, fieldDesc = "Disable gather and scatter optimization for contiguous accesses")
 declareField(peripheralName = ICB, registerName = ACTLR, fieldName = DISDI, bitOffset = 16, bitWidth = 2, readAccess = true, writeAccess = true, fieldDesc = "Disable dual-issue features")
@@ -21,7 +20,7 @@ declareField(peripheralName = ICB, registerName = ACTLR, fieldName = DISOLAPS, b
 declareField(peripheralName = ICB, registerName = ACTLR, fieldName = DISLO, bitOffset = 4, bitWidth = 1, readAccess = true, writeAccess = true, fieldDesc = "Disable low overhead loops")
 declareField(peripheralName = ICB, registerName = ACTLR, fieldName = DISFOLD, bitOffset = 2, bitWidth = 1, readAccess = true, writeAccess = true, fieldDesc = "Determines whether dual-issue functionality is disabled")
 declareField(peripheralName = ICB, registerName = ACTLR, fieldName = DISMCYCINT, bitOffset = 0, bitWidth = 1, readAccess = true, writeAccess = true, fieldDesc = "Disables interruption of multi-cycle instructions")
-declareRegister(peripheralName = ICB, registerName = CPPWR, addressOffset = 0x8'u32, readAccess = true, writeAccess = true, registerDesc = "Specifies whether coprocessors are permitted to enter a non-retentive power state")
+declareRegister(peripheralName = ICB, registerName = CPPWR, addressOffset = 0x8'u32, readAccess = true, writeAccess = true, registerDesc = "Coprocessor Power Control Register specifies whether coprocessors are permitted to enter a non-retentive power state")
 declareField(peripheralName = ICB, registerName = CPPWR, fieldName = SUS11, bitOffset = 23, bitWidth = 1, readAccess = true, writeAccess = true, fieldDesc = "If the value of this bit is not programmed to the same value as the SUS10 field, then the value is unknown.")
 declareField(peripheralName = ICB, registerName = CPPWR, fieldName = SU11, bitOffset = 22, bitWidth = 1, readAccess = true, writeAccess = true, fieldDesc = "If the value of this bit is not programmed to the same value as the SU10 field, then the value is unknown.")
 declareField(peripheralName = ICB, registerName = CPPWR, fieldName = SUS10, bitOffset = 21, bitWidth = 1, readAccess = true, writeAccess = true, fieldDesc = "This bit indicates and allows modification of whether the SU10 field can be modified from Non-secure state.")

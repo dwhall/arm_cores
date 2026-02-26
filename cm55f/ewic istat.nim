@@ -5,11 +5,11 @@ import metagenerator
 
 #!fmt: off
 declarePeripheral(peripheralName = EWIC IStat, baseAddress = 0xE001E400'u32, peripheralDesc = "External Wakeup Interrupt Controller Interrupt Status Access")
-declareRegister(peripheralName = EWIC IStat, registerName = EVENTSPR, addressOffset = 0x0'u32, readAccess = false, writeAccess = true, registerDesc = "Set pending events at wakeup that cannot be directly set in the Nested Vectored Interrupt Controller (NVIC) using the architecture programming model")
+declareRegister(peripheralName = EWIC IStat, registerName = EVENTSPR, addressOffset = 0x0'u32, readAccess = false, writeAccess = true, registerDesc = "Event Set Pending Register set pending events at wakeup that cannot be directly set in the Nested Vectored Interrupt Controller (NVIC) using the architecture programming model")
 declareField(peripheralName = EWIC IStat, registerName = EVENTSPR, fieldName = EDBGREQ, bitOffset = 2, bitWidth = 1, readAccess = false, writeAccess = true, fieldDesc = "Causes the processor to behave like an external debug request has occurred")
 declareField(peripheralName = EWIC IStat, registerName = EVENTSPR, fieldName = NMI, bitOffset = 1, bitWidth = 1, readAccess = false, writeAccess = true, fieldDesc = "Causes the processor to behave like a Non-maskable Interrupt (NMI) has occurred")
 declareField(peripheralName = EWIC IStat, registerName = EVENTSPR, fieldName = EVENT, bitOffset = 1, bitWidth = 1, readAccess = false, writeAccess = true, fieldDesc = "Causes the processor to behave like an RXEV event has occurred")
-declareRegister(peripheralName = EWIC IStat, registerName = EVENTMASKA, addressOffset = 0x80'u32, readAccess = true, writeAccess = false, registerDesc = "Provides the events on sleep entry which cause the processor to wake up, including information about internal events")
+declareRegister(peripheralName = EWIC IStat, registerName = EVENTMASKA, addressOffset = 0x80'u32, readAccess = true, writeAccess = false, registerDesc = "Wake-up Event Mask Register A provides the events on sleep entry which cause the processor to wake up, including information about internal events")
 declareField(peripheralName = EWIC IStat, registerName = EVENTMASKA, fieldName = EDBGREQ, bitOffset = 2, bitWidth = 1, readAccess = true, writeAccess = false, fieldDesc = "Mask for external debug request")
 declareField(peripheralName = EWIC IStat, registerName = EVENTMASKA, fieldName = NMI, bitOffset = 1, bitWidth = 1, readAccess = true, writeAccess = false, fieldDesc = "Mask for Non-Maskable Interrupt (NMI)")
 declareField(peripheralName = EWIC IStat, registerName = EVENTMASKA, fieldName = EVENT, bitOffset = 0, bitWidth = 1, readAccess = true, writeAccess = false, fieldDesc = "Sensitive to RXEV when in WFE sleep")

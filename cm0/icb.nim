@@ -5,4 +5,4 @@ import metagenerator
 
 #!fmt: off
 declarePeripheral(peripheralName = ICB, baseAddress = 0xE000E008'u32, peripheralDesc = "Implementation Control Block")
-declareRegister(peripheralName = ICB, registerName = ACTLR, addressOffset = 0x0'u32, readAccess = true, writeAccess = true, registerDesc = "Provides IMPLEMENTATION DEFINED configuration and control options")
+declareRegister(peripheralName = ICB, registerName = ACTLR, addressOffset = 0x0'u32, readAccess = true, writeAccess = true, registerDesc = "Auxiliary Control Register provides IMPLEMENTATION DEFINED configuration and control options")
