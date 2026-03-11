@@ -1,0 +1,2 @@
+ARMv8M-Baseline: Cortex-M23, M33, M33F
+ARMv8M-Extended: Cortex-M55, M55F, M85, M85F
