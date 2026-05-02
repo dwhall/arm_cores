@@ -123,7 +123,7 @@ declareField(peripheralName = SCB, registerName = ID_PFR0, fieldName = State0, b
 declareRegister(peripheralName = SCB, registerName = ID_PFR1, addressOffset = 0x44'u32, dim = 0, dimIncrement = 0, readAccess = true, writeAccess = false, registerDesc = "Processor Feature Register 1 gives top-level information about the instruction sets supported by the processor")
 declareField(peripheralName = SCB, registerName = ID_PFR1, fieldName = M_profile_programmers_model, bitOffset = 8, bitWidth = 4, dim = 0, dimIncrement = 0, readAccess = true, writeAccess = false, fieldDesc = "")
 declareRegister(peripheralName = SCB, registerName = ID_DFR0, addressOffset = 0x48'u32, dim = 0, dimIncrement = 0, readAccess = true, writeAccess = false, registerDesc = "Debug Feature Register 0 gives top-level information about the debug system used in the processor")
-declareField(peripheralName = SCB, registerName = ID_DFR0, fieldName = M_profile_debug_model, bitOffset = 20, bitWidth = 4, dim = 0, dimIncrement = 0, readAccess = true, writeAccess = false, fieldDesc = "Support for memory-mapped debug model for M profile processors")
+declareField(peripheralName = SCB, registerName = ID_DFR0, fieldName = Debug_model_M_profile, bitOffset = 20, bitWidth = 4, dim = 0, dimIncrement = 0, readAccess = true, writeAccess = false, fieldDesc = "Support for memory-mapped debug model for M profile processors")
 declareRegister(peripheralName = SCB, registerName = ID_AFR0, addressOffset = 0x4C'u32, dim = 0, dimIncrement = 0, readAccess = true, writeAccess = false, registerDesc = "Auxiliary Feature Register 0 gives information about the IMPLEMENTATION DEFINED features of a processor implementation")
 declareRegister(peripheralName = SCB, registerName = ID_MMFR0, addressOffset = 0x50'u32, dim = 0, dimIncrement = 0, readAccess = true, writeAccess = false, registerDesc = "Memory Model Feature Register 0 gives information about the implemented memory model and memory management support")
 declareField(peripheralName = SCB, registerName = ID_MMFR0, fieldName = Auxiliary_registers, bitOffset = 20, bitWidth = 4, dim = 0, dimIncrement = 0, readAccess = true, writeAccess = false, fieldDesc = "Indicates the support for Auxiliary registers")
@@ -194,3 +194,15 @@ declareField(peripheralName = SCB, registerName = CSSELR, fieldName = Level, bit
 declareField(peripheralName = SCB, registerName = CSSELR, fieldName = InD, bitOffset = 0, bitWidth = 1, dim = 0, dimIncrement = 0, readAccess = true, writeAccess = false, fieldDesc = "Instruction not data bit")
 declareRegister(peripheralName = SCB, registerName = CPACR, addressOffset = 0x88'u32, dim = 0, dimIncrement = 0, readAccess = true, writeAccess = true, registerDesc = "Coprocessor Access Control Register specifies the access privileges for coprocessors")
 declareField(peripheralName = SCB, registerName = CPACR, fieldName = CP, bitOffset = 0, bitWidth = 2, dim = 16, dimIncrement = 2, readAccess = true, writeAccess = true, fieldDesc = "Access privileges for coprocessor 0-7, 10 and 11")
+
+# Reference: ARM DDI 0403D, Table B3-5, p. B3-711
+# when fp_extension:
+#[
+# the "_FP" suffix is my convention
+declarePeripheral(peripheralName = SCB_FP, baseAddress = 0xE000EF00'u32, peripheralDesc = "System Control Block for the FP extension")
+declareRegister(peripheralName = SCB_FP, registerName = FPCCR, addressOffset = 0x34'u32, readAccess = true, writeAccess = true, registerDesc = "Floating-Point Context Control Register")
+declareRegister(peripheralName = SCB_FP, registerName = FPCAR, addressOffset = 0x38'u32, readAccess = true, writeAccess = true, registerDesc = "Floating-Point Context Address Register")
+declareRegister(peripheralName = SCB_FP, registerName = FPDSCR, addressOffset = 0x3C'u32, readAccess = true, writeAccess = true, registerDesc = "Floating-Point Context Control Register")
+declareRegister(peripheralName = SCB_FP, registerName = MVFR0, addressOffset = 0x40'u32, readAccess = true, writeAccess = true, registerDesc = "Floating-Point Context Control Register")
+declareRegister(peripheralName = SCB_FP, registerName = MVFR1, addressOffset = 0x44'u32, readAccess = true, writeAccess = true, registerDesc = "Floating-Point Context Control Register")
+]#
