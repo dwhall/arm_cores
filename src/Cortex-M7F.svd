@@ -150,7 +150,7 @@
           </fields>
         </register>
         <register>
-          <name>IPR[%s]</name>
+          <name>NVIC_IPR[%s]</name>
           <description>Interrupt Priority Register sets or reads interrupt priorities</description>
           <addressOffset>0x300</addressOffset>
           <dim>124</dim>
@@ -381,6 +381,17 @@
           <addressOffset>0xC</addressOffset>
           <access>read-write</access>
           <fields>
+            <field>
+              <name>VECTKEY</name>
+              <description>Key to allow write to register</description>
+              <bitRange>[31:16]</bitRange>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <description>KEY</description>
+                  <value>0x05FA</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
             <field>
               <name>ENDIANNESS</name>
               <description>Indicates the memory system endianness</description>

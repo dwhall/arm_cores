@@ -1501,7 +1501,7 @@
           <access>read-only</access>
           <fields>
             <field>
-              <name>M profile debug model</name>
+              <name>Debug model, M profile</name>
               <description>Support for memory-mapped debug model for M profile processors</description>
               <bitRange>[23:20]</bitRange>
               <enumeratedValues>
@@ -2420,12 +2420,26 @@
           <description>Instruction Cache line Invalidate by Address to PoU invalidate instruction cache line by address to PoU</description>
           <addressOffset>0x8</addressOffset>
           <access>write-only</access>
+          <fields>
+            <field>
+              <name>ADDRESS</name>
+              <description>Address. Writing to this field initiates the maintenance operation for the address written</description>
+              <bitRange>[31:0]</bitRange>
+            </field>
+          </fields>
         </register>
         <register>
           <name>DCIMVAC</name>
           <description>Data Cache line Invalidate by Address to PoC invalidate data or unified cache line by address to PoC</description>
           <addressOffset>0xC</addressOffset>
           <access>write-only</access>
+          <fields>
+            <field>
+              <name>ADDRESS</name>
+              <description>Address. Writing to this field initiates the maintenance operation for the address written</description>
+              <bitRange>[31:0]</bitRange>
+            </field>
+          </fields>
         </register>
         <register>
           <name>DCISW</name>
@@ -2450,12 +2464,26 @@
           <description>Data Cache line Clean by address to PoU clean data or unified cache line by address to PoU</description>
           <addressOffset>0x14</addressOffset>
           <access>write-only</access>
+          <fields>
+            <field>
+              <name>ADDRESS</name>
+              <description>Address. Writing to this field initiates the maintenance operation for the address written</description>
+              <bitRange>[31:0]</bitRange>
+            </field>
+          </fields>
         </register>
         <register>
           <name>DCCMVAC</name>
           <description>Data Cache line Clean by Address to PoC clean data or unified cache line by address to PoC</description>
           <addressOffset>0x18</addressOffset>
           <access>write-only</access>
+          <fields>
+            <field>
+              <name>ADDRESS</name>
+              <description>Address. Writing to this field initiates the maintenance operation for the address written</description>
+              <bitRange>[31:0]</bitRange>
+            </field>
+          </fields>
         </register>
         <register>
           <name>DCCSW</name>
@@ -2480,6 +2508,13 @@
           <description>Data Cache line Clean and Invalidate by Address to PoC clean and invalidate data or unified cache line by address to PoC</description>
           <addressOffset>0x20</addressOffset>
           <access>write-only</access>
+          <fields>
+            <field>
+              <name>ADDRESS</name>
+              <description>Address. Writing to this field initiates the maintenance operation for the address written</description>
+              <bitRange>[31:0]</bitRange>
+            </field>
+          </fields>
         </register>
         <register>
           <name>DCCISW</name>
@@ -2518,7 +2553,7 @@
   <groups>
     <group>
       <name>Core</name>
-      <description>All CPU Registers</description>
+      <description>CPU registers</description>
       <size>32</size>
       <access>RW</access>
       <type>unsigned int</type>
