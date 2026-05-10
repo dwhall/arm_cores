@@ -114,35 +114,39 @@ template declareField(registerName: untyped, fieldName: untyped, bitOffset: stat
   ## to ensure only the named fields are impacted.
   ## Field read-modify-writes must be terminated with the `.write()`
   ## More than one field-write funcs can be chained. `REG.read().FIELD1(11).FIELD2(42).write()`
+  # Capture the register name as a concrete constant so each expansion generates
+  # distinct function signatures (e.g. RegVal["IPSR"] vs RegVal["PSR"]), preventing
+  # ambiguous-call errors when the same field name appears in multiple registers.
+  const dfReg = astToStr(`registerName`)
 
-  func fieldName*[Tname: static string](reg: static RegName[TName], value: RegType) =
+  func fieldName*(reg: static RegName[dfReg], value: RegType) =
     ## Replaces the register's field's bits with the value.
     ## Overwrites the bits outside the field with zeroes.
     ## Implements `REG.FLD(value)`
     when not writeAccess:
       {.error: "Attempted write to a field without write access.".}
-    let initVal = RegVal[Tname](0'u32)
-    let regVal = setField(initVal, value, bitOffset, bitWidth)
-    reg.write(regVal)
+    let initVal = RegVal[dfReg](0'u32)
+    let fldVal = setField(initVal, value, bitOffset, bitWidth)
+    fldVal.write()
 
-  func fieldName*[Tname: static string](regVal: RegVal[TName]): FldVal[Tname] =
+  func fieldName*(regVal: RegVal[dfReg]): FldVal[dfReg] =
     ## Returns the field value, down-shifted to no bit offset, as a register-distinct type.
     ## Implements the FLD part of `REG.read().FLD()`
     when not readAccess:
       {.error: "Attempted read from a field without read access.".}
     getField(regVal, bitOffset, bitWidth)
 
-  func fieldName*[Tname: static string](inVal: RegVal[TName], value: RegType): FldVal[Tname] =
+  func fieldName*(inVal: RegVal[dfReg], value: RegType): FldVal[dfReg] =
     ## Replaces inVal's field's bits with the value.
     ## Returns the FldVal[Taddr] type to allow chaining of more field modifications.
     ## Implements the FLD part of `REG.read().FLD(5).write`
-    setField[Tname](inVal, value, bitOffset, bitWidth)
+    setField[dfReg](inVal, value, bitOffset, bitWidth)
 
-  func fieldName*[Tname: static string](inVal: FldVal[TName], value: RegType): FldVal[Tname] =
+  func fieldName*(inVal: FldVal[dfReg], value: RegType): FldVal[dfReg] =
     ## Replaces inVal's field's bits with the value.
     ## Returns the FldVal[Taddr] type to allow chaining of more field modifications.
     ## Implements the FLDB part of `REG.read().FLDA(4).FLDB(2).write`
-    setField[Tname](inVal, value, bitOffset, bitWidth)
+    setField[dfReg](RegVal[dfReg](inVal), value, bitOffset, bitWidth)
 
 
 declareSpecialRegister(PSR, true, true, "Program Status Register")
