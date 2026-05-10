@@ -2,7 +2,7 @@
 
 # Package
 
-version = "0.3.3"
+version = "0.3.4"
 author = "!!Dean"
 description = "ARM core register access"
 license = "MIT"
