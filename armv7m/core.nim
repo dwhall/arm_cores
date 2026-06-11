@@ -6,7 +6,8 @@ import std/tables
 # Assert we are compiling for arch v4 (armv7) or later, which supports
 # the asm instructions used in this module: ubfx and bfi.
 const ARM_ARCH {.intdefine: "__ARM_ARCH".} = 0
-assert ARM_ARCH >= 4, "This module requires ARM architecture v4 or later"
+when defined(arm):
+  assert ARM_ARCH >= 4, "This module requires ARM architecture v4 or later"
 
 #
 # Native Nim interface for special Core Registers (accessed via MSR/MRS)
@@ -268,8 +269,3 @@ proc WFE*() {.inline.} =
   asm "  wfe \n"
 proc WFI*() {.inline.} =
   asm "  wfi \n"
-
-
-
-
-
