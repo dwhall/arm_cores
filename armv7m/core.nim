@@ -38,13 +38,6 @@ proc read*[Tname: static string](reg: RegName[Tname]): RegVal[Tname] {.inline.} 
     # TODO
     discard
 
-#[
-TODO: Missing ISB after MSR writes
-ARM strongly recommends an ISB after writing CONTROL and certain other registers
-for the effect to be immediately visible to subsequent instructions.
-The write* procs do not emit one. This is not a bug in isolation, but callers
-have no way to know they need to issue ISB() manually.
-]#
 proc write*[Tname: static string](reg: RegName[Tname], val: RegVal[Tname]) {.inline.} =
   ## Writes val to the special register reg
   ## Implements: REG.write(v)
@@ -54,6 +47,7 @@ proc write*[Tname: static string](reg: RegName[Tname], val: RegVal[Tname]) {.inl
     {.emit: ["asm (\"  msr ", Tname, ", %0\"\n",
              "\t     :\n",
              "\t     : \"r\" (", val.uint32, "));"] .}
+    ISB() # ARM recommends this after writing CONTROL and certain other registers, but not all.
   else:
     # TODO
     discard
@@ -269,3 +263,7 @@ proc WFE*() {.inline.} =
   asm "  wfe \n"
 proc WFI*() {.inline.} =
   asm "  wfi \n"
+proc DSB*() {.inline.} =
+  asm "  dsb \n"
+proc ISB*() {.inline.} =
+  asm "  isb \n"
