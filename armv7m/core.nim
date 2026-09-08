@@ -263,7 +263,3 @@ proc WFE*() {.inline.} =
   asm "  wfe \n"
 proc WFI*() {.inline.} =
   asm "  wfi \n"
-proc DSB*() {.inline.} =
-  asm "  dsb \n"
-proc ISB*() {.inline.} =
-  asm "  isb \n"
