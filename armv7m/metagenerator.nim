@@ -227,6 +227,18 @@ template declareField*(peripheralName: untyped, registerName: untyped, fieldName
       const bitOff = index * dimIncrement
       setField[Taddr](fldVal, value, bitOff, bitWidth)
 
+    func fieldName*[Taddr: static RegType](inVal: RegVal[Taddr] | FldVal[Taddr], index: uint32, value: RegType): FldVal[Taddr] {.inline.} =
+      ## Rmw's the field's bits in the register with `value`.
+      ## Implements the FLD(idx, value) part of `PER.REG.read().FLD(idx, value)`
+      ## Non-static index, compared to the previous func
+      when not readAccess:
+        {.error: "Attempted read from a register without read access.".}
+      when index >= dim:
+        {.error: "Attempted write to a field index beyond its limit.".}
+      let fldVal = FldVal[Taddr](inVal.uint32)
+      let bitOff = index * dimIncrement
+      setField[Taddr](fldVal, value, bitOff, bitWidth)
+
   else:
     func fieldName*[Taddr: static RegType](inVal: RegVal[Taddr] | FldVal[Taddr], index: static uint32, value: RegType): FldVal[Taddr] {.inline.} =
       {.error: "Attempted dimensioned access to a non-dimensioned field".}
