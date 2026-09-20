@@ -123,14 +123,11 @@ func getField[Taddr: static RegType](regVal: RegVal[Taddr], bitOffset: static ui
 
 func getField[Taddr: static RegType](regVal: RegVal[Taddr], bitOffset: uint8, bitWidth: static uint8): FldVal[Taddr] {.inline.} =
   ## Returns the bit field masked and down shifted to the zero'th bit
-  ## Non-static bitOffset, compared to the previous func
+  ## Non-static bitOffset, compared to the previous func, so we can't use UBFX
   when bitWidth == 0: {.error: "bitWidth must be greater than zero".}
   assert (bitOffset + bitWidth) < 32'u8, "bit field must not exceed register size in bits"
-  when defined(arm):
-    {.emit: ["asm (\"ubfx %0, %1, %2, %3\"\n\t: \"=r\" (", result, ")\n\t: \"r\" (", regVal, "), \"n\" (", bitOffset, "), \"n\" (", bitWidth, "));\n"].}
-  else: # for desktop testing
-    const fldMask = 0xFFFFFFFF'u32 shr (32 - bitWidth)
-    FldVal[Taddr]((regVal.uint32 shr bitOffset) and fldMask)
+  const fldMask = 0xFFFFFFFF'u32 shr (32 - bitWidth)
+  FldVal[Taddr]((regVal.uint32 shr bitOffset) and fldMask)
 
 func setField[Taddr: static RegType](fldVal: FldVal[Taddr], value: RegType, bitOffset: static uint8, bitWidth: static uint8): FldVal[Taddr] {.inline.} =
   ## Returns `fldVal` with `value` shifted and inserted into the given bit offset and width.
@@ -148,16 +145,12 @@ func setField[Taddr: static RegType](fldVal: FldVal[Taddr], value: RegType, bitO
 func setField[Taddr: static RegType](fldVal: FldVal[Taddr], value: RegType, bitOffset: uint8, bitWidth: static uint8): FldVal[Taddr] {.inline.} =
   ## Returns `fldVal` with `value` shifted and inserted into the given bit offset and width.
   ## No bits outside of the bit offset and width are changed.
-  ## Non-static bitOffset, compared to the previous func
+  ## Non-static bitOffset, compared to the previous func, so we can't use BFI
   when bitWidth == 0: {.error: "bitWidth must be greater than zero".}
   assert (bitOffset + bitWidth) < 32, "bit field must not exceed register size in bits"
-  when defined(arm):
-    result = fldVal
-    {.emit: ["asm (\"bfi %0, %1, %2, %3\"\n\t: \"+r\" (", result, ")\n\t: \"r\" (", value, "), \"n\" (", bitOffset, "), \"n\" (", bitWidth, "));\n"].}
-  else: # for desktop testing
-    let fldMask = 0xFFFFFFFF'u32 shr (32 - bitWidth) shl bitOffset
-    let r: uint32 = fldVal.uint32 and not fldMask
-    FldVal[Taddr](r or ((value.uint32 shl bitOffset) and fldMask))
+  let fldMask = 0xFFFFFFFF'u32 shr (32 - bitWidth) shl bitOffset
+  let r = fldVal.uint32 and not fldMask
+  FldVal[Taddr](r or ((value.uint32 shl bitOffset) and fldMask))
 
 proc write*[Taddr: static RegType](value: FldVal[Taddr]) {.inline.} =
   ## Writes the value to the register (volatile store).
@@ -216,7 +209,7 @@ template declareField*(peripheralName: untyped, registerName: untyped, fieldName
       let v = setField[Taddr](initVal, value, bitOff, bitWidth)
       volatileStore(regAddr, v.RegType)
 
-    func fieldName*[Taddr: static RegType](inVal: RegVal[Taddr] | FldVal[Taddr], index: static uint32, value: RegType): FldVal[Taddr] {.inline.} =
+    func fieldName*[Taddr: static RegType](inVal: RegVal[Taddr] | FldVal[Taddr], index: static uint8, value: RegType): FldVal[Taddr] {.inline.} =
       ## Rmw's the field's bits in the register with `value`.
       ## Implements the FLD(idx, value) part of `PER.REG.read().FLD(idx, value)`
       when not readAccess:
@@ -227,14 +220,12 @@ template declareField*(peripheralName: untyped, registerName: untyped, fieldName
       const bitOff = index * dimIncrement
       setField[Taddr](fldVal, value, bitOff, bitWidth)
 
-    func fieldName*[Taddr: static RegType](inVal: RegVal[Taddr] | FldVal[Taddr], index: uint32, value: RegType): FldVal[Taddr] {.inline.} =
+    func fieldName*[Taddr: static RegType](inVal: RegVal[Taddr] | FldVal[Taddr], index: uint8, value: RegType): FldVal[Taddr] {.inline.} =
       ## Rmw's the field's bits in the register with `value`.
       ## Implements the FLD(idx, value) part of `PER.REG.read().FLD(idx, value)`
       ## Non-static index, compared to the previous func
       when not readAccess:
         {.error: "Attempted read from a register without read access.".}
-      when index >= dim:
-        {.error: "Attempted write to a field index beyond its limit.".}
       let fldVal = FldVal[Taddr](inVal.uint32)
       let bitOff = index * dimIncrement
       setField[Taddr](fldVal, value, bitOff, bitWidth)
