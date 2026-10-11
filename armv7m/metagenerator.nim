@@ -129,7 +129,7 @@ func getField[Taddr: static RegType](regVal: RegVal[Taddr], bitOffset: uint8, bi
   const fldMask = 0xFFFFFFFF'u32 shr (32 - bitWidth)
   FldVal[Taddr]((regVal.uint32 shr bitOffset) and fldMask)
 
-func setField[Taddr: static RegType](fldVal: FldVal[Taddr], value: RegType, bitOffset: static uint8, bitWidth: static uint8): FldVal[Taddr] {.inline.} =
+func setField[Taddr: static RegType](fldVal: FldVal[Taddr], value: RegType, bitOffset: static uint32, bitWidth: static uint8): FldVal[Taddr] {.inline.} =
   ## Returns `fldVal` with `value` shifted and inserted into the given bit offset and width.
   ## No bits outside of the bit offset and width are changed.
   when bitWidth == 0: {.error: "bitWidth must be greater than zero".}
@@ -142,7 +142,7 @@ func setField[Taddr: static RegType](fldVal: FldVal[Taddr], value: RegType, bitO
     let r = fldVal.uint32 and not fldMask
     FldVal[Taddr](r or ((value.uint32 shl bitOffset) and fldMask))
 
-func setField[Taddr: static RegType](fldVal: FldVal[Taddr], value: RegType, bitOffset: uint8, bitWidth: static uint8): FldVal[Taddr] {.inline.} =
+func setField[Taddr: static RegType](fldVal: FldVal[Taddr], value: RegType, bitOffset: uint32, bitWidth: static uint8): FldVal[Taddr] {.inline.} =
   ## Returns `fldVal` with `value` shifted and inserted into the given bit offset and width.
   ## No bits outside of the bit offset and width are changed.
   ## Non-static bitOffset, compared to the previous func, so we can't use BFI
@@ -209,7 +209,7 @@ template declareField*(peripheralName: untyped, registerName: untyped, fieldName
       let v = setField[Taddr](initVal, value, bitOff, bitWidth)
       volatileStore(regAddr, v.RegType)
 
-    func fieldName*[Taddr: static RegType](inVal: RegVal[Taddr] | FldVal[Taddr], index: static uint8, value: RegType): FldVal[Taddr] {.inline.} =
+    func fieldName*[Taddr: static RegType](inVal: RegVal[Taddr] | FldVal[Taddr], index: static uint32, value: RegType): FldVal[Taddr] {.inline.} =
       ## Rmw's the field's bits in the register with `value`.
       ## Implements the FLD(idx, value) part of `PER.REG.read().FLD(idx, value)`
       when not readAccess:
@@ -220,7 +220,7 @@ template declareField*(peripheralName: untyped, registerName: untyped, fieldName
       const bitOff = index * dimIncrement
       setField[Taddr](fldVal, value, bitOff, bitWidth)
 
-    func fieldName*[Taddr: static RegType](inVal: RegVal[Taddr] | FldVal[Taddr], index: uint8, value: RegType): FldVal[Taddr] {.inline.} =
+    func fieldName*[Taddr: static RegType](inVal: RegVal[Taddr] | FldVal[Taddr], index: uint32, value: RegType): FldVal[Taddr] {.inline.} =
       ## Rmw's the field's bits in the register with `value`.
       ## Implements the FLD(idx, value) part of `PER.REG.read().FLD(idx, value)`
       ## Non-static index, compared to the previous func
